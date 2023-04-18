@@ -1,0 +1,845 @@
+{
+	"info": {
+		"_postman_id": "eddc65e8-2172-417b-9ee5-695977ce4d15",
+		"name": "Arcade",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Products",
+			"item": [
+				{
+					"name": "getAllProducts",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{backendURL}}/api/v1/products",
+							"host": [
+								"{{backendURL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"products"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "uploadProductById",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{accessToken}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"SUPER NINTENDO 64\",\n    \"description\": \"tuqituqituqi\",\n    \"price\": 200,\n    \"location\": \"A Coruña\",\n    \"category\": \"consolas\",\n    \"state\": \"nuevo\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{backendURL}}/api/v1/products/",
+							"host": [
+								"{{backendURL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"products",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getProductsByUserId - myProducts",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{accessToken}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{backendURL}}/api/v1/products/user/:idUser",
+							"host": [
+								"{{backendURL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"products",
+								"user",
+								":idUser"
+							],
+							"variable": [
+								{
+									"key": "idUser",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateProductById",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{accessToken}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"NINTENDO\",\n    \"description\": \"Es una puta mierda\",\n    \"price\": \"2\",\n    \"location\": \"A Coruña\",\n    \"category\": \"consolas\",\n    \"state\": \"usado\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{backendURL}}/api/v1/products/:idProduct",
+							"host": [
+								"{{backendURL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"products",
+								":idProduct"
+							],
+							"variable": [
+								{
+									"key": "idProduct",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "uploadProductImage",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{accessToken}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "productImage",
+									"type": "file",
+									"src": "/home/aaronvt98/Imágenes/Tux.png"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{backendURL}}/api/v1/products/images/:idProduct",
+							"host": [
+								"{{backendURL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"products",
+								"images",
+								":idProduct"
+							],
+							"variable": [
+								{
+									"key": "idProduct",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getImagesByProductId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{backendURL}}/api/v1/products/images/:idProduct",
+							"host": [
+								"{{backendURL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"products",
+								"images",
+								":idProduct"
+							],
+							"variable": [
+								{
+									"key": "idProduct",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteProductById",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{accessToken}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{backendURL}}/api/v1/products/:idProduct",
+							"host": [
+								"{{backendURL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"products",
+								":idProduct"
+							],
+							"variable": [
+								{
+									"key": "idProduct",
+									"value": "7"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteImageById",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{accessToken}}",
+								"type": "string"
+							}
+						],
+						"url": {
+							"raw": "{{backendURL}}/api/v1/products/images/:idImage",
+							"host": [
+								"{{backendURL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"products",
+								"images",
+								":idImage"
+							],
+							"variable": [
+								{
+									"key": "idImage",
+									"value": "5"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "addToFavoritesByProductId",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{accessToken}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{backendURL}}/api/v1/products/1",
+							"host": [
+								"{{backendURL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"products",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getFavoritesByUserId",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{accessToken}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{backendURL}}/api/v1/users/favorites",
+							"host": [
+								"{{backendURL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"favorites"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteFromFavoritesByIds",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{accessToken}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{backendURL}}/api/v1/products/favorites/:idProduct",
+							"host": [
+								"{{backendURL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"products",
+								"favorites",
+								":idProduct"
+							],
+							"variable": [
+								{
+									"key": "idProduct",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "getUserById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{backendURL}}/api/v1/users/user/:idUser",
+							"host": [
+								"{{backendURL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"user",
+								":idUser"
+							],
+							"variable": [
+								{
+									"key": "idUser",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "registerUser",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"nameUser\": \"pepe\",\n    \"email\": \"pepe123@yopmail.com\",\n    \"password\": \"123456\",\n    \"verifyPassword\": \"123456\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{backendURL}}/api/v1/users/register",
+							"host": [
+								"{{backendURL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "loginUser 2",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"const response = pm.response.json();",
+									"pm.environment.set(\"accessToken\", response.accessToken);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"pepe123@yopmail.com\",\n    \"password\": \"123456\" \n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{backendURL}}/api/v1/users/login",
+							"host": [
+								"{{backendURL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "loginUser 1",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"const response = pm.response.json();",
+									"pm.environment.set(\"accessToken\", response.accessToken);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"aaronvt98@yopmail.com\",\n    \"password\": \"123456\" \n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{backendURL}}/api/v1/users/login",
+							"host": [
+								"{{backendURL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateUser",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{accessToken}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"nameUser\": \"nacho\",\n    \"email\": \"nachito123@yopmail.com\",\n    \"phone\": \"123123123\",\n    \"password\": \"123456\",\n    \"repeatPassword\": \"123456\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{backendURL}}/api/v1/users",
+							"host": [
+								"{{backendURL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "uploadProfileImage",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{accessToken}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "profileImage",
+									"type": "file",
+									"src": "/C:/Users/nachh/Pictures/Steam Icon/nach-gatito-navidad2.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{backendURL}}/api/v1/users/upload",
+							"host": [
+								"{{backendURL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"upload"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteUserById",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{accessToken}}",
+								"type": "string"
+							}
+						],
+						"url": {
+							"raw": "{{backendURL}}/api/v1/users/:userId",
+							"host": [
+								"{{backendURL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"users",
+								":userId"
+							],
+							"variable": [
+								{
+									"key": "userId",
+									"value": "4"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Reviews",
+			"item": [
+				{
+					"name": "getAllUserReviewsByUserId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{backendURL}}/api/v1/reviews/:idUser",
+							"host": [
+								"{{backendURL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"reviews",
+								":idUser"
+							],
+							"variable": [
+								{
+									"key": "idUser",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "createReviewForIdUser",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{accessToken}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"opinion\":\"Buen comprador\",\r\n    \"rating\": 2,\r\n    \"isSeller\": 0\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{backendURL}}/api/v1/reviews/:idUser",
+							"host": [
+								"{{backendURL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"reviews",
+								":idUser"
+							],
+							"variable": [
+								{
+									"key": "idUser",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Orders",
+			"item": [
+				{
+					"name": "getOrdersByProductId - myProductOrders",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{accessToken}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{backendURL}}/api/v1/orders/:idProduct",
+							"host": [
+								"{{backendURL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"orders",
+								":idProduct"
+							],
+							"variable": [
+								{
+									"key": "idProduct",
+									"value": "7"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getOrdersByUserBuyer - myOrders",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{accessToken}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{backendURL}}/api/v1/orders/user/:idUserBuyer",
+							"host": [
+								"{{backendURL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"orders",
+								"user",
+								":idUserBuyer"
+							],
+							"variable": [
+								{
+									"key": "idUserBuyer",
+									"value": "5"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "createOrderByProductId",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{accessToken}}",
+								"type": "string"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"orderSubject\": \"Compro ya\",\r\n    \"orderMessage\": \"Me encanta lo quiero ya mismo\",\r\n    \"orderTypeOfContact\": \"email\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{backendURL}}/api/v1/orders/:idProduct",
+							"host": [
+								"{{backendURL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"orders",
+								":idProduct"
+							],
+							"variable": [
+								{
+									"key": "idProduct",
+									"value": "7"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "acceptOrderByProductId",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{accessToken}}",
+								"type": "string"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"saleDate\": \"2022-01-25\",\r\n    \"saleLocation\": \"Parque Europa, A Coruna\",\r\n    \"saleMessage\": \"hola hola hola\",\r\n    \"saleTypeOfContact\": \"phone\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{backendURL}}/api/v1/orders/:idProduct/:idUserBuyer",
+							"host": [
+								"{{backendURL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"orders",
+								":idProduct",
+								":idUserBuyer"
+							],
+							"variable": [
+								{
+									"key": "idProduct",
+									"value": "4"
+								},
+								{
+									"key": "idUserBuyer",
+									"value": "7"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
