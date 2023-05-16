@@ -14,6 +14,7 @@ const { sendMailRegister } = require("../../helpers/mail-smtp-SendGrid");
 const schema = Joi.object().keys({
   nameUser: Joi.string().min(3).max(120).required(),
   email: Joi.string().email().required(),
+  phone: Joi.string().min(9).max(12).required(),
   password: Joi.string().min(4).max(20).required(),
   verifyPassword: Joi.ref("password"),
   image: Joi.string().min(3),
@@ -23,7 +24,7 @@ async function registerUser(req, res) {
   try {
     const { body } = req;
     await schema.validateAsync(body);
-    const { nameUser, email, password, image } = body;
+    const { nameUser, email, password, image, phone } = body;
 
     const user = await findUserByEmail(email);
     if (user) {
@@ -34,11 +35,11 @@ async function registerUser(req, res) {
 
     const verificationCode = randomstring.generate(64);
 
-    const userDB = { nameUser, email, passwordHash, verificationCode, image };
+    const userDB = { nameUser, email, passwordHash, verificationCode, image , phone};
 
     const userId = await createUser(userDB);
 
-    await sendMailRegister(nameUser, email, verificationCode);
+    // await sendMailRegister(nameUser, email, verificationCode);
     res.status(201);
     res.send({
       idUser: userId,
