@@ -7,24 +7,31 @@ sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 const { HTTP_SERVER, FRONTEND_URL } = process.env;
 
 async function sendMailRegister(name, email, code) {
+
   try {
     const linkActivation = `${HTTP_SERVER}/api/v1/users/activation?code=${code}`;
+
 
     const msg = {
       to: email,
       from: process.env.SENDGRID_FROM,
-      subject: "Welcome to Arcade Marketplace",
-      text: `Hi ${name}, to confirm the account go this link: ${linkActivation}`,
-      html: `<div>
-               Hi ${name}, to confirm the account <a href='${linkActivation}'>active it here</a>
-             </div>`,
+      subject: "Bienvenido a Atkinson Barber Shop",
+      html: `
+        <div style="text-align: center;">
+          <img src="https://atkinsonbarbershop.com/wp-content/uploads/2017/06/logoatkinsonheader.png" alt="Logo Atkinson Barber Shop" style="width: 200px; height: auto; margin: 20px auto;">
+          <h1>Bienvenido a Atkinson Barber Shop</h1>
+          <p>Hola ${name},</p>
+          <p>Gracias por confiar en nosotros. Para activar la cuenta haz click en el boton que te muestro a continuación: </p>
+          <a href="${linkActivation}" style="display: inline-block; padding: 12px 24px; background-color: #d96c2c; color: #fff; text-decoration: none; border-radius: 4px; margin-top: 20px;">Activar Cuenta</a>
+        </div>
+      `,
     };
 
     const data = await sgMail.send(msg);
 
     return data;
   } catch (error) {
-    createJsonError(400, "Error al enviar el mail");
+    throw new Error( "Error al enviar el mail");
   }
 }
 

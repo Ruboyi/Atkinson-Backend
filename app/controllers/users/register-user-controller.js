@@ -23,6 +23,7 @@ const schema = Joi.object().keys({
 async function registerUser(req, res) {
   try {
     const { body } = req;
+
     await schema.validateAsync(body);
     const { nameUser, email, password, image, phone } = body;
 
@@ -39,7 +40,9 @@ async function registerUser(req, res) {
 
     const userId = await createUser(userDB);
 
-    // await sendMailRegister(nameUser, email, verificationCode);
+    await sendMailRegister(nameUser, email, verificationCode);
+
+
     res.status(201);
     res.send({
       idUser: userId,
