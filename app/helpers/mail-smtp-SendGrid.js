@@ -36,16 +36,25 @@ async function sendMailRegister(name, email, code) {
 }
 
 async function sendMailCorrectValidation(name, email) {
-  const msg = {
-    to: email,
-    from: process.env.SENDGRID_FROM,
-    subject: "Arcade Marketplace - Account Activated!",
-    text: `Hi ${name}, \n Your account was activated.`,
-    html: `<h1>Hi ${name},</h1> your account was activated.`,
-  };
+  try {
+    const msg = {
+      to: email,
+      from: process.env.SENDGRID_FROM,
+      subject: "Atkinson Barber Shop - Cuenta activada",
+      html: `<div style="text-align: center;">
+      <img src="https://atkinsonbarbershop.com/wp-content/uploads/2017/06/logoatkinsonheader.png" alt="Logo Atkinson Barber Shop" style="width: 200px; height: auto; margin: 20px auto;">
+      <h1>Atkinson Barber Shop</h1>
+      <p>Hola ${name},</p>
+      <p>Gracias por confiar en nosotros. Su cuenta ha sido activada correctamente</p>
+    
+    </div>`,
+    };
 
-  const data = await sgMail.send(msg);
-  return data;
+    const data = await sgMail.send(msg);
+    return data;
+  } catch (error) {
+    throw new Error( "Error al enviar el mail");
+  }
 }
 
 async function sendMailPurchaseOrderNotif(name, email) {
