@@ -9,6 +9,7 @@ async function getAllBarbers() {
   return barbers;
 }
 
+
 module.exports = {
   getAllBarbers,
 };

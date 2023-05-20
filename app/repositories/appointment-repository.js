@@ -21,6 +21,18 @@ async function createAppointment(appointmentData) {
   return result.insertId;
 }
 
+
+async function getAppoimentsByBarberId(barberId) {
+  const pool = await getPool();
+  const sql = `SELECT * FROM appointments WHERE idBarber = ?`;
+  const [appointments] = await pool.query(sql, barberId);
+  return appointments;
+}
+
+
+
+
 module.exports = {
-  createAppointment
+  createAppointment,
+  getAppoimentsByBarberId,
 };

@@ -59,6 +59,7 @@ async function loginUser(req, res) {
       accessToken: token,
       expiresIn: "365 days",
       role: role,
+      idUser: idUser,
     };
 
     await updateUserLoginById(idUser);

@@ -42,8 +42,8 @@ const phoneArray = [
 ];
 
 const servicesArray = [
-  { name: "Haircut", price: 20 },
-  { name: "Haircut & Beard", price: 30 },
+  { name: "Haircut", price: 15 },
+  { name: "Haircut & Beard", price: 20 },
   { name: "Beard Trim", price: 10 },
 ];
 
