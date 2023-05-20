@@ -7,11 +7,12 @@ const { getAppoimentsByBarberId } = require("../../repositories/appointment-repo
 
 async function getAllAppoimnetsByBarberId(req, res) {
   try {
-    const idBarber = req.auth.idUser;
+    const idBarber = req.params.idBarber;
+  
     
     if(!idBarber) throwJsonError('No se encontró el id del barbero', 404)
     
-    const appointments = await getAppoimentsByBarberId(idBarber);
+    const appointments = await getAppoimentsByBarberId(Number(idBarber));
 
     res.status(200)
     res.send({ data: appointments })
