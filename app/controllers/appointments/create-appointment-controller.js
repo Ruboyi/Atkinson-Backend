@@ -4,7 +4,6 @@ const createJsonError = require('../../errors/create-json-error');
 const throwJsonError = require('../../errors/throw-json-error');
 
 const schema = Joi.object().keys({
-  userId: Joi.number().required(),
   barberId: Joi.number().required(),
   appointmentDate: Joi.date().required(),
   serviceId: Joi.number().required()
@@ -13,9 +12,16 @@ const schema = Joi.object().keys({
 async function createAppointmentController(req, res) {
   try {
     const { body } = req;
+    const { idUser } = req.auth;
+
     await schema.validateAsync(body);
 
-    const appointment = await createAppointment(body);
+    const newAppointment = {
+      ...body,
+      idUser: idUser
+    }
+
+    const appointment = await createAppointment(newAppointment);
 
     res.status(201).json({idAppointment :appointment});
   } catch (error) {
