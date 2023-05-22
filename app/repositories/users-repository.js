@@ -1,225 +1,218 @@
-"use strict";
+'use strict'
 
-const getPool = require("../infrastructure/database-infrastructure");
+const getPool = require('../infrastructure/database-infrastructure')
 
 async function findUserById(userId) {
-  const pool = await getPool();
-  const sql = "SELECT * FROM users WHERE idUser = ?";
-  const [user] = await pool.query(sql, userId);
-  return user[0];
+    const pool = await getPool()
+    const sql = 'SELECT * FROM users WHERE idUser = ?'
+    const [user] = await pool.query(sql, userId)
+    return user[0]
 }
 
 async function findAllUser() {
-  const pool = await getPool();
-  const sql =
-    "SELECT idUser as id,  nameUser, email, phone, createdAt FROM users";
-  const [user] = await pool.query(sql);
-  return user;
+    const pool = await getPool()
+    const sql =
+        'SELECT idUser as id,  nameUser, email, phone, createdAt FROM users'
+    const [user] = await pool.query(sql)
+    return user
 }
 async function findAllUserPublic() {
-  const pool = await getPool();
-  const sql = "SELECT idUser,  nameUser, image, isOnline FROM users";
-  const [user] = await pool.query(sql);
-  return user;
+    const pool = await getPool()
+    const sql = 'SELECT idUser,  nameUser, image, isOnline FROM users'
+    const [user] = await pool.query(sql)
+    return user
 }
 
 async function createUser(user) {
-  const pool = await getPool();
-  const sql = `
+    const pool = await getPool()
+    const sql = `
     INSERT INTO users(
       nameUser, email, password, image,
       createdAt, verificationCode, role, phone
     ) VALUES (?, ?, ?, ?, ?, ?, ?, ?)
-  `;
-  const { nameUser, email, passwordHash, image, verificationCode, phone } = user;
-  const now = new Date();
-  const [created] = await pool.query(sql, [
-    nameUser,
-    email,
-    passwordHash,
-    image,
-    now,
-    verificationCode,
-    "user",
-    phone,
-  ]);
+  `
+    const { nameUser, email, passwordHash, image, verificationCode, phone } =
+        user
+    const now = new Date()
+    const [created] = await pool.query(sql, [
+        nameUser,
+        email,
+        passwordHash,
+        image,
+        now,
+        verificationCode,
+        'user',
+        phone,
+    ])
 
-  return created.insertId;
+    return created.insertId
 }
 
 async function findUserByEmail(email) {
-  const pool = await getPool();
-  const sql =
-    "SELECT idUser, nameUser, email, role, password, verifiedAt, verificationCode, isBanned FROM users WHERE email = ?";
-  const [user] = await pool.query(sql, email);
+    const pool = await getPool()
+    const sql =
+        'SELECT idUser, nameUser, email, role, password, verifiedAt, verificationCode, isBanned FROM users WHERE email = ?'
+    const [user] = await pool.query(sql, email)
 
-  return user[0];
+    return user[0]
 }
 
 async function activateUser(verificationCode) {
-  const now = new Date();
-  const pool = await getPool();
-  const sql = `
+    const now = new Date()
+    const pool = await getPool()
+    const sql = `
   UPDATE users
   SET verifiedAt = ?
   WHERE verificationCode = ?
   AND verifiedAt IS NULL
-  `;
+  `
 
-  const [result] = await pool.query(sql, [now, verificationCode]);
+    const [result] = await pool.query(sql, [now, verificationCode])
 
-  return result.affectedRows === 1;
+    return result.affectedRows === 1
 }
 
 async function getUserByVerificationCode(code) {
-  const pool = await getPool();
-  const sql = `
+    const pool = await getPool()
+    const sql = `
   SELECT nameUser, email, image, phone, createdAt FROM users
   WHERE verificationCode = ?    
-  `;
-  const [user] = await pool.query(sql, code);
-  return user[0];
+  `
+    const [user] = await pool.query(sql, code)
+    return user[0]
 }
 
 async function udpateUserById(data) {
-  const { idUser, nameUser, email, province, phone, bio, password } = data;
-  const pool = await getPool();
-  const sql = `
+    const { idUser, nameUser, email, phone } = data
+    const pool = await getPool()
+    const sql = `
     UPDATE users
-    SET nameUser = ?, email = ?, province = ?, phone = ?, bio = ?, password = ?
+    SET nameUser = ?, email = ?, phone = ?
     WHERE idUser = ?
-  `;
-  await pool.query(sql, [
-    nameUser,
-    email,
-    province,
-    phone,
-    bio,
-    password,
-    idUser,
-  ]);
+  `
+    await pool.query(sql, [nameUser, email, phone, idUser])
 
-  return true;
+    return true
 }
 
 async function addVerificationCode(idUser, code) {
-  const now = new Date();
-  const pool = await getPool();
-  const sql = `
+    const now = new Date()
+    const pool = await getPool()
+    const sql = `
     UPDATE users SET verificationCode = ?,
     updatedAt = ?,
     verifiedAt = NULL
     WHERE idUser = ?
-  `;
-  const [created] = await pool.query(sql, [code, now, idUser]);
+  `
+    const [created] = await pool.query(sql, [code, now, idUser])
 
-  return created.insertId;
+    return created.insertId
 }
 
 async function findUserProfileImage(idUser) {
-  const pool = await getPool();
-  const sql = "SELECT image FROM users WHERE idUser = ?";
-  const [user] = await pool.query(sql, idUser);
+    const pool = await getPool()
+    const sql = 'SELECT image FROM users WHERE idUser = ?'
+    const [user] = await pool.query(sql, idUser)
 
-  return user[0];
+    return user[0]
 }
 
 async function uploadUserProfileImage(idUser, image) {
-  const pool = await getPool();
-  const sql = "UPDATE users SET image = ? WHERE idUser = ?";
-  await pool.query(sql, [image, idUser]);
+    const pool = await getPool()
+    const sql = 'UPDATE users SET image = ? WHERE idUser = ?'
+    await pool.query(sql, [image, idUser])
 
-  return true;
+    return true
 }
 
 async function removeUserById(id) {
-  const pool = await getPool();
-  const sql = "DELETE FROM users WHERE idUser = ?";
-  await pool.query(sql, id);
+    const pool = await getPool()
+    const sql = 'DELETE FROM users WHERE idUser = ?'
+    await pool.query(sql, id)
 
-  return true;
+    return true
 }
 
 async function findFavoritesByUserId(idUser) {
-  const pool = await getPool();
-  const sql =
-    "SELECT * FROM products INNER JOIN favorites ON products.idProduct = favorites.idProduct WHERE favorites.idUser = ?;";
-  const [favorites] = await pool.query(sql, idUser);
+    const pool = await getPool()
+    const sql =
+        'SELECT * FROM products INNER JOIN favorites ON products.idProduct = favorites.idProduct WHERE favorites.idUser = ?;'
+    const [favorites] = await pool.query(sql, idUser)
 
-  return favorites;
+    return favorites
 }
 
 async function blockUserById(id) {
-  const pool = await getPool();
-  const sql = `UPDATE arcade.users SET isBanned = '1' WHERE (idUser = ?);`;
-  await pool.query(sql, id);
+    const pool = await getPool()
+    const sql = `UPDATE arcade.users SET isBanned = '1' WHERE (idUser = ?);`
+    await pool.query(sql, id)
 
-  return true;
+    return true
 }
 
 async function desBlockUserById(id) {
-  const pool = await getPool();
-  const sql = `UPDATE arcade.users SET isBanned = '0' WHERE (idUser = ?);`;
-  await pool.query(sql, id);
+    const pool = await getPool()
+    const sql = `UPDATE arcade.users SET isBanned = '0' WHERE (idUser = ?);`
+    await pool.query(sql, id)
 
-  return true;
+    return true
 }
 
 async function udpatePassworByNameUser(nameUser, password) {
-  const pool = await getPool();
-  const sql = `
+    const pool = await getPool()
+    const sql = `
     UPDATE users
     SET password = ?
     WHERE nameUser = ?
-  `;
-  await pool.query(sql, [password, nameUser]);
+  `
+    await pool.query(sql, [password, nameUser])
 
-  return true;
+    return true
 }
 
 async function updateUserLoginById(id) {
-  const pool = await getPool();
-  const sql = `UPDATE users SET isOnline = '1' WHERE (idUser = ?);`;
-  await pool.query(sql, id);
+    const pool = await getPool()
+    const sql = `UPDATE users SET isOnline = '1' WHERE (idUser = ?);`
+    await pool.query(sql, id)
 
-  return true;
+    return true
 }
 
 async function updateUserLogoutById(id) {
-  const pool = await getPool();
-  const sql = `UPDATE users SET isOnline = '0' WHERE (idUser = ?);`;
-  await pool.query(sql, id);
+    const pool = await getPool()
+    const sql = `UPDATE users SET isOnline = '0' WHERE (idUser = ?);`
+    await pool.query(sql, id)
 
-  return true;
+    return true
 }
 
 async function updateLastLoginById(id) {
-  const now = new Date();
-  const pool = await getPool();
-  const sql = `UPDATE users SET lastLogin = ?  WHERE (idUser = ?);`;
-  await pool.query(sql, [now, id]);
+    const now = new Date()
+    const pool = await getPool()
+    const sql = `UPDATE users SET lastLogin = ?  WHERE (idUser = ?);`
+    await pool.query(sql, [now, id])
 
-  return true;
+    return true
 }
 
 module.exports = {
-  findUserById,
-  createUser,
-  findUserByEmail,
-  activateUser,
-  getUserByVerificationCode,
-  udpateUserById,
-  addVerificationCode,
-  findUserProfileImage,
-  uploadUserProfileImage,
-  removeUserById,
-  findFavoritesByUserId,
-  findAllUser,
-  blockUserById,
-  desBlockUserById,
-  udpatePassworByNameUser,
-  updateUserLoginById,
-  updateUserLogoutById,
-  updateLastLoginById,
-  findAllUserPublic,
-};
+    findUserById,
+    createUser,
+    findUserByEmail,
+    activateUser,
+    getUserByVerificationCode,
+    udpateUserById,
+    addVerificationCode,
+    findUserProfileImage,
+    uploadUserProfileImage,
+    removeUserById,
+    findFavoritesByUserId,
+    findAllUser,
+    blockUserById,
+    desBlockUserById,
+    udpatePassworByNameUser,
+    updateUserLoginById,
+    updateUserLogoutById,
+    updateLastLoginById,
+    findAllUserPublic,
+}
