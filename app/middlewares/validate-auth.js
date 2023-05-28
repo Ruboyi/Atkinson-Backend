@@ -1,32 +1,36 @@
-"use strict";
-const jwt = require("jsonwebtoken");
-const createJsonError = require("../errors/create-json-error");
-const throwJsonError = require("../errors/throw-json-error");
-const { JWT_SECRET } = process.env;
+'use strict'
+const jwt = require('jsonwebtoken')
+const createJsonError = require('../errors/create-json-error')
+const throwJsonError = require('../errors/throw-json-error')
+const { JWT_SECRET } = process.env
 
 function extractAccessToken(headers) {
-  const { authorization } = headers;
-  if (!authorization || !authorization.startsWith("Bearer ")) {
-    throwJsonError(403, "Autorización requerida");
-  }
+    const { authorization } = headers
+    if (!authorization || !authorization.startsWith('Bearer ')) {
+        throwJsonError(403, 'Autorización requerida')
+    }
 
-  return authorization.split(" ")[1];
-  // return authorization.slice(7, authorization.length);
+    return authorization.split(' ')[1]
+    // return authorization.slice(7, authorization.length);
 }
 
 function validateAuth(req, res, next) {
-  try {
-    const { headers } = req;
-    const token = extractAccessToken(headers);
-    const decodedToken = jwt.verify(token, JWT_SECRET);
+    try {
+        const { headers } = req
+        const token = extractAccessToken(headers)
+        const decodedToken = jwt.verify(token, JWT_SECRET)
 
-    const { idUser, nameUser, role } = decodedToken;
-    req.auth = { idUser, nameUser, role };
+        const { idUser, nameUser, role } = decodedToken
+        req.auth = { idUser, nameUser, role }
 
-    next();
-  } catch (error) {
-    createJsonError(error, res);
-  }
+        next()
+    } catch (error) {
+        if (error.name === 'TokenExpiredError') {
+            throwJsonError(403, 'Token expirado')
+        } else {
+            createJsonError(error, res)
+        }
+    }
 }
 
-module.exports = validateAuth;
+module.exports = validateAuth
