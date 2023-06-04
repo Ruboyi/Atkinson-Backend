@@ -6,6 +6,7 @@ const createAppointmentController = require('../controllers/appointments/create-
 const getAllAppoimnetsByBarberId = require('../controllers/appointments/get-all-appoiments-by-barber-id')
 const getAppoimentsByUser = require('../controllers/appointments/get-appointment-by-user-id')
 const cancelAppointmentById = require('../controllers/appointments/cancel-appointment-controllers')
+const getAllAppoimnets = require('../controllers/appointments/get-all-appoiments-controller')
 
 const router = express.Router()
 
@@ -13,6 +14,8 @@ router
     .route('/appointments')
     .all(validateAuth) // Middleware de validación de autenticación
     .post(createAppointmentController)
+
+router.route('/appointments').all(validateAuth).get(getAllAppoimnets)
 
 router.route('/appointments/user').all(validateAuth).get(getAppoimentsByUser)
 router
