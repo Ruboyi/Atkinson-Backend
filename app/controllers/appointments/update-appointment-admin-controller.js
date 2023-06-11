@@ -31,6 +31,20 @@ async function updateAppointementAdmin(req, res) {
 
         if (!appointment) throwJsonError(400, 'La cita no existe')
 
+        //Si la fecha es la misma no se comprueba nada y solo se actualiza el servicio
+        if (
+            new Date(appointment.appointmentDate).getTime() ===
+            new Date(appointmentDate).getTime()
+        ) {
+            await updateAppoimnetByAppoimentId({
+                idAppointment,
+                idService,
+                appointmentDate,
+            })
+            res.send({ idAppointment, idService, appointmentDate })
+            return
+        }
+
         //Comprobar que no haya otra cita a la misma hora con el mismo barbero
         const appointments = await findAppoimentsByBarberIdAndDate(
             appointment.idBarber,
