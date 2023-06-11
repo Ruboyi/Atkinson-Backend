@@ -15,8 +15,7 @@ async function getAllAppoimnets(req, res) {
 
         const date = new Date().toISOString().split('T')[0]
         const appointments = await getAppoiments(date)
-        console.log(appointments)
-
+     
         const barbers = await getAllBarbers()
         const services = await getAllServices()
 
