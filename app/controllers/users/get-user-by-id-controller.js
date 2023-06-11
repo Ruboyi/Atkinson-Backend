@@ -8,7 +8,6 @@ const schema = Joi.number().integer().positive().required()
 
 async function getUserById(req, res) {
     try {
-        console.log('adiioss')
         const { idUser } = req.params
         await schema.validateAsync(idUser)
         const user = await findUserById(idUser)
