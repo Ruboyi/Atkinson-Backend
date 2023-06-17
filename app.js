@@ -1,29 +1,34 @@
-"use strict";
+'use strict'
 
-require("dotenv").config();
-const cors = require("cors");
-const express = require("express");
-const app = express();
-const fileUpload = require("express-fileupload");
-const { PORT } = process.env;
+require('dotenv').config()
+const cors = require('cors')
+const express = require('express')
+const app = express()
+const http = require('http')
+const fileUpload = require('express-fileupload')
+const configureWebSocket = require('./app/websocket/websocket')
 
-app.use(fileUpload());
-// Para recibir datos como JSON en el BODY
-app.use(express.json());
-// CORS - Para dar permisos de acceso a otras url's
-app.use(cors());
-// To serve static files => Archivos públicos.
-app.use(express.static("public"));
+const { PORT } = process.env
 
-//const usersRouter = require('./app/routes/users-routes');
-const usersRouter = require("./app/routes/users-routes");
-const barbersRouter = require("./app/routes/barbers-routes");
-const servicesRouter = require("./app/routes/services-routes");
-const appointmentsRouter = require("./app/routes/appointments-routes");
+app.use(fileUpload())
+app.use(express.json())
+app.use(cors())
+app.use(express.static('public'))
 
-app.use("/api/v1/users/", usersRouter);
-app.use("/api/v1/barbers/", barbersRouter);
-app.use("/api/v1/services/", servicesRouter);
-app.use("/api/v1/appointments/", appointmentsRouter);
+const usersRouter = require('./app/routes/users-routes')
+const barbersRouter = require('./app/routes/barbers-routes')
+const servicesRouter = require('./app/routes/services-routes')
+const appointmentsRouter = require('./app/routes/appointments-routes')
 
-app.listen(PORT, () => console.log("Running", PORT));
+app.use('/api/v1/users/', usersRouter)
+app.use('/api/v1/barbers/', barbersRouter)
+app.use('/api/v1/services/', servicesRouter)
+app.use('/api/v1/appointments/', appointmentsRouter)
+
+const server = http.createServer(app)
+
+const io = configureWebSocket(server)
+
+app.set('socketio', io)
+
+server.listen(PORT, () => console.log('Running', PORT))

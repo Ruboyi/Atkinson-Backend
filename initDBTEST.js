@@ -75,13 +75,13 @@ async function initDB() {
 
         // create table users
         await connection.query(`
-      CREATE TABLE IF NOT EXISTS users (
+        CREATE TABLE IF NOT EXISTS users (
           idUser INT NOT NULL AUTO_INCREMENT,
           nameUser VARCHAR(120) NOT NULL,
-          email VARCHAR(120) NOT NULL,
-          password VARCHAR(120) NOT NULL,
+          email VARCHAR(120) DEFAULT NULL,
+          password VARCHAR(120) DEFAULT NULL,
           image VARCHAR(300) NULL DEFAULT NULL,
-          phone VARCHAR(120) NULL DEFAULT NULL,
+          phone VARCHAR(120) NOT NULL,
           createdAt TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
           verifiedAt TIMESTAMP NULL DEFAULT NULL,
           updatedAt TIMESTAMP NULL DEFAULT NULL,
@@ -91,8 +91,8 @@ async function initDB() {
           isOnline TINYINT(1) DEFAULT '0',
           lastLogin DATETIME NULL DEFAULT NULL,
           PRIMARY KEY (idUser)
-      )
-    `)
+        )
+      `)
 
         console.log('Table "users" created')
 

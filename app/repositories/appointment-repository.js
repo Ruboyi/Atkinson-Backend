@@ -77,6 +77,13 @@ async function updateAppoimnetByAppoimentId(appointmentData) {
     return true
 }
 
+async function getAppoimentsById(idAppointment) {
+    const pool = await getPool()
+    const sql = `SELECT * FROM appointments WHERE idAppointment = ?`
+    const [appointments] = await pool.query(sql, idAppointment)
+    return appointments[0]
+}
+
 module.exports = {
     createAppointment,
     getAppoimentsByBarberId,
@@ -87,4 +94,5 @@ module.exports = {
     updateAppoimnetByAppoimentId,
     getAppoiments,
     findAppoimentsById,
+    getAppoimentsById,
 }

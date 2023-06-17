@@ -48,6 +48,19 @@ async function createUser(user) {
     return created.insertId
 }
 
+const createUserByAdmin = async user => {
+    const pool = await getPool()
+    const sql = `
+    INSERT INTO users(
+        nameUser, phone
+    ) VALUES (?, ?)
+    `
+    const { nameUser, phone } = user
+    const [created] = await pool.query(sql, [nameUser, phone])
+
+    return created.insertId
+}
+
 async function findUserByEmail(email) {
     const pool = await getPool()
     const sql =
@@ -215,4 +228,5 @@ module.exports = {
     updateUserLogoutById,
     updateLastLoginById,
     findAllUserPublic,
+    createUserByAdmin,
 }
