@@ -14,7 +14,7 @@ async function cancelAppointmentById(req, res) {
         const { idAppointment } = req.params
 
         if (!idAppointment)
-            throwJsonError('No se encontró el id de la cita', 404)
+            throwJsonError(404, 'No se encontró el id de la cita')
 
         const appointments = await getAppoimentsByUserId(idUser)
 
@@ -28,6 +28,10 @@ async function cancelAppointmentById(req, res) {
         if (!appointment) return throwJsonError(404, 'No se encontró la cita')
 
         await deleteAppointmentById(idAppointment)
+
+        const io = req.app.get('socketio')
+
+        io.emit('cancelAppointment', Number(idAppointment))
 
         res.status(200).send({ message: 'Cita cancelada' })
     } catch (error) {

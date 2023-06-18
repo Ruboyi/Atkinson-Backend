@@ -10,6 +10,7 @@ const {
     findAppoimentsById,
     updateAppoimnetByAppoimentId,
 } = require('../../repositories/appointment-repository')
+const { getAppoimentsByAppointmentId } = require('../../helpers/utils')
 
 const schema = Joi.object().keys({
     idAppointment: Joi.number().integer().positive().required(),
@@ -59,6 +60,13 @@ async function updateAppointementAdmin(req, res) {
             idService,
             appointmentDate,
         })
+        const io = req.app.get('socketio')
+
+        const appointmentsByAppointmentId = await getAppoimentsByAppointmentId(
+            idAppointment
+        )
+
+        io.emit('updateAppointment', appointmentsByAppointmentId)
 
         res.send({ idAppointment, idService, appointmentDate })
     } catch (err) {

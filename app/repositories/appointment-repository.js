@@ -24,6 +24,16 @@ async function getAppoiments(date) {
     return appointments
 }
 
+//Dame todas las citas de un dia especifico
+async function getAppoimentsByDate(date) {
+    const pool = await getPool()
+    const init = date + ' 00:00:00'
+    const end = date + ' 23:59:59'
+    const sql = `SELECT * FROM appointments WHERE appointmentDate BETWEEN ? AND ?`
+    const [appointments] = await pool.query(sql, [init, end])
+    return appointments
+}
+
 async function getAppoimentsByBarberId(barberId) {
     const pool = await getPool()
     const sql = `SELECT * FROM appointments WHERE idBarber = ?`
@@ -95,4 +105,5 @@ module.exports = {
     getAppoiments,
     findAppoimentsById,
     getAppoimentsById,
+    getAppoimentsByDate,
 }

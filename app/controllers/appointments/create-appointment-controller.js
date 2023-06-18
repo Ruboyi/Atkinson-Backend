@@ -5,6 +5,7 @@ const {
 } = require('../../repositories/appointment-repository')
 const createJsonError = require('../../errors/create-json-error')
 const throwJsonError = require('../../errors/throw-json-error')
+const { getAppoimentsByAppointmentId } = require('../../helpers/utils')
 
 const schema = Joi.object().keys({
     barberId: Joi.number().required(),
@@ -35,6 +36,13 @@ async function createAppointmentController(req, res) {
         }
 
         const appointment = await createAppointment(newAppointment)
+        const io = req.app.get('socketio')
+
+        const appointmentsByAppointmentId = await getAppoimentsByAppointmentId(
+            appointment
+        )
+
+        io.emit('newAppointment', appointmentsByAppointmentId)
 
         res.status(201).json({ idAppointment: appointment })
     } catch (error) {
