@@ -11,7 +11,7 @@ async function getUserProfile(req, res) {
         if (!user) {
             throwJsonError(400, 'El usuario no existe')
         }
-        const { nameUser, email, image, phone, createdAt, bio, province } = user
+        const { nameUser, email, image, phone, createdAt } = user
         res.status(200)
         res.send({
             idUser,
@@ -20,8 +20,6 @@ async function getUserProfile(req, res) {
             image,
             phone,
             createdAt,
-            bio,
-            province,
         })
     } catch (error) {
         createJsonError(error, res)

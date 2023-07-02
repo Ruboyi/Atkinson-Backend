@@ -35,7 +35,9 @@ async function loginUser(req, res) {
             verifiedAt,
             isBanned,
         } = user
+
         const isValidPassword = await bcrypt.compare(password, passwordHash)
+
         if (!isValidPassword) {
             throwJsonError(
                 403,

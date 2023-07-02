@@ -88,7 +88,7 @@ async function activateUser(verificationCode) {
 async function getUserByVerificationCode(code) {
     const pool = await getPool()
     const sql = `
-  SELECT nameUser, email, image, phone, createdAt FROM users
+  SELECT nameUser, email, image, phone, createdAt, idUser FROM users
   WHERE verificationCode = ?    
   `
     const [user] = await pool.query(sql, code)
@@ -183,6 +183,20 @@ async function udpatePassworByNameUser(nameUser, password) {
     return true
 }
 
+async function updatePasswordByIdUser(idUser, password) {
+    const pool = await getPool()
+    const sql = `
+      UPDATE users
+      SET password = ?
+      WHERE idUser = ?
+    `
+    const response = await pool.query(sql, [password, idUser])
+
+    console.log(response)
+
+    return true
+}
+
 async function updateUserLoginById(id) {
     const pool = await getPool()
     const sql = `UPDATE users SET isOnline = '1' WHERE (idUser = ?);`
@@ -208,6 +222,19 @@ async function updateLastLoginById(id) {
     return true
 }
 
+//Cambiar verificationCode por id user
+
+async function updateUserVerificationCode(userId, verificationCode) {
+    const pool = await getPool()
+    const sql = `
+    UPDATE users
+    SET verificationCode = ?
+    WHERE idUser = ?
+    `
+    await pool.query(sql, [verificationCode, userId])
+    return true
+}
+
 module.exports = {
     findUserById,
     createUser,
@@ -229,4 +256,6 @@ module.exports = {
     updateLastLoginById,
     findAllUserPublic,
     createUserByAdmin,
+    updateUserVerificationCode,
+    updatePasswordByIdUser,
 }
