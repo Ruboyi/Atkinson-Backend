@@ -39,6 +39,7 @@ router.route('/public').get(getAllUserPublic)
 router.route('/').all(validateAuth).get(getAllUser).put(updateUser)
 router.route('/logout').all(validateAuth).get(logoutUser)
 router.route('/upload').all(validateAuth).post(uploadImageProfile)
+router.route('/new-password/').all(validateAuth).put(udpatePassword)
 router
     .route('/:userId')
     .all(validateAuth)

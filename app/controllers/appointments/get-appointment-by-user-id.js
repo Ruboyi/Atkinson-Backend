@@ -12,7 +12,7 @@ async function getAppoimentsByUser(req, res) {
     try {
         const idUser = req.auth.idUser
 
-        if (!idUser) throwJsonError('No se encontró el id del usuario', 404)
+        if (!idUser) throwJsonError(404, 'No se encontró el id del usuario')
 
         const appointments = await getAppoimentsByUserId(idUser)
 
