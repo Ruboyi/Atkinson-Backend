@@ -3,6 +3,8 @@
 const Joi = require('joi')
 const bcrypt = require('bcryptjs')
 const randomstring = require('randomstring')
+const path = require('path')
+const fs = require('fs')
 const createJsonError = require('../../errors/create-json-error')
 const throwJsonError = require('../../errors/throw-json-error')
 const {
