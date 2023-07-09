@@ -19,6 +19,7 @@ const schema = Joi.object().keys({
     phone: Joi.string().min(9).max(12).required(),
     password: Joi.string().min(4).max(20).required(),
     verifyPassword: Joi.ref('password'),
+    image: Joi.any(),
 })
 
 const validExtensions = ['.jpeg', '.jpg', '.png']
