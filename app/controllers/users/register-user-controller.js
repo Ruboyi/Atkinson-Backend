@@ -23,13 +23,14 @@ const schema = Joi.object().keys({
         .description('Image file'),
 })
 
+const { HTTP_SERVER, PATH_USER_IMAGE } = process.env
+
 async function registerUser(req, res) {
     try {
-        console.log('holiiiii')
-        const { body, files } = req
-
+        const { body } = req
+        console.log(body)
         await schema.validateAsync(body)
-        const { nameUser, email, password, phone } = body
+        const { nameUser, email, password, phone, image } = body
 
         const user = await findUserByEmail(email)
         if (user) {
@@ -48,8 +49,7 @@ async function registerUser(req, res) {
             phone,
         }
 
-        if (files && files.image) {
-            const { image } = files
+        if (image) {
             const imageName = `${nameUser.replace(
                 / /g,
                 '_'
@@ -60,8 +60,7 @@ async function registerUser(req, res) {
                     throwJsonError(500, 'Error al guardar la imagen')
                 }
             })
-
-            userDB.image = imageName
+            userDB.image = `${HTTP_SERVER}/${PATH_USER_IMAGE}/${imageName}`
         }
 
         const userId = await createUser(userDB)
@@ -69,8 +68,6 @@ async function registerUser(req, res) {
         await sendMailRegister(nameUser, email, verificationCode)
 
         console.log(userDB)
-
-        console.log('userId', userId)
 
         res.status(201)
         res.send({
