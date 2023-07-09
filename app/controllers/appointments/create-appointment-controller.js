@@ -2,10 +2,13 @@ const Joi = require('joi')
 const {
     createAppointment,
     findAppoimentsByBarberIdAndDate,
+    getAppoimentsByUserId,
 } = require('../../repositories/appointment-repository')
 const createJsonError = require('../../errors/create-json-error')
 const throwJsonError = require('../../errors/throw-json-error')
 const { getAppoimentsByAppointmentId } = require('../../helpers/utils')
+
+const MAX_APPOINTMENTS_PER_USER = 2
 
 const schema = Joi.object().keys({
     barberId: Joi.number().required(),
@@ -23,6 +26,15 @@ async function createAppointmentController(req, res) {
         const newAppointment = {
             ...body,
             idUser: idUser,
+        }
+
+        const userAppointments = await getAppoimentsByUserId(idUser)
+
+        if (userAppointments.length >= MAX_APPOINTMENTS_PER_USER) {
+            throwJsonError(
+                400,
+                `No se puede realizar la reserva. Ya tienes el máximo de ${MAX_APPOINTMENTS_PER_USER} citas.`
+            )
         }
 
         //Comprobar si ya tiene una cita a esa hora
