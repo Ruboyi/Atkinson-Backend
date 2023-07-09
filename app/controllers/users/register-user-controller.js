@@ -31,7 +31,7 @@ async function registerUser(req, res) {
         const { body } = req
         console.log(body)
         await schema.validateAsync(body)
-        const { nameUser, email, password, phone } = body
+        const { nameUser, email, password, phone, image } = body
 
         const user = await findUserByEmail(email)
         if (user) {
@@ -51,7 +51,6 @@ async function registerUser(req, res) {
         }
 
         if (image) {
-            const { image } = body
             const extension = path.extname(image.name)
 
             if (!validExtensions.includes(extension)) {
