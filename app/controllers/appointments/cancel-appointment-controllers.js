@@ -7,6 +7,8 @@ const {
     getAppoimentsByUserId,
 } = require('../../repositories/appointment-repository')
 
+const MINIMUM_CANCELLATION_HOURS = 24
+
 async function cancelAppointmentById(req, res) {
     try {
         const idUser = req.auth.idUser
@@ -26,6 +28,17 @@ async function cancelAppointmentById(req, res) {
         )
 
         if (!appointment) return throwJsonError(404, 'No se encontró la cita')
+
+        const now = new Date()
+        const citaDate = new Date(appointment.appointmentDate)
+        const differenceInTime = citaDate.getTime() - now.getTime()
+        const differenceInHours = Math.ceil(differenceInTime / (1000 * 3600))
+
+        if (differenceInHours < MINIMUM_CANCELLATION_HOURS)
+            throwJsonError(
+                400,
+                `No se puede cancelar la cita. Debe haber al menos ${MINIMUM_CANCELLATION_HOURS} horas de anticipación.`
+            )
 
         await deleteAppointmentById(idAppointment)
 

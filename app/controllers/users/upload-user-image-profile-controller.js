@@ -22,9 +22,7 @@ async function uploadImageProfile(req, res) {
         }
 
         const { profileImage } = files
-        console.log(profileImage)
         const extension = path.extname(profileImage.name)
-        console.log(extension)
 
         if (!validExtensions.includes(extension)) {
             throwJsonError(400, 'Formato no valido')
