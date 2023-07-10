@@ -2,6 +2,7 @@
 
 const createJsonError = require('../../errors/create-json-error')
 const throwJsonError = require('../../errors/throw-json-error')
+const logger = require('../../logs/logger')
 const {
     getAppoimentsByUserId,
 } = require('../../repositories/appointment-repository')
@@ -13,6 +14,10 @@ async function getAppoimentsByUser(req, res) {
         const idUser = req.auth.idUser
 
         if (!idUser) throwJsonError(404, 'No se encontró el id del usuario')
+
+        logger.info(
+            `Usuario con id: ${idUser} ha solicitado lista de citas agendadas`
+        )
 
         const appointments = await getAppoimentsByUserId(idUser)
 
@@ -39,10 +44,14 @@ async function getAppoimentsByUser(req, res) {
             }
         })
 
+        logger.info(
+            `Usuario con id: ${idUser} ha recibido lista de citas agendadas correctamente`
+        )
+
         res.status(200)
         res.send({ data: formattedAppointments })
     } catch (error) {
-        console.log(error)
+        logger.error(`Error al obtener lista de citas agendadas`, error)
         createJsonError(error, res)
     }
 }

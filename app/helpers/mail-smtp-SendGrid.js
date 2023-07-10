@@ -2,6 +2,7 @@
 
 const sgMail = require('@sendgrid/mail')
 const createJsonError = require('../errors/create-json-error')
+const logger = require('../logs/logger')
 
 sgMail.setApiKey(process.env.SENDGRID_API_KEY)
 const { HTTP_SERVER, FRONTEND_URL } = process.env
@@ -26,9 +27,12 @@ async function sendMailRegister(name, email, code) {
         }
 
         const data = await sgMail.send(msg)
-
+        logger.info(
+            `Usuario con email: ${email} ha recibido un mail de activación`
+        )
         return data
     } catch (error) {
+        logger.error(`Error al enviar el mail de activación a ${email}`, error)
         throw new Error('Error al enviar el mail')
     }
 }
@@ -49,8 +53,15 @@ async function sendMailCorrectValidation(name, email) {
         }
 
         const data = await sgMail.send(msg)
+        logger.info(
+            `Usuario con email: ${email} ha recibido un mail de agradecimiento de activación`
+        )
         return data
     } catch (error) {
+        logger.error(
+            `Error al enviar el mail de agradecimiento de activación a ${email}`,
+            error
+        )
         throw new Error('Error al enviar el mail')
     }
 }
@@ -139,7 +150,14 @@ async function sendMailRecoveryPassword(name, email, temporaryPassword) {
         }
 
         await sgMail.send(msg)
+        logger.info(
+            `Usuario con email: ${email} ha recibido un mail de recuperación de contraseña`
+        )
     } catch (error) {
+        logger.error(
+            `Error al enviar el mail de recuperación de contraseña a ${email}}`,
+            error
+        )
         throw new Error('Error al enviar el correo electrónico')
     }
 }
@@ -172,7 +190,14 @@ async function sendMailRecoveryPassword(name, email, verificationCode) {
         }
 
         await sgMail.send(msg)
+        logger.info(
+            `Usuario con email: ${email} ha recibido un mail de recuperación de contraseña`
+        )
     } catch (error) {
+        logger.error(
+            `Error al enviar el mail de recuperación de contraseña a ${email}`,
+            error
+        )
         throw new Error('Error al enviar el correo electrónico')
     }
 }

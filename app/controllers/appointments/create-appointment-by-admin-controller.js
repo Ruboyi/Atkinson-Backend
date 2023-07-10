@@ -8,6 +8,7 @@ const createJsonError = require('../../errors/create-json-error')
 const throwJsonError = require('../../errors/throw-json-error')
 const { createUserByAdmin } = require('../../repositories/users-repository')
 const { getAppoimentsByAppointmentId } = require('../../helpers/utils')
+const logger = require('../../logs/logger')
 
 const schema = Joi.object().keys({
     barberId: Joi.number().required(),
@@ -29,6 +30,11 @@ async function createAppointmentByAdminController(req, res) {
                 'No tienes permisos para crear citas como administrador'
             )
         }
+
+        logger.info(
+            `Admin con id: ${auth.idUser} solicitando una cita con ${body}`
+        )
+
         await schema.validateAsync(body)
 
         const newAppointment = {
@@ -70,8 +76,13 @@ async function createAppointmentByAdminController(req, res) {
         const io = req.app.get('socketio')
         io.emit('newAppointment', appoimentEdit)
 
+        logger.info(
+            `Admin con id: ${auth.idUser} ha creado la cita con id: ${appointmentId}`
+        )
+
         res.status(201).json({ idAppointment: appointmentId })
     } catch (error) {
+        logger.error(`Error al crear la cita`, error)
         createJsonError(error, res)
     }
 }

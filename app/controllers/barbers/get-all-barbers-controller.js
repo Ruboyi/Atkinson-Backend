@@ -2,11 +2,15 @@
 
 const createJsonError = require('../../errors/create-json-error')
 const throwJsonError = require('../../errors/throw-json-error')
+const logger = require('../../logs/logger')
 const { getAllBarbers } = require('../../repositories/barbers-repository')
 const { getAllSchedules } = require('../../repositories/schedules-repository')
 
 async function getBarbers(req, res) {
     try {
+        const { idUser } = req.auth
+
+        logger.info(`Usuario con id: ${idUser} ha solicitado lista de barberos`)
         // Llamar a la función del repositorio para obtener la lista de barberos
         const barbers = await getAllBarbers()
 
@@ -33,10 +37,14 @@ async function getBarbers(req, res) {
             }
         })
 
-        // Enviar la respuesta con la lista de barberos
+        logger.info(
+            `Usuario con id: ${idUser} ha recibido lista de barberos correctamente`
+        )
+
         res.status(200)
         res.send({ data: barbersWithSchedule })
     } catch (error) {
+        logger.error(`Error al obtener lista de barberos`, error)
         createJsonError(error, res)
     }
 }

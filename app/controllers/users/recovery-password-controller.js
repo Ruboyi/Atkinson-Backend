@@ -10,6 +10,7 @@ const {
 const jwt = require('jsonwebtoken')
 const bcrypt = require('bcryptjs')
 const { sendMailRecoveryPassword } = require('../../helpers/mail-smtp-SendGrid')
+const logger = require('../../logs/logger')
 
 const schema = Joi.object().keys({
     verificationCode: Joi.string().required(),
@@ -20,6 +21,10 @@ async function recoveryPasswordController(req, res) {
         const { body } = req
         await schema.validateAsync(body)
         const { verificationCode } = body
+
+        logger.info(
+            `Usuario con código de verificación ${verificationCode} ha solicitado recuperar su contraseña`
+        )
 
         const user = await getUserByVerificationCode(verificationCode)
         if (!user) {
@@ -39,9 +44,14 @@ async function recoveryPasswordController(req, res) {
         // Enviar la contraseña temporal por correo electrónico
         await sendMailRecoveryPassword(nameUser, email, temporaryPassword)
 
+        logger.info(
+            `Usuario con código de verificación ${verificationCode} ha recibido un correo de recuperación de contraseña`
+        )
+
         res.status(200)
         res.send({ message: 'Correo enviado correctamente' })
     } catch (error) {
+        logger.error(`Error al recuperar la contraseña del usuario`, error)
         createJsonError(error, res)
     }
 }

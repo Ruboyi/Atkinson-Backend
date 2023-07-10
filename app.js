@@ -19,6 +19,7 @@ const usersRouter = require('./app/routes/users-routes')
 const barbersRouter = require('./app/routes/barbers-routes')
 const servicesRouter = require('./app/routes/services-routes')
 const appointmentsRouter = require('./app/routes/appointments-routes')
+const logger = require('./app/logs/logger')
 
 app.use('/api/v1/users/', usersRouter)
 app.use('/api/v1/barbers/', barbersRouter)
@@ -31,4 +32,4 @@ const io = configureWebSocket(server)
 
 app.set('socketio', io)
 
-server.listen(PORT, () => console.log('Running', PORT))
+server.listen(PORT, () => logger.info('Running', PORT))

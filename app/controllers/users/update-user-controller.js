@@ -12,6 +12,7 @@ const {
 const createJsonError = require('../../errors/create-json-error')
 const throwJsonError = require('../../errors/throw-json-error')
 const { sendMailRegister } = require('../../helpers/mail-smtp-SendGrid')
+const logger = require('../../logs/logger')
 
 const schema = Joi.object().keys({
     nameUser: Joi.string().min(3).max(20).required(),
@@ -22,10 +23,14 @@ const schema = Joi.object().keys({
 async function updateUser(req, res) {
     try {
         const { idUser } = req.auth
-
-        const { body } = req
-        await schema.validateAsync(body)
         const { nameUser, email, phone } = req.body
+        const { body } = req
+
+        await schema.validateAsync(body)
+
+        logger.info(
+            `Usuario con id: ${idUser} ha actualizado su perfil con ${body}`
+        )
 
         const userById = await findUserById(idUser)
         const user = await findUserByEmail(email)
@@ -47,8 +52,15 @@ async function updateUser(req, res) {
             await sendMailRegister(nameUser, email, verificationCode)
         }
 
+        logger.info(
+            `Usuario con id: ${idUser} ha actualizado su perfil con ${body}`
+        )
+
         res.send({ idUser, nameUser, email, phone, role: userById.role })
     } catch (err) {
+        logger.error(
+            `Usuario con id: ${req.auth.idUser} ha intentado actualizar su perfil con ${req.body}`
+        )
         createJsonError(err, res)
     }
 }

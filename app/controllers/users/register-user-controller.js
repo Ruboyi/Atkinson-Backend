@@ -12,6 +12,7 @@ const {
     findUserByEmail,
 } = require('../../repositories/users-repository')
 const { sendMailRegister } = require('../../helpers/mail-smtp-SendGrid')
+const logger = require('../../logs/logger')
 
 const schema = Joi.object().keys({
     nameUser: Joi.string().min(3).max(120).required(),
@@ -29,9 +30,10 @@ const { HTTP_SERVER, PATH_USER_IMAGE } = process.env
 async function registerUser(req, res) {
     try {
         const { body } = req
-        console.log(body)
         await schema.validateAsync(body)
         const { nameUser, email, password, phone, image } = body
+
+        logger.info(`Usuario con email ${email} ha intentado registrarse`)
 
         const user = await findUserByEmail(email)
         if (user) {
@@ -85,13 +87,16 @@ async function registerUser(req, res) {
 
         await sendMailRegister(nameUser, email, verificationCode)
 
-        console.log(userDB)
+        logger.info(
+            `Usuario con email ${email} ha registrado correctamente con id: ${userId}`
+        )
 
         res.status(201)
         res.send({
             idUser: userId,
         })
     } catch (error) {
+        logger.error(`Error al registrar el usuario`, error)
         createJsonError(error, res)
     }
 }

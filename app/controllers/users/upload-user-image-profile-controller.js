@@ -9,6 +9,7 @@ const {
     findUserProfileImage,
     uploadUserProfileImage,
 } = require('../../repositories/users-repository')
+const logger = require('../../logs/logger')
 
 const validExtensions = ['.jpeg', '.jpg', '.png']
 
@@ -20,6 +21,10 @@ async function uploadImageProfile(req, res) {
         if (!files || Object.keys(files).length === 0) {
             throwJsonError(400, 'No se ha selecionado ningún fichero')
         }
+
+        logger.info(
+            `El usuario con id: ${idUser} subiendo una imagen de perfil`
+        )
 
         const { profileImage } = files
         const extension = path.extname(profileImage.name)
@@ -46,8 +51,20 @@ async function uploadImageProfile(req, res) {
             if (err) return res.status(500).send(err)
             await uploadUserProfileImage(idUser, url)
         })
+
+        logger.info(
+            `El usuario con id: ${idUser} ha subido una imagen de perfil`
+        )
+
+        res.status(200)
         res.send({ url: url })
     } catch (error) {
+        const { idUser } = req.auth
+        logger.error(
+            `Error al subir una imagen de perfil el usuario con id: ${idUser}`,
+            error
+        )
+
         createJsonError(error, res)
     }
 }

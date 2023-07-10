@@ -7,6 +7,7 @@ const {
 const createJsonError = require('../../errors/create-json-error')
 const throwJsonError = require('../../errors/throw-json-error')
 const { getAppoimentsByAppointmentId } = require('../../helpers/utils')
+const logger = require('../../logs/logger')
 
 const MAX_APPOINTMENTS_PER_USER = 2
 
@@ -20,6 +21,10 @@ async function createAppointmentController(req, res) {
     try {
         const { body } = req
         const { idUser } = req.auth
+
+        logger.info(
+            `Usuario con id: ${idUser} solicitando una cita con ${body}`
+        )
 
         await schema.validateAsync(body)
 
@@ -56,8 +61,13 @@ async function createAppointmentController(req, res) {
 
         io.emit('newAppointment', appointmentsByAppointmentId)
 
+        logger.info(
+            `Usuario con id: ${idUser} ha solicitado una cita con ${body}`
+        )
+
         res.status(201).json({ idAppointment: appointment })
     } catch (error) {
+        logger.error(`Error al crear la cita`, error)
         if (error.name === 'ValidationError') {
             throwJsonError(400, 'Invalid appointment data')
         } else {

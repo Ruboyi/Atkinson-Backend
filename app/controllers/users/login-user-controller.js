@@ -9,6 +9,7 @@ const {
     findUserByEmail,
     updateUserLoginById,
 } = require('../../repositories/users-repository')
+const { log } = require('winston')
 const schema = Joi.object().keys({
     email: Joi.string().email().required(),
     password: Joi.string().min(4).max(20).required(),
@@ -39,12 +40,18 @@ async function loginUser(req, res) {
         const isValidPassword = await bcrypt.compare(password, passwordHash)
 
         if (!isValidPassword) {
+            logger.error(
+                `Usuario con email ${email} e id: ${idUser} ha intentado iniciar sesión con una contraseña incorrecta`
+            )
             throwJsonError(
                 403,
                 'No existe un usuario con ese email y/o password'
             )
         }
         if (!verifiedAt) {
+            logger.error(
+                `Usuario con email ${email} e id: ${idUser} ha intentado iniciar sesión sin verificar su cuenta`
+            )
             throwJsonError(
                 401,
                 'Verifique su cuenta poder acceder a nuestros servicios'
@@ -52,6 +59,9 @@ async function loginUser(req, res) {
         }
 
         if (isBanned) {
+            logger.error(
+                `Usuario con email ${email} e id: ${idUser} ha intentado iniciar sesión con una cuenta baneada`
+            )
             throwJsonError(
                 403,
                 'Su cuenta ha sido banneada temporalmente para más imformacion mandenos un correo a arcademarket@gmail.com'
@@ -70,11 +80,19 @@ async function loginUser(req, res) {
             idUser: idUser,
         }
 
+        logger.info(
+            `Usuario con email ${email} e id: ${idUser} ha iniciado sesión exitosamente`
+        )
+
         await updateUserLoginById(idUser)
 
         res.status(200)
         res.send(response)
     } catch (error) {
+        const { email } = req.body
+        logger.error(
+            `Error al iniciar sesión con emal: ${email}: ${error.message}`
+        )
         createJsonError(error, res)
     }
 }

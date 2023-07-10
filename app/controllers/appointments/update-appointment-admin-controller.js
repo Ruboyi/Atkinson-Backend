@@ -11,6 +11,7 @@ const {
     updateAppoimnetByAppoimentId,
 } = require('../../repositories/appointment-repository')
 const { getAppoimentsByAppointmentId } = require('../../helpers/utils')
+const logger = require('../../logs/logger')
 
 const schema = Joi.object().keys({
     idAppointment: Joi.number().integer().positive().required(),
@@ -24,6 +25,10 @@ async function updateAppointementAdmin(req, res) {
 
         if (role !== 'admin') throwJsonError(401, 'Acceso denegado')
 
+        logger.info(
+            `Admin con id: ${req.auth.idUser} actualizando cita con ${req.body}`
+        )
+
         const { body } = req
         await schema.validateAsync(body)
         const { idAppointment, idService, appointmentDate } = body
@@ -32,7 +37,6 @@ async function updateAppointementAdmin(req, res) {
 
         if (!appointment) throwJsonError(400, 'La cita no existe')
 
-        //Si la fecha es la misma no se comprueba nada y solo se actualiza el servicio
         if (
             new Date(appointment.appointmentDate).getTime() ===
             new Date(appointmentDate).getTime()
@@ -68,8 +72,13 @@ async function updateAppointementAdmin(req, res) {
 
         io.emit('updateAppointment', appointmentsByAppointmentId)
 
+        logger.info(
+            `Admin con id: ${req.auth.idUser} ha actualizado la cita con ${req.body}`
+        )
+
         res.send({ idAppointment, idService, appointmentDate })
     } catch (err) {
+        logger.error(`Error al actualizar la cita con ${req.body}`, err)
         createJsonError(err, res)
     }
 }

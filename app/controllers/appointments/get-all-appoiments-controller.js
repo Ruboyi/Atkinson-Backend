@@ -2,6 +2,7 @@
 
 const createJsonError = require('../../errors/create-json-error')
 const throwJsonError = require('../../errors/throw-json-error')
+const logger = require('../../logs/logger')
 const { getAppoiments } = require('../../repositories/appointment-repository')
 const { getAllBarbers } = require('../../repositories/barbers-repository')
 const { getAllServices } = require('../../repositories/services-repository')
@@ -14,8 +15,12 @@ async function getAllAppoimnets(req, res) {
         if (role !== 'admin') throwJsonError(401, 'Acceso denegado')
 
         const date = new Date().toISOString().split('T')[0]
+
+        logger.info(
+            `Admin con id ${req.auth.idUser} solicitando todos las citas del día ${date}`
+        )
         const appointments = await getAppoiments(date)
-     
+
         const barbers = await getAllBarbers()
         const services = await getAllServices()
 
@@ -43,10 +48,14 @@ async function getAllAppoimnets(req, res) {
                 }
             })
         )
+        logger.info(
+            `Admin con id ${req.auth.idUser} ha recibido todas las citas del día ${date} correctamente`
+        )
 
         res.status(200)
         res.send({ data: newAppointments })
     } catch (error) {
+        logger.error(`Error al obtener lista de citas agendadas`, error)
         createJsonError(error, res)
     }
 }

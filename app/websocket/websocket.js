@@ -1,15 +1,16 @@
 const socketIO = require('socket.io')
+const logger = require('../logs/logger')
 
 function configureWebSocket(server) {
     const io = socketIO(server)
 
     // Configura los eventos que el servidor escuchará desde el cliente
     io.on('connection', socket => {
-        console.log('Nuevo cliente conectado')
+        logger.info('Nuevo cliente conectado conectado al socket')
 
         // Escucha el evento 'disconnect' para manejar la desconexión del cliente
         socket.on('disconnect', () => {
-            console.log('Cliente desconectado')
+            logger.info('Cliente desconectado del socket')
         })
     })
 
