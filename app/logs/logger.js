@@ -20,7 +20,7 @@ const logger = winston.createLogger({
             maxFiles: 5,
             tailable: true,
             zippedArchive: true,
-            rotationFormat: '{yyyy-MM-dd}.gz',
+            datePattern: 'YYYY-MM-DD',
         }),
     ],
 })
