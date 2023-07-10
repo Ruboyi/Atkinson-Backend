@@ -1,11 +1,9 @@
 const winston = require('winston')
 const { combine, timestamp, printf } = winston.format
 
-// Configuración de los formatos de registro
+// Configuración del formato de registro
 const logFormat = printf(({ level, message, timestamp }) => {
-    const color = getColor(level)
-    const coloredLevel = color.bold(level.toUpperCase())
-    return `[${timestamp}] ${coloredLevel}: ${message}`
+    return `[${timestamp}] ${level.toUpperCase()}: ${message}`
 })
 
 // Configuración del transportista (destino) de los registros
