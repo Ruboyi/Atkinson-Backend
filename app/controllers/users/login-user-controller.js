@@ -10,6 +10,7 @@ const {
     updateUserLoginById,
 } = require('../../repositories/users-repository')
 const { log } = require('winston')
+const logger = require('../../logs/logger')
 const schema = Joi.object().keys({
     email: Joi.string().email().required(),
     password: Joi.string().min(4).max(20).required(),
