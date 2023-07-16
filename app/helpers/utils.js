@@ -37,6 +37,7 @@ const getAppoimentsByAppointmentId = async idAppointment => {
         service: service.name,
         date: appointment.appointmentDate,
         createdAt: appointment.createdAt,
+        idUser: appointment.idUser,
         user: user.nameUser,
         phone: user.phone,
     }

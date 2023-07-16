@@ -12,6 +12,8 @@ const {
 } = require('../../repositories/appointment-repository')
 const { getAppoimentsByAppointmentId } = require('../../helpers/utils')
 const logger = require('../../logs/logger')
+const { sendMailCitaActualizada } = require('../../helpers/mail-smtp-SendGrid')
+const { findUserById } = require('../../repositories/users-repository')
 
 const schema = Joi.object().keys({
     idAppointment: Joi.number().integer().positive().required(),
@@ -73,13 +75,17 @@ async function updateAppointementAdmin(req, res) {
         io.emit('updateAppointment', appointmentsByAppointmentId)
 
         logger.info(
-            `Admin con id: ${req.auth.idUser} ha actualizado la cita con ${req.body}`
+            `Admin con id: ${req.auth.idUser} ha actualizado la cita al usuario con id: ${appointmentsByAppointmentId.idUser} y con id de cita: ${appointmentsByAppointmentId.idAppointment}`
         )
+
+        const user = await findUserById(appointmentsByAppointmentId.idUser)
+        const { nameUser, email } = user
+
+        await sendMailCitaActualizada(nameUser, email, appointmentDate)
 
         res.send({ idAppointment, idService, appointmentDate })
     } catch (err) {
         const { body } = req
-
         logger.error(
             `Error al actualizar la cita con id ${body.idAppointment}`,
             err

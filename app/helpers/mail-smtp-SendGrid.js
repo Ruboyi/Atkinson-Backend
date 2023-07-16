@@ -83,45 +83,6 @@ async function sendMailPurchaseOrderNotif(name, email) {
     return data
 }
 
-// async function sendMailRecoveryPassword(name, email, code) {
-//     try {
-//         const linkRecoveryPassword = `${FRONTEND_URL}/password/${code}`
-
-//         const msg = {
-//             to: email,
-//             from: process.env.SENDGRID_FROM,
-//             subject: 'Arcade Marketplace info',
-//             text: `Hola, Ruben:
-
-//       Hemos recibido una solicitud para restablecer la contraseña. Pulsa el enlace para crear tu nueva contraseña.
-
-//       Si no has sido tú quien lo ha solicitado, puedes ignorar este mensaje.
-
-//       Por seguridad, nunca compartas este enlace con otras personas. Desde Arcade Marketplace en ningún caso te pediremos que lo hagas.
-
-//       ${linkRecoveryPassword}
-//       `,
-//             html: `<div>
-//       Hola,${name}:
-
-//       Hemos recibido una solicitud para restablecer la contraseña. Pulsa el enlace para crear tu nueva contraseña.
-
-//       Si no has sido tú quien lo ha solicitado, puedes ignorar este mensaje.
-
-//       Por seguridad, nunca compartas este enlace con otras personas. Desde Wallapop en ningún caso te pediremos que lo hagas.
-
-//       <a href='${linkRecoveryPassword}'>Restablece tu contraseña</a>
-//              </div>`,
-//         }
-
-//         const data = await sgMail.send(msg)
-
-//         return data
-//     } catch (error) {
-//         createJsonError(400, 'Error al enviar el mail')
-//     }
-// }
-
 async function sendMailRecoveryPassword(name, email, temporaryPassword) {
     try {
         sgMail.setApiKey(process.env.SENDGRID_API_KEY)
@@ -202,9 +163,78 @@ async function sendMailRecoveryPassword(name, email, verificationCode) {
     }
 }
 
+async function sendMailCitaActualizada(name, email, newDate) {
+    try {
+        const msg = {
+            to: email,
+            from: process.env.SENDGRID_FROM,
+            subject: 'Actualización de cita en Atkinson Barber Shop',
+            html: `
+          <div style="text-align: center;">
+            <img src="https://atkinsonbarbershop.com/wp-content/uploads/2017/06/logoatkinsonheader.png" alt="Logo Atkinson Barber Shop" style="width: 200px; height: auto; margin: 20px auto;">
+            <h1>Atkinson Barber Shop</h1>
+            <p>Hola ${name},</p>
+            <p>Tu cita ha sido actualizada por el administrador debido a motivos de concurrencia.</p>
+            <p>La nueva fecha de tu cita es: ${newDate}</p>
+            <p>Por favor, contáctanos si tienes alguna pregunta o necesitas más información.</p>
+            <p>Gracias por tu comprensión.</p>
+          </div>
+        `,
+        }
+
+        const data = await sgMail.send(msg)
+        logger.info(
+            `Usuario con email: ${email} ha recibido un correo electrónico de actualización de cita`
+        )
+        return data
+    } catch (error) {
+        logger.error(
+            `Error al enviar el correo electrónico de actualización de cita a ${email}`,
+            error
+        )
+        throw new Error('Error al enviar el correo electrónico')
+    }
+}
+
+async function sendMailCitaCancelada(name, email) {
+    try {
+        const msg = {
+            to: email,
+            from: process.env.SENDGRID_FROM,
+            subject: 'Cancelación de cita en Atkinson Barber Shop',
+            html: `
+          <div style="text-align: center;">
+            <img src="https://atkinsonbarbershop.com/wp-content/uploads/2017/06/logoatkinsonheader.png" alt="Logo Atkinson Barber Shop" style="width: 200px; height: auto; margin: 20px auto;">
+            <h1>Atkinson Barber Shop</h1>
+            <p>Hola ${name},</p>
+            <p>Lamentamos informarte que tu cita ha sido cancelada.</p>
+            <p>Contactar con el admistrador para mas información</p>
+            <p>Te pedimos disculpas por cualquier inconveniente que esto pueda causarte.</p>
+            <p>Si deseas programar una nueva cita, por favor contáctanos.</p>
+            <p>Gracias por tu comprensión.</p>
+          </div>
+        `,
+        }
+
+        const data = await sgMail.send(msg)
+        logger.info(
+            `Usuario con email: ${email} ha recibido un correo electrónico de cancelación de cita`
+        )
+        return data
+    } catch (error) {
+        logger.error(
+            `Error al enviar el correo electrónico de cancelación de cita a ${email}`,
+            error
+        )
+        throw new Error('Error al enviar el correo electrónico')
+    }
+}
+
 module.exports = {
     sendMailRegister,
     sendMailCorrectValidation,
     sendMailPurchaseOrderNotif,
     sendMailRecoveryPassword,
+    sendMailCitaActualizada,
+    sendMailCitaCancelada,
 }

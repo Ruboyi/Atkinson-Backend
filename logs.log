@@ -1,1 +1,54 @@
 [2023-07-10T20:06:50.008Z] INFO: Running
+[2023-07-16T12:02:23.751Z] INFO: Running
+[2023-07-16T12:02:29.057Z] ERROR: Error al actualizar la cita con id 77 Acceso denegado
+[2023-07-16T12:05:44.236Z] ERROR: Usuario con email ruben@yopmail.com e id: 1 ha intentado iniciar sesión con una contraseña incorrecta
+[2023-07-16T12:05:44.236Z] ERROR: Error al iniciar sesión con emal: ruben@yopmail.com: No existe un usuario con ese email y/o password
+[2023-07-16T12:05:53.368Z] ERROR: Usuario con email ruben@yopmail.com e id: 1 ha intentado iniciar sesión con una contraseña incorrecta
+[2023-07-16T12:05:53.368Z] ERROR: Error al iniciar sesión con emal: ruben@yopmail.com: No existe un usuario con ese email y/o password
+[2023-07-16T12:06:48.473Z] ERROR: Usuario con email lolo@yopmail.com e id: 2 ha intentado iniciar sesión con una contraseña incorrecta
+[2023-07-16T12:06:48.473Z] ERROR: Error al iniciar sesión con emal: lolo@yopmail.com: No existe un usuario con ese email y/o password
+[2023-07-16T12:06:57.309Z] INFO: Usuario con email lolo@yopmail.com e id: 2 ha iniciado sesión exitosamente
+[2023-07-16T12:07:22.314Z] INFO: Usuario con id: 2 solicitando una cita con [object Object]
+[2023-07-16T12:07:22.324Z] INFO: Usuario con id: 2 ha solicitado una cita con [object Object]
+[2023-07-16T12:07:40.146Z] INFO: Usuario con email admin1@yopmail.com e id: 3 ha iniciado sesión exitosamente
+[2023-07-16T12:09:06.736Z] ERROR: Error al actualizar la cita con id 103 Acceso denegado
+[2023-07-16T12:09:45.260Z] ERROR: Error al actualizar la cita con id 103 Acceso denegado
+[2023-07-16T12:09:51.832Z] ERROR: Error al actualizar la cita con id 103 Acceso denegado
+[2023-07-16T12:09:56.254Z] INFO: Usuario con email admin1@yopmail.com e id: 3 ha iniciado sesión exitosamente
+[2023-07-16T12:10:00.559Z] INFO: Admin con id: 3 actualizando cita con [object Object]
+[2023-07-16T12:10:00.566Z] INFO: Admin con id: 3 ha actualizado la cita con [object Object]
+[2023-07-16T12:14:33.329Z] INFO: Running
+[2023-07-16T12:16:10.519Z] INFO: Running
+[2023-07-16T12:16:19.620Z] INFO: Running
+[2023-07-16T12:17:18.022Z] INFO: Admin con id: 3 actualizando cita con [object Object]
+[2023-07-16T12:17:18.056Z] INFO: Admin con id: 3 ha actualizado la cita con [object Object]
+[2023-07-16T12:17:18.765Z] INFO: Usuario con email: lolo@yopmail.com ha recibido un correo electrónico de actualización de cita
+[2023-07-16T12:19:31.412Z] INFO: Admin con id: 3 actualizando cita con [object Object]
+[2023-07-16T12:23:43.972Z] INFO: Running
+[2023-07-16T12:30:13.873Z] INFO: Running
+[2023-07-16T12:30:16.008Z] INFO: Running
+[2023-07-16T12:31:28.033Z] INFO: Running
+[2023-07-16T12:32:01.097Z] INFO: Running
+[2023-07-16T12:32:08.838Z] INFO: Running
+[2023-07-16T12:32:55.266Z] INFO: El usuario con id: 3 ha cancelado la cita con id: 103
+[2023-07-16T12:32:55.266Z] ERROR: Error al cancelar la cita con id: 103 findAppoimentsById is not defined
+[2023-07-16T12:33:19.471Z] INFO: El usuario con id: 3 ha cancelado la cita con id: 103
+[2023-07-16T12:33:19.471Z] ERROR: Error al cancelar la cita con id: 103 findAppoimentsById is not defined
+[2023-07-16T12:34:03.471Z] INFO: Running
+[2023-07-16T12:34:08.086Z] INFO: El usuario con id: 3 ha cancelado la cita con id: 103
+[2023-07-16T12:34:08.089Z] ERROR: Error al cancelar la cita con id: 103 findUserById is not defined
+[2023-07-16T12:34:31.006Z] INFO: Running
+[2023-07-16T12:34:33.313Z] INFO: El usuario con id: 3 ha cancelado la cita con id: 103
+[2023-07-16T12:34:33.316Z] ERROR: Error al cancelar la cita con id: 103 Cannot read properties of undefined (reading 'idUser')
+[2023-07-16T12:34:53.240Z] INFO: Running
+[2023-07-16T12:34:57.281Z] INFO: El usuario con id: 3 ha cancelado la cita con id: 103
+[2023-07-16T12:34:57.284Z] ERROR: Error al cancelar la cita con id: 103 Cannot read properties of undefined (reading 'idUser')
+[2023-07-16T12:35:22.029Z] INFO: Running
+[2023-07-16T12:35:56.468Z] INFO: Running
+[2023-07-16T12:35:58.563Z] INFO: El usuario con id: 3 ha cancelado la cita con id: 103
+[2023-07-16T12:35:58.564Z] ERROR: Error al cancelar la cita con id: 103 Cannot read properties of undefined (reading 'idUser')
+[2023-07-16T12:36:16.662Z] INFO: El usuario con id: 3 ha cancelado la cita con id: 103
+[2023-07-16T12:36:16.662Z] ERROR: Error al cancelar la cita con id: 103 Cannot read properties of undefined (reading 'idUser')
+[2023-07-16T12:37:10.776Z] INFO: El usuario con id: 3 ha cancelado la cita con id: 102
+[2023-07-16T12:37:11.480Z] INFO: Usuario con email: lolo@yopmail.com ha recibido un correo electrónico de cancelación de cita
+[2023-07-16T12:37:39.057Z] INFO: Running

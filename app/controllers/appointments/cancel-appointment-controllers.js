@@ -2,11 +2,14 @@
 
 const createJsonError = require('../../errors/create-json-error')
 const throwJsonError = require('../../errors/throw-json-error')
+const { sendMailCitaCancelada } = require('../../helpers/mail-smtp-SendGrid')
 const logger = require('../../logs/logger')
 const {
     deleteAppointmentById,
     getAppoimentsByUserId,
+    findAppoimentsById,
 } = require('../../repositories/appointment-repository')
+const { findUserById } = require('../../repositories/users-repository')
 
 const MINIMUM_CANCELLATION_HOURS = 24
 
@@ -50,6 +53,7 @@ async function cancelAppointmentById(req, res) {
                     `No se puede cancelar la cita. Debe haber al menos ${MINIMUM_CANCELLATION_HOURS} horas de anticipación.`
                 )
         }
+        const appointment = await findAppoimentsById(idAppointment)
 
         await deleteAppointmentById(idAppointment)
 
@@ -60,6 +64,10 @@ async function cancelAppointmentById(req, res) {
         logger.info(
             `El usuario con id: ${idUser} ha cancelado la cita con id: ${idAppointment}`
         )
+        if (role === 'admin') {
+            const user = await findUserById(appointment.idUser)
+            await sendMailCitaCancelada(user.nameUser, user.email)
+        }
 
         res.status(200).send({ message: 'Cita cancelada' })
     } catch (error) {
