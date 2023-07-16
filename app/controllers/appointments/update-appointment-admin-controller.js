@@ -78,7 +78,12 @@ async function updateAppointementAdmin(req, res) {
 
         res.send({ idAppointment, idService, appointmentDate })
     } catch (err) {
-        logger.error(`Error al actualizar la cita con ${req.body}`, err)
+        const { body } = req
+
+        logger.error(
+            `Error al actualizar la cita con id ${body.idAppointment}`,
+            err
+        )
         createJsonError(err, res)
     }
 }
