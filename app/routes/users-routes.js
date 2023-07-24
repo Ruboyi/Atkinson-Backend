@@ -35,6 +35,7 @@ router.route('/recovery-password').post(recoveryPasswordController)
 router.route('/login').post(loginUser)
 router.route('/user/:idUser').get(getUserById)
 router.route('/public').get(getAllUserPublic)
+router.route('/expo-push-token').put(updateExpoPushToken)
 // URL's PRIVADAS (aquellas que tienen la función validateAuth por delante), por ejemplo:
 // router.route('/').all(validateAuth).delete(nombreFuncion)
 router.route('/').all(validateAuth).get(getAllUser).put(updateUser)
@@ -47,6 +48,5 @@ router
     .delete(deleteUserById)
     .put(banUserById)
 router.route('/profile').all(validateAuth).get(getUserProfile)
-router.route('/expo-push-token').all(validateAuth).put(updateExpoPushToken)
 
 module.exports = router
