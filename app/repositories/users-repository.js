@@ -245,6 +245,16 @@ async function updateExpoPushTokenByIdUser(idUser, expoPushToken) {
     return true
 }
 
+async function getAllExpoPushTokenAdmin() {
+    const pool = await getPool()
+    const sql = `
+    SELECT pushToken FROM users
+    WHERE role = 'admin'
+    `
+    const [expoPushToken] = await pool.query(sql)
+    return expoPushToken
+}
+
 module.exports = {
     findUserById,
     createUser,
@@ -269,4 +279,5 @@ module.exports = {
     updateUserVerificationCode,
     updatePasswordByIdUser,
     updateExpoPushTokenByIdUser,
+    getAllExpoPushTokenAdmin,
 }
