@@ -8,22 +8,20 @@ const {
 const logger = require('../../logs/logger')
 
 const schema = Joi.object({
+    idUser: Joi.number().positive().required(),
     expoPushToken: Joi.string().required(),
 })
 
 async function updateExpoPushToken(req, res) {
     try {
-        const { idUser } = req.auth
-
         const { body } = req
+
+        await schema.validateAsync(body)
+        const { idUser, expoPushToken } = body
 
         logger.info(
             `Actualizando token de Expo Push del usuario con id: ${idUser}`
         )
-
-        await schema.validateAsync(body)
-
-        const { expoPushToken } = body
 
         await updateExpoPushTokenByIdUser(idUser, expoPushToken)
 
