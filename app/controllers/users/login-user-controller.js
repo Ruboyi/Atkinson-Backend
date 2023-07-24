@@ -36,6 +36,7 @@ async function loginUser(req, res) {
             password: passwordHash,
             verifiedAt,
             isBanned,
+            pushToken,
         } = user
 
         const isValidPassword = await bcrypt.compare(password, passwordHash)
@@ -76,6 +77,7 @@ async function loginUser(req, res) {
         })
         const response = {
             accessToken: token,
+            expoPushToken: pushToken,
             expiresIn: '15 days',
             role: role,
             idUser: idUser,

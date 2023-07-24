@@ -64,7 +64,7 @@ const createUserByAdmin = async user => {
 async function findUserByEmail(email) {
     const pool = await getPool()
     const sql =
-        'SELECT idUser, nameUser, email, role, password, verifiedAt, verificationCode, isBanned FROM users WHERE email = ?'
+        'SELECT idUser, nameUser, email, role, password, verifiedAt, verificationCode, isBanned, pushToken FROM users WHERE email = ?'
     const [user] = await pool.query(sql, email)
 
     return user[0]
@@ -222,8 +222,6 @@ async function updateLastLoginById(id) {
     return true
 }
 
-//Cambiar verificationCode por id user
-
 async function updateUserVerificationCode(userId, verificationCode) {
     const pool = await getPool()
     const sql = `
@@ -232,6 +230,18 @@ async function updateUserVerificationCode(userId, verificationCode) {
     WHERE idUser = ?
     `
     await pool.query(sql, [verificationCode, userId])
+    return true
+}
+
+//Actualizar expoPushToken de usuario por id de usuario
+async function updateExpoPushTokenByIdUser(idUser, expoPushToken) {
+    const pool = await getPool()
+    const sql = `
+    UPDATE users
+    SET pushToken = ?
+    WHERE idUser = ?
+    `
+    await pool.query(sql, [expoPushToken, idUser])
     return true
 }
 
@@ -258,4 +268,5 @@ module.exports = {
     createUserByAdmin,
     updateUserVerificationCode,
     updatePasswordByIdUser,
+    updateExpoPushTokenByIdUser,
 }

@@ -17,6 +17,7 @@ const uploadImageProfile = require('../controllers/users/upload-user-image-profi
 const validateAuth = require('../middlewares/validate-auth')
 const requestPasswordReset = require('../controllers/users/reset-password-controller')
 const recoveryPasswordController = require('../controllers/users/recovery-password-controller')
+const updateExpoPushToken = require('../controllers/users/update-expo-token-controller-by-user-id')
 const router = express.Router()
 
 // require a los controllers, por ejemplo:
@@ -46,5 +47,6 @@ router
     .delete(deleteUserById)
     .put(banUserById)
 router.route('/profile').all(validateAuth).get(getUserProfile)
+router.route('/expo-push-token').all(validateAuth).put(updateExpoPushToken)
 
 module.exports = router
