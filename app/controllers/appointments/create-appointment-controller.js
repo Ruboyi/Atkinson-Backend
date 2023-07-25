@@ -16,6 +16,7 @@ const {
 const getUserById = require('../users/get-user-by-id-controller')
 const { getBarberById } = require('../../repositories/barbers-repository')
 const { getServiceById } = require('../../repositories/services-repository')
+const { log } = require('winston')
 
 const MAX_APPOINTMENTS_PER_USER = 2
 
@@ -98,6 +99,10 @@ async function createAppointmentController(req, res) {
                 tickets.push(...ticketChunk)
             } catch (error) {
                 console.error(error)
+                logger.error(
+                    `Error al enviar las notificaciones a los administradores de la app`,
+                    error
+                )
             }
         }
         logger.info(
