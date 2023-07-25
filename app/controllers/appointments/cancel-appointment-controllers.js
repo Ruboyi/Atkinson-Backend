@@ -1,5 +1,6 @@
 'use strict'
 
+const { default: Expo } = require('expo-server-sdk')
 const createJsonError = require('../../errors/create-json-error')
 const throwJsonError = require('../../errors/throw-json-error')
 const { sendMailCitaCancelada } = require('../../helpers/mail-smtp-SendGrid')
@@ -66,7 +67,24 @@ async function cancelAppointmentById(req, res) {
         )
         if (role === 'admin') {
             const user = await findUserById(appointment.idUser)
+            //Enviar notificación al usuario
+            const expo = new Expo()
+            const expoPushToken = user.pushToken
+            const messages = {
+                to: expoPushToken,
+                sound: 'default',
+                body: `Su cita con ${user.nameBarber} ha sido cancelada, por favor contacte con la barbería para más información.`,
+            }
+            if (Expo.isExpoPushToken(expoPushToken)) {
+                await expo.sendPushNotificationsAsync(messages)
+                logger.info(
+                    `El usuario con id: ${idUser} ha recibido una notificación de cancelación de cita`
+                )
+            }
             await sendMailCitaCancelada(user.nameUser, user.email)
+            logger.info(
+                `El usuario con id: ${idUser} ha recibido un mail de cancelación de cita`
+            )
         }
 
         res.status(200).send({ message: 'Cita cancelada' })

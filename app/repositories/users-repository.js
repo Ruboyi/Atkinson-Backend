@@ -255,6 +255,16 @@ async function getAllExpoPushTokenAdmin() {
     return expoPushToken
 }
 
+async function getExpoPushTokenByIdUser(idUser) {
+    const pool = await getPool()
+    const sql = `
+    SELECT pushToken FROM users
+    WHERE idUser = ?
+    `
+    const [expoPushToken] = await pool.query(sql, idUser)
+    return expoPushToken
+}
+
 module.exports = {
     findUserById,
     createUser,
@@ -280,4 +290,5 @@ module.exports = {
     updatePasswordByIdUser,
     updateExpoPushTokenByIdUser,
     getAllExpoPushTokenAdmin,
+    getExpoPushTokenByIdUser,
 }
