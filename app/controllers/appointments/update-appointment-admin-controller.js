@@ -85,15 +85,32 @@ async function updateAppointementAdmin(req, res) {
         const expo = new Expo()
         const expoPushToken = user.pushToken
 
-        const message = {
-            to: expoPushToken,
-            sound: 'default',
-            body: `Hola ${nameUser}, tu cita ha sido actualizada a las ${appointmentDate}, por favor contacte con la barbería para más información.`,
-            data: { extraData: 'Some data' },
-        }
+        const messages = [
+            {
+                to: expoPushToken,
+                title: 'Cita actualizada',
+                sound: 'default',
+                body: `Hola ${nameUser}, tu cita ha sido actualizada a las ${appointmentDate}, por favor contacte con la barbería para más información.`,
+                data: { extraData: 'Some data' },
+            },
+        ]
 
         if (Expo.isExpoPushToken(expoPushToken)) {
-            await expo.sendPushNotificationsAsync([message])
+            const chunks = expo.chunkPushNotifications(messages)
+            const tickets = []
+            for (const chunk of chunks) {
+                try {
+                    const ticketChunk = await expo.sendPushNotificationsAsync(
+                        chunk
+                    )
+                    tickets.push(...ticketChunk)
+                } catch (error) {
+                    logger.error(
+                        `Error al enviar las notificaciones a los administradores de la app`,
+                        error
+                    )
+                }
+            }
             logger.info(
                 `Usuario con id: ${appointmentsByAppointmentId.idUser} ha recibido una notificación de cita actualizada`
             )

@@ -70,13 +70,30 @@ async function cancelAppointmentById(req, res) {
             //Enviar notificación al usuario
             const expo = new Expo()
             const expoPushToken = user.pushToken
-            const messages = {
-                to: expoPushToken,
-                sound: 'default',
-                body: `Su cita con ${user.nameBarber} ha sido cancelada, por favor contacte con la barbería para más información.`,
-            }
+            const messages = [
+                {
+                    to: expoPushToken,
+                    sound: 'default',
+                    title: 'Cita cancelada',
+                    body: `Su cita con ${user.nameBarber} ha sido cancelada, por favor contacte con la barbería para más información.`,
+                    data: { withSome: 'data' },
+                },
+            ]
             if (Expo.isExpoPushToken(expoPushToken)) {
-                await expo.sendPushNotificationsAsync(messages)
+                const chunks = expo.chunkPushNotifications(messages)
+                const tickets = []
+                for (const chunk of chunks) {
+                    try {
+                        const ticketChunk =
+                            await expo.sendPushNotificationsAsync(chunk)
+                        tickets.push(...ticketChunk)
+                    } catch (error) {
+                        logger.error(
+                            `Error al enviar las notificaciones a los administradores de la app`,
+                            error
+                        )
+                    }
+                }
                 logger.info(
                     `El usuario con id: ${idUser} ha recibido una notificación de cancelación de cita`
                 )
