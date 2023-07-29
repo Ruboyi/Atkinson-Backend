@@ -15,6 +15,9 @@ const logger = require('../../logs/logger')
 const { sendMailCitaActualizada } = require('../../helpers/mail-smtp-SendGrid')
 const { findUserById } = require('../../repositories/users-repository')
 const { default: Expo } = require('expo-server-sdk')
+const {
+    createNotification,
+} = require('../../repositories/notifications-repository')
 
 const schema = Joi.object().keys({
     idAppointment: Joi.number().integer().positive().required(),
@@ -84,13 +87,15 @@ async function updateAppointementAdmin(req, res) {
 
         const expo = new Expo()
         const expoPushToken = user.pushToken
+        const title = 'Cita actualizada'
+        const messageBody = `Hola ${nameUser}, tu cita ha sido actualizada a las ${appointmentDate}, por favor contacte con la barbería para más información.`
 
         const messages = [
             {
                 to: expoPushToken,
-                title: 'Cita actualizada',
+                title: title,
                 sound: 'default',
-                body: `Hola ${nameUser}, tu cita ha sido actualizada a las ${appointmentDate}, por favor contacte con la barbería para más información.`,
+                body: messageBody,
                 data: { extraData: 'Some data' },
             },
         ]
@@ -104,6 +109,11 @@ async function updateAppointementAdmin(req, res) {
                         chunk
                     )
                     tickets.push(...ticketChunk)
+                    await createNotification(
+                        appointmentsByAppointmentId.idUser,
+                        title,
+                        messageBody
+                    )
                 } catch (error) {
                     logger.error(
                         `Error al enviar las notificaciones a los administradores de la app`,
