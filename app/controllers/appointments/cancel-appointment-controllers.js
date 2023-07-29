@@ -11,6 +11,9 @@ const {
     findAppoimentsById,
 } = require('../../repositories/appointment-repository')
 const { findUserById } = require('../../repositories/users-repository')
+const {
+    createNotification,
+} = require('../../repositories/notifications-repository')
 
 const MINIMUM_CANCELLATION_HOURS = 24
 
@@ -70,12 +73,15 @@ async function cancelAppointmentById(req, res) {
             //Enviar notificación al usuario
             const expo = new Expo()
             const expoPushToken = user.pushToken
+            const title = 'Cita cancelada'
+            const message = `Su cita con ${user.nameBarber} ha sido cancelada, por favor contacte con la barbería para más información.`
+
             const messages = [
                 {
                     to: expoPushToken,
                     sound: 'default',
-                    title: 'Cita cancelada',
-                    body: `Su cita con ${user.nameBarber} ha sido cancelada, por favor contacte con la barbería para más información.`,
+                    title: title,
+                    body: message,
                     data: { withSome: 'data' },
                 },
             ]
@@ -87,6 +93,11 @@ async function cancelAppointmentById(req, res) {
                         const ticketChunk =
                             await expo.sendPushNotificationsAsync(chunk)
                         tickets.push(...ticketChunk)
+                        await createNotification(
+                            appointment.idUser,
+                            title,
+                            message
+                        )
                     } catch (error) {
                         logger.error(
                             `Error al enviar las notificaciones a los administradores de la app`,
