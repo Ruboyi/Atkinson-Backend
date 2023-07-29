@@ -19,12 +19,15 @@ const usersRouter = require('./app/routes/users-routes')
 const barbersRouter = require('./app/routes/barbers-routes')
 const servicesRouter = require('./app/routes/services-routes')
 const appointmentsRouter = require('./app/routes/appointments-routes')
+const notificationsRouter = require('./app/routes/notifications-routes')
+
 const logger = require('./app/logs/logger')
 
 app.use('/api/v1/users/', usersRouter)
 app.use('/api/v1/barbers/', barbersRouter)
 app.use('/api/v1/services/', servicesRouter)
 app.use('/api/v1/appointments/', appointmentsRouter)
+app.use('/api/v1/notifications/', notificationsRouter)
 
 const server = http.createServer(app)
 
