@@ -3,6 +3,9 @@
 const createJsonError = require('../../errors/create-json-error')
 const throwJsonError = require('../../errors/throw-json-error')
 const logger = require('../../logs/logger')
+const {
+    updateNotificationsByUserId,
+} = require('../../repositories/notifications-repository')
 
 async function updateViewedNotificationsByUserId(req, res) {
     try {

@@ -35,7 +35,7 @@ async function deleteNotificationById(idNotification) {
 async function updateNotificationsByUserId(userId) {
     const pool = await getPool()
     const sql = `
-    UPDATE notifications SET viewed = 1 WHERE idUser = ?
+    UPDATE notifications SET viewed = 1 WHERE idUser = ? AND viewed = 0
     `
     const [result] = await pool.query(sql, [userId])
     return result
