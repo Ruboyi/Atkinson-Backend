@@ -14,6 +14,7 @@ const { findUserById } = require('../../repositories/users-repository')
 const {
     createNotification,
 } = require('../../repositories/notifications-repository')
+const { getBarberById } = require('../../repositories/barbers-repository')
 
 const MINIMUM_CANCELLATION_HOURS = 24
 
@@ -70,11 +71,12 @@ async function cancelAppointmentById(req, res) {
         )
         if (role === 'admin') {
             const user = await findUserById(appointment.idUser)
+            const barber = await getBarberById(appointment.idBarber)
             //Enviar notificación al usuario
             const expo = new Expo()
             const expoPushToken = user.pushToken
             const title = 'Cita cancelada'
-            const message = `Su cita con ${user.nameBarber} ha sido cancelada, por favor contacte con la barbería para más información.`
+            const message = `Su cita con ${barber.name} ha sido cancelada, por favor contacte con la barbería para más información.`
 
             const messages = [
                 {
