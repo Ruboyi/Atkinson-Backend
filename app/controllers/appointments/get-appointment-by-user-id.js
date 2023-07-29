@@ -51,7 +51,7 @@ async function getAppoimentsByUser(req, res) {
         res.status(200)
         res.send({ data: formattedAppointments })
     } catch (error) {
-        logger.error(`Error al obtener lista de citas agendadas`, error)
+        logger.error(`Error al obtener lista de citas agendadas`)
         createJsonError(error, res)
     }
 }
