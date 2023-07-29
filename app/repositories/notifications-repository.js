@@ -31,8 +31,19 @@ async function deleteNotificationById(idNotification) {
     return result
 }
 
+//Actualizar como leidas todas las notificaciones de un usuario
+async function updateNotificationsByUserId(userId) {
+    const pool = await getPool()
+    const sql = `
+    UPDATE notifications SET viewed = 1 WHERE idUser = ?
+    `
+    const [result] = await pool.query(sql, [userId])
+    return result
+}
+
 module.exports = {
     createNotification,
     getNotificationsByUserId,
     deleteNotificationById,
+    updateNotificationsByUserId,
 }
