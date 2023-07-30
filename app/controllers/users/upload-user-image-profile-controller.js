@@ -13,6 +13,8 @@ const logger = require('../../logs/logger')
 
 const validExtensions = ['.jpeg', '.jpg', '.png']
 
+//Deprecado por el nuevo controlador de subida de imagenes a firebase
+
 async function uploadImageProfile(req, res) {
     try {
         const { idUser } = req.auth
