@@ -15,7 +15,7 @@ async function createNotification(userId, title, message) {
 async function getNotificationsByUserId(userId) {
     const pool = await getPool()
     const sql = `
-    SELECT * FROM notifications WHERE idUser = ?
+    SELECT * FROM notifications WHERE idUser = ? ORDER BY createdAt DESC LIMIT 10
     `
     const [result] = await pool.query(sql, [userId])
     return result
