@@ -1,9 +1,12 @@
-'use strict';
+'use strict'
+
+const logger = require('../logs/logger')
 
 function throwJsonError(status, message) {
-  const error = new Error(message);
-  error.status = status;
-  throw error;
+    const error = new Error(message)
+    error.status = status
+    logger.error(message)
+    throw error
 }
 
-module.exports = throwJsonError;
+module.exports = throwJsonError
