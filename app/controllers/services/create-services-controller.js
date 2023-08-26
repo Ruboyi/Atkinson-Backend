@@ -23,10 +23,15 @@ async function createServiceController(req, res) {
 
         await schema.validateAsync(body)
 
-        const service = await createService(name, price)
+        const idService = await createService(name, price)
 
-        logger.info(`Servicio creado con id ${service.idService}`)
-        res.status(200).send(service)
+        logger.info(`Servicio creado con id ${idService}`)
+
+        res.status(201)
+
+        res.send({
+            idService: idService,
+        })
     } catch (error) {
         logger.error(error.message)
         createJsonError(error, res)

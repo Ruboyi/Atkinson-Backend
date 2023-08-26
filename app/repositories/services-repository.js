@@ -20,7 +20,7 @@ async function createService(name, price) {
     const pool = await getPool()
     const sql = 'INSERT INTO services (name, price) VALUES (?, ?)'
     const [createdService] = await pool.query(sql, [name, price])
-    return createdService
+    return createdService.insertId
 }
 
 async function deleteService(idService) {
