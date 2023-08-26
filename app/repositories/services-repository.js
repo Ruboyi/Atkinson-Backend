@@ -23,10 +23,10 @@ async function createService(name, price) {
     return createdService.insertId
 }
 
-async function updateService(name, price) {
+async function updateService(name, price, idService) {
     const pool = await getPool()
     const sql = 'UPDATE services SET name = ?, price = ? WHERE idService = ?'
-    const [updatedService] = await pool.query(sql, [name, price])
+    const [updatedService] = await pool.query(sql, [name, price, idService])
     return updatedService.insertId
 }
 

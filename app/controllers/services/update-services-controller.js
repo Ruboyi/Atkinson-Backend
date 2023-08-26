@@ -26,7 +26,7 @@ async function updateServiceController(req, res) {
 
         await schema.validateAsync(body)
 
-        const serviceId = await updateService(name, price)
+        const serviceId = await updateService(name, price, idService)
 
         logger.info(`Servicio con id ${serviceId} modificado`)
 
