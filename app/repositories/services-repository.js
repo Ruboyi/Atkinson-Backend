@@ -23,6 +23,13 @@ async function createService(name, price) {
     return createdService.insertId
 }
 
+async function updateService(name, price) {
+    const pool = await getPool()
+    const sql = 'UPDATE services SET name = ?, price = ? WHERE idService = ?'
+    const [updatedService] = await pool.query(sql, [name, price])
+    return updatedService.insertId
+}
+
 async function deleteService(idService) {
     const pool = await getPool()
     const sql = 'UPDATE services SET DeletionStatus = 1 WHERE idService = ?'
@@ -34,4 +41,5 @@ module.exports = {
     getServiceById,
     createService,
     deleteService,
+    updateService,
 }
