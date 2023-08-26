@@ -4,7 +4,7 @@ const getPool = require('../infrastructure/database-infrastructure')
 
 async function getAllServices() {
     const pool = await getPool()
-    const sql = 'SELECT * FROM services'
+    const sql = 'SELECT * FROM services WHERE DeletionStatus = 0'
     const [services] = await pool.query(sql)
     return services
 }
@@ -23,8 +23,15 @@ async function createService(name, price) {
     return createdService
 }
 
+async function deleteService(idService) {
+    const pool = await getPool()
+    const sql = 'UPDATE services SET DeletionStatus = 1 WHERE idService = ?'
+    await pool.query(sql, idService)
+}
+
 module.exports = {
     getAllServices,
     getServiceById,
     createService,
+    deleteService,
 }
