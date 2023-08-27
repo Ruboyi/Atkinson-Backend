@@ -43,6 +43,7 @@ async function getAllAppoimnets(req, res) {
                     service: service.name,
                     date: appointment.appointmentDate,
                     createdAt: appointment.createdAt,
+                    image: user.image,
                     user: user.nameUser,
                     phone: user.phone,
                 }

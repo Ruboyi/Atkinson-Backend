@@ -38,6 +38,7 @@ const getAppoimentsByAppointmentId = async idAppointment => {
         date: appointment.appointmentDate,
         createdAt: appointment.createdAt,
         idUser: appointment.idUser,
+        image: user.image,
         user: user.nameUser,
         phone: user.phone,
     }
