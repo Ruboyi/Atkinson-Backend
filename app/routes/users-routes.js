@@ -40,7 +40,7 @@ router.route('/expo-push-token').put(updateExpoPushToken)
 // URL's PRIVADAS (aquellas que tienen la función validateAuth por delante), por ejemplo:
 // router.route('/').all(validateAuth).delete(nombreFuncion)
 router.route('/').all(validateAuth).get(getAllUser).put(updateUser)
-router.route('/userInfo/:idUser').get(getUserInfoAdminById)
+router.route('/userInfo/:idUser').all(validateAuth).get(getUserInfoAdminById)
 router.route('/logout').all(validateAuth).get(logoutUser)
 router.route('/upload').all(validateAuth).post(updateUserUrlImage)
 router.route('/new-password/').all(validateAuth).put(udpatePassword)
