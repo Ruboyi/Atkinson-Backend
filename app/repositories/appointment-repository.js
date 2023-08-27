@@ -100,9 +100,10 @@ async function deleteAppointmentById(idAppointment) {
 
 async function updateAppoimnetByAppoimentId(appointmentData) {
     const pool = await getPool()
-    const { idAppointment, idService, appointmentDate } = appointmentData
-    const sql = `UPDATE appointments SET idService = ?, appointmentDate = ? WHERE idAppointment = ?`
-    await pool.query(sql, [idService, appointmentDate, idAppointment])
+    const { idAppointment, idService, appointmentDate, idBarber } =
+        appointmentData
+    const sql = `UPDATE appointments SET idService = ?, appointmentDate = ?, idBarber = ? WHERE idAppointment = ?`
+    await pool.query(sql, [idService, appointmentDate, idBarber, idAppointment])
     return true
 }
 
