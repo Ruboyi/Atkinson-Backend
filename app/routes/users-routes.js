@@ -18,6 +18,7 @@ const requestPasswordReset = require('../controllers/users/reset-password-contro
 const recoveryPasswordController = require('../controllers/users/recovery-password-controller')
 const updateExpoPushToken = require('../controllers/users/update-expo-token-controller-by-user-id')
 const updateUserUrlImage = require('../controllers/users/upload-user-image-url-controller')
+const getUserInfoAdminById = require('../controllers/users/get-user-info-admin-controller')
 const router = express.Router()
 
 // require a los controllers, por ejemplo:
@@ -39,6 +40,7 @@ router.route('/expo-push-token').put(updateExpoPushToken)
 // URL's PRIVADAS (aquellas que tienen la función validateAuth por delante), por ejemplo:
 // router.route('/').all(validateAuth).delete(nombreFuncion)
 router.route('/').all(validateAuth).get(getAllUser).put(updateUser)
+router.route('/userInfo/:userId').get(getUserInfoAdminById)
 router.route('/logout').all(validateAuth).get(logoutUser)
 router.route('/upload').all(validateAuth).post(updateUserUrlImage)
 router.route('/new-password/').all(validateAuth).put(udpatePassword)
