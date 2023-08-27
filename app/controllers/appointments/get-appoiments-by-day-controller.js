@@ -48,6 +48,7 @@ async function getAppoimnetsbyDay(req, res) {
                     date: appointment.appointmentDate,
                     createdAt: appointment.createdAt,
                     image: user.image,
+                    idUser: user.idUser,
                     user: user.nameUser,
                     phone: user.phone,
                 }
