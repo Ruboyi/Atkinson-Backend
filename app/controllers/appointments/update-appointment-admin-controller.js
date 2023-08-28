@@ -44,20 +44,6 @@ async function updateAppointementAdmin(req, res) {
 
         if (!appointment) throwJsonError(400, 'La cita no existe')
 
-        // if (
-        //     new Date(appointment.appointmentDate).getTime() ===
-        //     new Date(appointmentDate).getTime()
-        // ) {
-        //     await updateAppoimnetByAppoimentId({
-        //         idAppointment,
-        //         idService,
-        //         appointmentDate,
-        //         idBarber,
-        //     })
-        //     res.send({ idAppointment, idService, appointmentDate })
-        //     return
-        // }
-
         //Comprobar que no haya otra cita a la misma hora con el mismo barbero
 
         const appointments = await findAppoimentsByBarberIdAndDate(
@@ -67,6 +53,11 @@ async function updateAppointementAdmin(req, res) {
 
         if (appointments.length > 0)
             throwJsonError(400, 'El barbero ya tiene una cita a esa hora')
+
+        //Comprobar que esa hora no haya pasado
+
+        if (new Date(appointmentDate).getTime() < new Date().getTime())
+            throwJsonError(400, 'La hora de la cita ya ha pasado')
 
         await updateAppoimnetByAppoimentId({
             idAppointment,
