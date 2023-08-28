@@ -27,13 +27,7 @@ function validateAuth(req, res, next) {
 
         next()
     } catch (error) {
-        const { idUser } = req.auth
-        if (error.name === 'TokenExpiredError') {
-            logger.error('Token expirado de usuario con id: ' + idUser)
-            throwJsonError(403, 'Token expirado')
-        } else {
-            createJsonError(error, res)
-        }
+        throwJsonError(403, 'Token expirado')
     }
 }
 
