@@ -1,7 +1,7 @@
 'use strict'
 
-const createJsonError = require('../')
-const throwJsonError = require('../')
+const createJsonError = require('../../errors/create-json-error')
+const throwJsonError = require('../../errors/throw-json-error')
 const logger = require('../../logs/logger')
 const { getHolidaysByYear } = require('../../repositories/holidays-repository')
 
