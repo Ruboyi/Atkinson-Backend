@@ -6,6 +6,6 @@ const getHolidays = require('../controllers/holidays/get-holidays-by-year-contro
 
 const router = express.Router()
 
-router.route('/holidays').all(validateAuth).get(getHolidays)
+router.route('/holidays/:year').all(validateAuth).get(getHolidays)
 
 module.exports = router
