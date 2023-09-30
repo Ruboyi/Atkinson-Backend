@@ -19,6 +19,8 @@ const recoveryPasswordController = require('../controllers/users/recovery-passwo
 const updateExpoPushToken = require('../controllers/users/update-expo-token-controller-by-user-id')
 const updateUserUrlImage = require('../controllers/users/upload-user-image-url-controller')
 const getUserInfoAdminById = require('../controllers/users/get-user-info-admin-controller')
+const forgotPassword = require('../controllers/users/forgot-password-controller')
+const udpatePasswordPublic = require('../controllers/users/update-password-public-controller')
 const router = express.Router()
 
 // require a los controllers, por ejemplo:
@@ -33,6 +35,8 @@ router.route('/activation').get(validateUser)
 // router.route("/recovery-password").post(recoveryPassword);
 router.route('/reset-password').post(requestPasswordReset)
 router.route('/recovery-password').post(recoveryPasswordController)
+router.route('/forgot-password').post(forgotPassword)
+router.route('/update-password-public').post(udpatePasswordPublic)
 router.route('/login').post(loginUser)
 router.route('/user/:idUser').get(getUserById)
 router.route('/public').get(getAllUserPublic)

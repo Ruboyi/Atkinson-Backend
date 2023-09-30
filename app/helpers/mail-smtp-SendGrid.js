@@ -230,9 +230,61 @@ async function sendMailCitaCancelada(name, email) {
     }
 }
 
+// Función para generar la URL de recuperación con el verificationCode
+function generateRecoveryURL(verificationCode) {
+    const baseUrl = 'https://tu-sitio-web.com/recuperar-contrasena' // Reemplaza con la URL de tu sitio web
+    const recoveryUrl = `${baseUrl}?code=${verificationCode}`
+    return recoveryUrl
+}
+
+async function sendMailRecoveryPasswordWeb(name, email, verificationCode) {
+    try {
+        sgMail.setApiKey(process.env.SENDGRID_API_KEY)
+
+        const recoveryUrl = generateRecoveryURL(verificationCode)
+
+        const msg = {
+            to: email,
+            from: {
+                name: 'Atkinson Barber Shop',
+                email: process.env.SENDGRID_FROM,
+            },
+            subject: 'Atkinson Barber Shop - Restablecimiento de Contraseña',
+            html: `
+                <div style="text-align: center;">
+                    <img src="https://atkinsonbarbershop.com/wp-content/uploads/2017/06/logoatkinsonheader.png" alt="Logo Atkinson Barber Shop" style="width: 200px; height: auto; margin: 20px auto;">
+                    <h1>Atkinson Barber Shop</h1>
+                    <p>Estimado/a ${name},</p>
+                    <p>Recibimos una solicitud para restablecer su contraseña en Atkinson Barber Shop.</p>
+                    <p>A continuación, encontrará su código de verificación:</p>
+                    <p><strong>${verificationCode}</strong></p>
+                    <p>Por favor, utilice este código en nuestra plataforma para completar el proceso de restablecimiento de contraseña.</p>
+                    <p>Si no solicitó restablecer su contraseña, por favor ignore este correo electrónico.</p>
+                    <p>Para recuperar su contraseña, haga clic en el siguiente enlace:</p>
+                    <p><a href="${recoveryUrl}">${recoveryUrl}</a></p>
+                    <p>Atentamente,</p>
+                    <p>El Equipo de Atkinson Barber Shop</p>
+                </div>
+            `,
+        }
+
+        await sgMail.send(msg)
+        logger.info(
+            `Usuario con email: ${email} ha recibido un correo de recuperación de contraseña`
+        )
+    } catch (error) {
+        logger.error(
+            `Error al enviar el correo de recuperación de contraseña a ${email}`,
+            error
+        )
+        throw new Error('Error al enviar el correo electrónico')
+    }
+}
+
 module.exports = {
     sendMailRegister,
     sendMailCorrectValidation,
+    sendMailRecoveryPasswordWeb,
     sendMailPurchaseOrderNotif,
     sendMailRecoveryPassword,
     sendMailCitaActualizada,
