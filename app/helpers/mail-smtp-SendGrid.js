@@ -256,9 +256,6 @@ async function sendMailRecoveryPasswordWeb(name, email, verificationCode) {
                     <h1>Atkinson Barber Shop</h1>
                     <p>Estimado/a ${name},</p>
                     <p>Recibimos una solicitud para restablecer su contraseña en Atkinson Barber Shop.</p>
-                    <p>A continuación, encontrará su código de verificación:</p>
-                    <p><strong>${verificationCode}</strong></p>
-                    <p>Por favor, utilice este código en nuestra plataforma para completar el proceso de restablecimiento de contraseña.</p>
                     <p>Si no solicitó restablecer su contraseña, por favor ignore este correo electrónico.</p>
                     <p>Para recuperar su contraseña, haga clic en el siguiente enlace:</p>
                     <p><a href="${recoveryUrl}">${recoveryUrl}</a></p>
