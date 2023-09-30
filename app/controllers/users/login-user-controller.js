@@ -73,12 +73,12 @@ async function loginUser(req, res) {
         const { JWT_SECRET } = process.env
         const tokenPayload = { idUser, nameUser, role }
         const token = jwt.sign(tokenPayload, JWT_SECRET, {
-            expiresIn: '15 days',
+            expiresIn: '365 days',
         })
         const response = {
             accessToken: token,
             expoPushToken: pushToken,
-            expiresIn: '15 days',
+            expiresIn: '365 days',
             role: role,
             idUser: idUser,
         }

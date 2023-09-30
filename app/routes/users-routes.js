@@ -41,6 +41,7 @@ router.route('/login').post(loginUser)
 router.route('/user/:idUser').get(getUserById)
 router.route('/public').get(getAllUserPublic)
 router.route('/expo-push-token').put(updateExpoPushToken)
+router.route('/upload-public/:idUser').post(updateUserUrlImage)
 // URL's PRIVADAS (aquellas que tienen la función validateAuth por delante), por ejemplo:
 // router.route('/').all(validateAuth).delete(nombreFuncion)
 router.route('/').all(validateAuth).get(getAllUser).put(updateUser)
