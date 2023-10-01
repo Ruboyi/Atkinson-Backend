@@ -232,7 +232,7 @@ async function sendMailCitaCancelada(name, email) {
 
 // Función para generar la URL de recuperación con el verificationCode
 function generateRecoveryURL(verificationCode) {
-    const baseUrl = 'https://tu-sitio-web.com/recuperar-contrasena' // Reemplaza con la URL de tu sitio web
+    const baseUrl = `${FRONTEND_URL}/reset-password`
     const recoveryUrl = `${baseUrl}?code=${verificationCode}`
     return recoveryUrl
 }
