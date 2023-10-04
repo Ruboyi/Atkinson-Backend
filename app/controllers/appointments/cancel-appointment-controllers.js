@@ -16,7 +16,7 @@ const {
 } = require('../../repositories/notifications-repository')
 const { getBarberById } = require('../../repositories/barbers-repository')
 
-const MINIMUM_CANCELLATION_HOURS = 24
+const MINIMUM_CANCELLATION_HOURS = 12
 
 async function cancelAppointmentById(req, res) {
     try {

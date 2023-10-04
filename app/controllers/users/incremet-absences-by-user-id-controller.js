@@ -4,7 +4,10 @@ const createJsonError = require('../../errors/create-json-error')
 const throwJsonError = require('../../errors/throw-json-error')
 
 const logger = require('../../logs/logger')
-const { incrementAbsences } = require('../../repositories/users-repository')
+const {
+    incrementAbsences,
+    findUserById,
+} = require('../../repositories/users-repository')
 
 async function incrementAbsencesByUserId(req, res) {
     try {
