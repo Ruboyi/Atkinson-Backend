@@ -21,6 +21,7 @@ const updateUserUrlImage = require('../controllers/users/upload-user-image-url-c
 const getUserInfoAdminById = require('../controllers/users/get-user-info-admin-controller')
 const forgotPassword = require('../controllers/users/forgot-password-controller')
 const udpatePasswordPublic = require('../controllers/users/update-password-public-controller')
+const incrementAbsencesByUserId = require('../controllers/users/incremet-absences-by-user-id-controller')
 const router = express.Router()
 
 // require a los controllers, por ejemplo:
@@ -46,6 +47,10 @@ router.route('/upload-public/:idUser').post(updateUserUrlImage)
 // router.route('/').all(validateAuth).delete(nombreFuncion)
 router.route('/').all(validateAuth).get(getAllUser).put(updateUser)
 router.route('/userInfo/:idUser').all(validateAuth).get(getUserInfoAdminById)
+router
+    .route('/absences/:idUser')
+    .all(validateAuth)
+    .put(incrementAbsencesByUserId)
 router.route('/logout').all(validateAuth).get(logoutUser)
 router.route('/upload').all(validateAuth).post(updateUserUrlImage)
 router.route('/new-password/').all(validateAuth).put(udpatePassword)

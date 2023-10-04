@@ -265,6 +265,17 @@ async function getExpoPushTokenByIdUser(idUser) {
     return expoPushToken
 }
 
+async function incrementAbsences(idUser) {
+    const pool = await getPool()
+    const sql = `
+    UPDATE users
+    SET absences = absences + 1
+    WHERE idUser = ?
+    `
+    await pool.query(sql, idUser)
+    return true
+}
+
 module.exports = {
     findUserById,
     createUser,
@@ -291,4 +302,5 @@ module.exports = {
     updateExpoPushTokenByIdUser,
     getAllExpoPushTokenAdmin,
     getExpoPushTokenByIdUser,
+    incrementAbsences,
 }
