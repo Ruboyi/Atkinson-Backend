@@ -39,6 +39,8 @@ async function getAppoimnetsbyDay(req, res) {
 
                 const user = await findUserById(appointment.idUser)
 
+                const isUserApp = !!user.email
+
                 return {
                     id: appointment.idAppointment,
                     barber: barber.name,
@@ -48,6 +50,7 @@ async function getAppoimnetsbyDay(req, res) {
                     date: appointment.appointmentDate,
                     createdAt: appointment.createdAt,
                     image: user.image,
+                    isUserApp: isUserApp,
                     idUser: user.idUser,
                     user: user.nameUser,
                     phone: user.phone,
