@@ -29,6 +29,8 @@ const getAppoimentsByAppointmentId = async idAppointment => {
     )
     const user = await findUserById(appointment.idUser)
 
+    const isUserApp = !!user.email
+
     const appoimentEdit = {
         id: appointment.idAppointment,
         barber: barber.name,
@@ -40,6 +42,7 @@ const getAppoimentsByAppointmentId = async idAppointment => {
         idUser: appointment.idUser,
         image: user.image,
         user: user.nameUser,
+        isUserApp: isUserApp,
         phone: user.phone,
     }
     return appoimentEdit
