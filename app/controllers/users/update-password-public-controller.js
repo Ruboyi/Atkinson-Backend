@@ -22,8 +22,8 @@ async function udpatePasswordPublic(req, res) {
         const { code } = req.params
 
         if (!code) {
-            throwJsonError(400, 'Código no válido')
             logger.error(`Usuario ha ingresado un codigo no válido`, code)
+            throwJsonError(400, 'Código no válido')
         }
         const user = await getUserByVerificationCode(code)
 
