@@ -9,6 +9,14 @@ async function getAllSchedules() {
     return schedules
 }
 
+async function getAllSchedulesNew() {
+    const pool = await getPool()
+    const sql = `SELECT * FROM schedule_barbers`
+    const [schedules] = await pool.query(sql)
+    return schedules
+}
+
 module.exports = {
     getAllSchedules,
+    getAllSchedulesNew,
 }
