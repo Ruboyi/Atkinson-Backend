@@ -4,14 +4,14 @@ const getPool = require('../infrastructure/database-infrastructure')
 
 async function getAllBarbers() {
     const pool = await getPool()
-    const sql = `SELECT * FROM barbers`
+    const sql = `SELECT * FROM barbers WHERE isDelete = 0`
     const [barbers] = await pool.query(sql)
     return barbers
 }
 // dame el barbero por id
 async function getBarberById(idBarber) {
     const pool = await getPool()
-    const sql = `SELECT * FROM barbers WHERE idBarber = ?`
+    const sql = `SELECT * FROM barbers WHERE idBarber = ? WHERE isDelete = 0`
     const [barber] = await pool.query(sql, idBarber)
     return barber[0]
 }
