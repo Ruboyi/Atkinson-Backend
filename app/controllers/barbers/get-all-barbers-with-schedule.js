@@ -8,7 +8,7 @@ const {
     getAllSchedulesNew,
 } = require('../../repositories/schedules-repository')
 
-async function getBarbers(req, res) {
+async function getAllBarbersWithShedule(req, res) {
     try {
         const { idUser } = req.auth
 
@@ -51,4 +51,4 @@ async function getBarbers(req, res) {
     }
 }
 
-module.exports = getBarbers
+module.exports = getAllBarbersWithShedule
