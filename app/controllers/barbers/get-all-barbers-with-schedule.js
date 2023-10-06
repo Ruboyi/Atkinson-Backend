@@ -31,7 +31,7 @@ async function getAllBarbersWithShedule(req, res) {
         // Mapear la lista de barberos y agregar el horario correspondiente
         const barbersWithSchedule = barbers.map(barber => {
             const schedules = allSchedules.filter(
-                schedule => schedule.idSchedule === barber.idSchedule
+                schedule => barber.idBarber === schedule.idBarber
             )
             return {
                 ...barber,
