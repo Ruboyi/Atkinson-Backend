@@ -20,7 +20,7 @@ async function editSheduleById(schedule) {
     const { startTime, endTime, freeDay, id } = schedule
     const pool = await getPool()
     const sql = `
-        UPDATE schedule_barbes
+        UPDATE schedule_barbers
         SET startTime = ?,
             endTime = ?,
             freeDay = ?
