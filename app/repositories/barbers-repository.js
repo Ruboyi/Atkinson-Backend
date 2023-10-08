@@ -11,7 +11,7 @@ async function getAllBarbers() {
 // dame el barbero por id
 async function getBarberById(idBarber) {
     const pool = await getPool()
-    const sql = `SELECT * FROM barbers WHERE idBarber = ? WHERE isDelete = 0`
+    const sql = `SELECT * FROM barbers WHERE idBarber = ? AND isDelete = 0`
     const [barber] = await pool.query(sql, idBarber)
     return barber[0]
 }
