@@ -51,7 +51,7 @@ async function updateAppointementAdmin(req, res) {
             appointmentDate
         )
 
-        if (appointments.length > 0)
+        if (appointments.length > 0 && appointments[0].idBarber !== idBarber)
             throwJsonError(400, 'El barbero ya tiene una cita a esa hora')
 
         //Comprobar que esa hora no haya pasado
