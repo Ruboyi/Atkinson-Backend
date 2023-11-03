@@ -39,7 +39,7 @@ async function validateUser(req, res) {
 
         res.status(200)
 
-        res.redirect(`${FRONTEND_URL}`)
+        res.redirect(`${FRONTEND_URL}?success=true`)
 
         res.send({ message: 'Cuenta activada.' })
     } catch (error) {
