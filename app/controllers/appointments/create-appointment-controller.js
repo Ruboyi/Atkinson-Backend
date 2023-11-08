@@ -65,12 +65,15 @@ async function createAppointmentController(req, res) {
         }
         logger.info(`${typeof newAppointment.serviceId}`)
         logger.info(
-            `${DOUBLE_APPOINTMENT_SERVICES.includes(newAppointment.serviceId)}`
+            `${
+                newAppointment.serviceId === '13' ||
+                newAppointment.serviceId === '14'
+            }`
         )
 
         if (
-            newAppointment.serviceId === 13 ||
-            newAppointment.serviceId === 14
+            newAppointment.serviceId === '13' ||
+            newAppointment.serviceId === '14'
         ) {
             logger.info('entro')
             //Lo mismo con la media hora siguiente
