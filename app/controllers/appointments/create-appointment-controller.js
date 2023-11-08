@@ -63,32 +63,19 @@ async function createAppointmentController(req, res) {
         if (appointments.length > 0) {
             throwJsonError(400, 'El barbero ya tiene una cita a esa hora')
         }
-        logger.info(`${typeof newAppointment.serviceId}`)
-        logger.info(
-            `${
-                newAppointment.serviceId === '13' ||
-                newAppointment.serviceId === '14'
-            }`
-        )
 
         if (
             newAppointment.serviceId === '13' ||
             newAppointment.serviceId === '14'
         ) {
-            logger.info('entro')
             //Lo mismo con la media hora siguiente
             const appointmentDate = new Date(newAppointment.appointmentDate)
-
             appointmentDate.setMinutes(appointmentDate.getMinutes() + 30)
-            logger.info(appointmentDate, 'fecha')
             const date = formatDate(appointmentDate)
-            logger.info(date, 'fecha formateada')
             const appointments2 = await findAppoimentsByBarberIdAndDate(
                 newAppointment.barberId,
                 date
             )
-            logger.info(appointments2.length > 0)
-
             if (appointments2.length > 0) {
                 throwJsonError(
                     400,
