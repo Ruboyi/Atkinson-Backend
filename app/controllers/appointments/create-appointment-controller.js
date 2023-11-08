@@ -6,19 +6,22 @@ const {
 } = require('../../repositories/appointment-repository')
 const createJsonError = require('../../errors/create-json-error')
 const throwJsonError = require('../../errors/throw-json-error')
-const { getAppoimentsByAppointmentId } = require('../../helpers/utils')
+const {
+    getAppoimentsByAppointmentId,
+    formatDate,
+} = require('../../helpers/utils')
 const logger = require('../../logs/logger')
 const { Expo } = require('expo-server-sdk')
 const {
     getAllExpoPushTokenAdmin,
     findUserById,
 } = require('../../repositories/users-repository')
-const getUserById = require('../users/get-user-by-id-controller')
+
 const { getBarberById } = require('../../repositories/barbers-repository')
 const { getServiceById } = require('../../repositories/services-repository')
-const { log } = require('winston')
 
 const MAX_APPOINTMENTS_PER_USER = 2
+const DOUBLE_APPOINTMENT_SERVICES = [13, 14]
 
 const schema = Joi.object().keys({
     barberId: Joi.number().required(),
@@ -59,6 +62,24 @@ async function createAppointmentController(req, res) {
 
         if (appointments.length > 0) {
             throwJsonError(400, 'El barbero ya tiene una cita a esa hora')
+        }
+
+        if (DOUBLE_APPOINTMENT_SERVICES.includes(newAppointment.serviceId)) {
+            //Lo mismo con la media hora siguiente
+            const appointmentDate = new Date(newAppointment.appointmentDate)
+            appointmentDate.setMinutes(appointmentDate.getMinutes() + 30)
+            const date = formatDate(appointmentDate)
+            const appointments2 = await findAppoimentsByBarberIdAndDate(
+                newAppointment.barberId,
+                date
+            )
+
+            if (appointments2.length > 0) {
+                throwJsonError(
+                    400,
+                    'La duracion del servicio seleccionado es de 1 hora. El barbero ya tiene una cita a la hora siguiente'
+                )
+            }
         }
 
         const appointment = await createAppointment(newAppointment)
