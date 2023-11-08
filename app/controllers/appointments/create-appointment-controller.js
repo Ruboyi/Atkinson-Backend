@@ -64,6 +64,9 @@ async function createAppointmentController(req, res) {
             throwJsonError(400, 'El barbero ya tiene una cita a esa hora')
         }
         logger.info(`${newAppointment.serviceId}`)
+        logger.info(
+            `${DOUBLE_APPOINTMENT_SERVICES.includes(newAppointment.serviceId)}`
+        )
 
         if (DOUBLE_APPOINTMENT_SERVICES.includes(newAppointment.serviceId)) {
             logger.info('entro')
