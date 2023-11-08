@@ -65,14 +65,19 @@ async function createAppointmentController(req, res) {
         }
 
         if (DOUBLE_APPOINTMENT_SERVICES.includes(newAppointment.serviceId)) {
+            console.log('entro')
             //Lo mismo con la media hora siguiente
             const appointmentDate = new Date(newAppointment.appointmentDate)
+
             appointmentDate.setMinutes(appointmentDate.getMinutes() + 30)
+            console.log(appointmentDate, 'fecha')
             const date = formatDate(appointmentDate)
+            console.log(date, 'fecha formateada')
             const appointments2 = await findAppoimentsByBarberIdAndDate(
                 newAppointment.barberId,
                 date
             )
+            console.log(appointments2, 'citas')
 
             if (appointments2.length > 0) {
                 throwJsonError(
