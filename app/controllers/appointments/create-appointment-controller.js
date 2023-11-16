@@ -15,12 +15,14 @@ const { Expo } = require('expo-server-sdk')
 const {
     getAllExpoPushTokenAdmin,
     findUserById,
+    findAbsencesByIdUser,
 } = require('../../repositories/users-repository')
 
 const { getBarberById } = require('../../repositories/barbers-repository')
 const { getServiceById } = require('../../repositories/services-repository')
 
 const MAX_APPOINTMENTS_PER_USER = 2
+const LIMIT_ABSENCES = 2
 const DOUBLE_APPOINTMENT_SERVICES = [13, 14]
 
 const schema = Joi.object().keys({
@@ -82,6 +84,15 @@ async function createAppointmentController(req, res) {
                     'La duracion del servicio seleccionado es de 1 hora. El barbero ya tiene una cita a la hora siguiente'
                 )
             }
+        }
+
+        //Comprobar si tiene más de 1 ausencias
+        const absences = findAbsencesByIdUser(idUser)
+        if (absences >= LIMIT_ABSENCES) {
+            throwJsonError(
+                400,
+                `Tienes ${absences} ausencias registradas. Por favor, contacta con el administrador para poder reservar una cita.`
+            )
         }
 
         const appointment = await createAppointment(newAppointment)

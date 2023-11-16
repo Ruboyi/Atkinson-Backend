@@ -276,6 +276,17 @@ async function incrementAbsences(idUser) {
     return true
 }
 
+//Buscar absences de usuario por id de usuario
+async function findAbsencesByIdUser(idUser) {
+    const pool = await getPool()
+    const sql = `
+    SELECT absences FROM users
+    WHERE idUser = ?
+    `
+    const [absences] = await pool.query(sql, idUser)
+    return absences
+}
+
 module.exports = {
     findUserById,
     createUser,
@@ -303,4 +314,5 @@ module.exports = {
     getAllExpoPushTokenAdmin,
     getExpoPushTokenByIdUser,
     incrementAbsences,
+    findAbsencesByIdUser,
 }
