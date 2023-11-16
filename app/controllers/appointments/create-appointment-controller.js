@@ -24,6 +24,7 @@ const { getServiceById } = require('../../repositories/services-repository')
 const MAX_APPOINTMENTS_PER_USER = 2
 const LIMIT_ABSENCES = 2
 const DOUBLE_APPOINTMENT_SERVICES = [13, 14]
+const TLF_ADMIN = '608 19 44 32'
 
 const schema = Joi.object().keys({
     barberId: Joi.number().required(),
@@ -88,14 +89,11 @@ async function createAppointmentController(req, res) {
 
         //Comprobar si tiene más de 1 ausencias
         const absences = await findAbsencesByIdUser(idUser)
-        console.log(absences)
-        console.log(typeof absences)
-        console.log(absences >= LIMIT_ABSENCES)
         if (absences >= LIMIT_ABSENCES) {
             console.log('entro')
             throwJsonError(
                 400,
-                `Tienes ${absences} ausencias registradas. Por favor, contacta con el administrador para poder reservar una cita.`
+                `Tienes ${absences} ausencias registradas. Por favor, contacta con el administrador para poder reservar una cita. Tlf: ${TLF_ADMIN}`
             )
         }
 
