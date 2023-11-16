@@ -284,7 +284,7 @@ async function findAbsencesByIdUser(idUser) {
     WHERE idUser = ?
     `
     const [absences] = await pool.query(sql, idUser)
-    return absences
+    return absences[0].absences
 }
 
 module.exports = {
