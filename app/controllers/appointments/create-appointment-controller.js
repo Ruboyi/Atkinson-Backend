@@ -87,7 +87,7 @@ async function createAppointmentController(req, res) {
         }
 
         //Comprobar si tiene más de 1 ausencias
-        const absences = findAbsencesByIdUser(idUser)
+        const absences = await findAbsencesByIdUser(idUser)
         console.log(absences)
         console.log(typeof absences)
         console.log(absences >= LIMIT_ABSENCES)
