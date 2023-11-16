@@ -88,7 +88,11 @@ async function createAppointmentController(req, res) {
 
         //Comprobar si tiene más de 1 ausencias
         const absences = findAbsencesByIdUser(idUser)
+        console.log(absences)
+        console.log(typeof absences)
+        console.log(absences >= LIMIT_ABSENCES)
         if (absences >= LIMIT_ABSENCES) {
+            console.log('entro')
             throwJsonError(
                 400,
                 `Tienes ${absences} ausencias registradas. Por favor, contacta con el administrador para poder reservar una cita.`
