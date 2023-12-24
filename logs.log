@@ -54,3 +54,1276 @@
 [2023-07-16T12:37:39.057Z] INFO: Running
 [2023-08-30T11:37:12.305Z] INFO: Running
 [2023-08-30T11:44:45.062Z] INFO: Running
+[2023-12-24T11:24:13.727Z] INFO: Running
+[2023-12-24T11:36:08.140Z] INFO: Usuario con id: 54 ha accedido a su perfil
+[2023-12-24T11:36:13.319Z] INFO: Usuario con id: 54 ha solicitado lista de citas agendadas
+[2023-12-24T11:36:13.321Z] INFO: Usuario con id: 54 ha accedido a su perfil
+[2023-12-24T11:36:13.325Z] INFO: Usuario con id: 54 ha recibido lista de citas agendadas correctamente
+[2023-12-24T11:36:14.559Z] INFO: Usuario con id: 54 ha solicitado lista de barberos
+[2023-12-24T11:36:14.561Z] INFO: Usuario con id: 54 ha recibido lista de barberos correctamente
+[2023-12-24T11:36:15.916Z] INFO: Usuario con id: 54 ha accedido a todos los servicios
+[2023-12-24T11:36:15.919Z] INFO: El usuario con id: 54 ha accedido a todas las citas del barbero con id: 1
+[2023-12-24T11:36:15.920Z] INFO: Usuario ha solicitado obtener los festivos del año 2023}
+[2023-12-24T11:36:15.921Z] INFO: El usuario con id: 54 ha recibido todas las citas del barbero con id: 1
+[2023-12-24T11:36:15.922Z] INFO:    Usuario ha obtenido los festivos del año 2023} correctamente
+[2023-12-24T11:36:17.699Z] INFO: Usuario con id: 54 ha accedido a su perfil
+[2023-12-24T11:36:18.162Z] INFO: Usuario con id: 54 ha solicitado lista de barberos
+[2023-12-24T11:36:18.163Z] INFO: Usuario con id: 54 ha recibido lista de barberos correctamente
+[2023-12-24T11:36:19.122Z] INFO: Usuario ha solicitado obtener los festivos del año 2023}
+[2023-12-24T11:36:19.123Z] INFO: Usuario con id: 54 ha accedido a todos los servicios
+[2023-12-24T11:36:19.124Z] INFO: El usuario con id: 54 ha accedido a todas las citas del barbero con id: 4
+[2023-12-24T11:36:19.125Z] INFO:    Usuario ha obtenido los festivos del año 2023} correctamente
+[2023-12-24T11:36:19.126Z] INFO: El usuario con id: 54 ha recibido todas las citas del barbero con id: 4
+[2023-12-24T11:36:23.097Z] INFO: Usuario con id: 54 solicitando una cita con [object Object]
+[2023-12-24T11:36:23.107Z] INFO: Usuario con id: 54 ha solicitado una cita con [object Object]
+[2023-12-24T11:36:23.344Z] ERROR: Error al enviar las notificaciones a los administradores de la app "[0].to" must be one of [string, array].
+[2023-12-24T11:36:23.344Z] INFO: Se han enviando las notificaciones a los administradores de la app
+[2023-12-24T11:36:32.151Z] INFO: Usuario con id: 54 ha solicitado lista de citas agendadas
+[2023-12-24T11:36:32.153Z] INFO: Usuario con id: 54 ha recibido lista de citas agendadas correctamente
+[2023-12-24T11:36:34.023Z] INFO: Usuario con id: 54 ha solicitado lista de citas agendadas
+[2023-12-24T11:36:34.025Z] INFO: Usuario con id: 54 ha recibido lista de citas agendadas correctamente
+[2023-12-24T11:36:34.027Z] INFO: Usuario con id: 54 ha accedido a su perfil
+[2023-12-24T11:37:13.820Z] INFO: Usuario con email atkinsonbarbershop@gmail.com e id: 52 ha iniciado sesión exitosamente
+[2023-12-24T11:37:13.858Z] INFO: Usuario con id: 52 ha solicitado lista de barberos
+[2023-12-24T11:37:13.859Z] INFO: Usuario con id: 52 ha accedido a todos los servicios
+[2023-12-24T11:37:13.861Z] INFO: Usuario con id: 52 ha recibido lista de barberos correctamente
+[2023-12-24T11:37:13.861Z] INFO: Usuario ha solicitado obtener los festivos del año 2023}
+[2023-12-24T11:37:13.865Z] INFO: Admin con id 52 solicitando  todos las citas del día 2023-12-24
+[2023-12-24T11:37:13.865Z] INFO:    Usuario ha obtenido los festivos del año 2023} correctamente
+[2023-12-24T11:37:13.867Z] INFO: Nuevo cliente conectado conectado al socket
+[2023-12-24T11:37:13.870Z] INFO: Admin con id 52 ha recibido todos las citas del día 2023-12-24 correctamente
+[2023-12-24T11:37:13.872Z] INFO: Admin con id 52 solicitando  todos las citas del día 2023-12-24
+[2023-12-24T11:37:13.874Z] INFO: Admin con id 52 ha recibido todos las citas del día 2023-12-24 correctamente
+[2023-12-24T11:37:17.479Z] INFO: Cliente desconectado del socket
+[2023-12-24T11:37:17.484Z] INFO: Admin con id 52 solicitando  todos las citas del día 2023-12-25
+[2023-12-24T11:37:17.486Z] INFO: Nuevo cliente conectado conectado al socket
+[2023-12-24T11:37:17.488Z] INFO: Admin con id 52 ha recibido todos las citas del día 2023-12-25 correctamente
+[2023-12-24T11:37:17.489Z] INFO: Admin con id 52 solicitando  todos las citas del día 2023-12-25
+[2023-12-24T11:37:17.491Z] INFO: Admin con id 52 ha recibido todos las citas del día 2023-12-25 correctamente
+[2023-12-24T11:37:18.371Z] INFO: Cliente desconectado del socket
+[2023-12-24T11:37:18.375Z] INFO: Admin con id 52 solicitando  todos las citas del día 2023-12-30
+[2023-12-24T11:37:18.385Z] INFO: Admin con id 52 ha recibido todos las citas del día 2023-12-30 correctamente
+[2023-12-24T11:37:18.399Z] INFO: Admin con id 52 solicitando  todos las citas del día 2023-12-30
+[2023-12-24T11:37:18.400Z] INFO: Nuevo cliente conectado conectado al socket
+[2023-12-24T11:37:18.406Z] INFO: Admin con id 52 ha recibido todos las citas del día 2023-12-30 correctamente
+[2023-12-24T11:37:27.817Z] INFO: Cliente desconectado del socket
+[2023-12-24T11:37:27.824Z] INFO: Usuario con id: 52 ha solicitado lista de barberos
+[2023-12-24T11:37:27.825Z] INFO: Usuario con id: 52 ha recibido lista de barberos correctamente
+[2023-12-24T11:37:29.326Z] INFO: Usuario con id: 52 ha solicitado lista de barberos
+[2023-12-24T11:37:29.327Z] INFO: Usuario con id: 52 ha accedido a todos los servicios
+[2023-12-24T11:37:29.328Z] INFO: Usuario ha solicitado obtener los festivos del año 2023}
+[2023-12-24T11:37:29.329Z] INFO: Usuario con id: 52 ha recibido lista de barberos correctamente
+[2023-12-24T11:37:29.330Z] INFO:    Usuario ha obtenido los festivos del año 2023} correctamente
+[2023-12-24T11:37:29.331Z] INFO: Nuevo cliente conectado conectado al socket
+[2023-12-24T11:37:29.331Z] INFO: Admin con id 52 solicitando  todos las citas del día 2023-12-24
+[2023-12-24T11:37:29.333Z] INFO: Admin con id 52 ha recibido todos las citas del día 2023-12-24 correctamente
+[2023-12-24T11:37:29.334Z] INFO: Admin con id 52 solicitando  todos las citas del día 2023-12-24
+[2023-12-24T11:37:29.336Z] INFO: Admin con id 52 ha recibido todos las citas del día 2023-12-24 correctamente
+[2023-12-24T11:37:33.398Z] INFO: Cliente desconectado del socket
+[2023-12-24T11:37:37.116Z] INFO: Usuario con email rubo2093@gmail.com e id: 54 ha iniciado sesión exitosamente
+[2023-12-24T11:37:37.140Z] INFO: Usuario con id: 54 ha solicitado lista de citas agendadas
+[2023-12-24T11:37:37.141Z] INFO: Usuario con id: 54 ha accedido a su perfil
+[2023-12-24T11:37:37.142Z] INFO: Usuario con id: 54 ha recibido lista de citas agendadas correctamente
+[2023-12-24T11:37:43.857Z] INFO: Usuario con id: 54 ha accedido a su perfil
+[2023-12-24T11:37:44.392Z] INFO: Usuario con id: 54 ha solicitado lista de barberos
+[2023-12-24T11:37:44.393Z] INFO: Usuario con id: 54 ha recibido lista de barberos correctamente
+[2023-12-24T11:41:29.634Z] INFO: Usuario con id: 54 ha accedido a su perfil
+[2023-12-24T11:41:30.397Z] INFO: Usuario con id: 54 ha solicitado lista de barberos
+[2023-12-24T11:41:30.398Z] INFO: Usuario con id: 54 ha recibido lista de barberos correctamente
+[2023-12-24T11:41:32.584Z] INFO: Usuario con id: 54 ha accedido a su perfil
+[2023-12-24T11:41:34.035Z] INFO: Usuario con id: 54 ha accedido a su perfil
+[2023-12-24T11:41:54.162Z] INFO: Usuario con id: 54 ha solicitado lista de barberos
+[2023-12-24T11:41:54.163Z] INFO: Usuario con id: 54 ha recibido lista de barberos correctamente
+[2023-12-24T11:41:55.403Z] INFO: Usuario con id: 54 ha accedido a su perfil
+[2023-12-24T11:41:57.224Z] INFO: Usuario con id: 54 ha solicitado lista de barberos
+[2023-12-24T11:41:57.225Z] INFO: Usuario con id: 54 ha recibido lista de barberos correctamente
+[2023-12-24T11:42:02.430Z] INFO: Usuario con id: 54 ha solicitado lista de barberos
+[2023-12-24T11:42:02.431Z] INFO: Usuario con id: 54 ha recibido lista de barberos correctamente
+[2023-12-24T11:47:05.822Z] INFO: Running
+[2023-12-24T11:47:59.432Z] INFO: Running
+[2023-12-24T11:51:48.832Z] INFO: Running
+[2023-12-24T11:51:59.652Z] INFO: Running
+[2023-12-24T11:54:42.083Z] INFO: Usuario con id: 54 ha solicitado lista de barberos
+[2023-12-24T11:54:42.111Z] INFO: Usuario con id: 54 ha recibido lista de barberos correctamente
+[2023-12-24T11:56:03.813Z] INFO: Usuario con id: 54 ha solicitado lista de barberos
+[2023-12-24T11:56:03.815Z] INFO: Usuario con id: 54 ha solicitado lista de barberias
+[2023-12-24T11:56:03.817Z] INFO: Usuario con id: 54 ha recibido lista de barberos correctamente
+[2023-12-24T11:56:03.820Z] INFO: Usuario con id: 54 ha recibido lista de barberias correctamente
+[2023-12-24T11:56:09.561Z] INFO: Usuario con id: 54 ha accedido a su perfil
+[2023-12-24T11:56:10.374Z] INFO: Usuario con id: 54 ha solicitado lista de barberos
+[2023-12-24T11:56:10.375Z] INFO: Usuario con id: 54 ha solicitado lista de barberias
+[2023-12-24T11:56:10.376Z] INFO: Usuario con id: 54 ha recibido lista de barberias correctamente
+[2023-12-24T11:56:10.377Z] INFO: Usuario con id: 54 ha recibido lista de barberos correctamente
+[2023-12-24T11:56:20.854Z] INFO: Usuario con id: 54 ha solicitado lista de barberos
+[2023-12-24T11:56:20.856Z] INFO: Usuario con id: 54 ha solicitado lista de barberias
+[2023-12-24T11:56:20.857Z] INFO: Usuario con id: 54 ha recibido lista de barberias correctamente
+[2023-12-24T11:56:20.859Z] INFO: Usuario con id: 54 ha recibido lista de barberos correctamente
+[2023-12-24T11:57:45.256Z] INFO: Usuario con id: 54 ha solicitado lista de barberos
+[2023-12-24T11:57:45.257Z] INFO: Usuario con id: 54 ha solicitado lista de barberias
+[2023-12-24T11:57:45.258Z] INFO: Usuario con id: 54 ha recibido lista de barberias correctamente
+[2023-12-24T11:57:45.259Z] INFO: Usuario con id: 54 ha recibido lista de barberos correctamente
+[2023-12-24T11:58:11.929Z] INFO: Usuario con id: 54 ha solicitado lista de barberos
+[2023-12-24T11:58:11.930Z] INFO: Usuario con id: 54 ha solicitado lista de barberias
+[2023-12-24T11:58:11.930Z] INFO: Usuario con id: 54 ha recibido lista de barberos correctamente
+[2023-12-24T11:58:11.931Z] INFO: Usuario con id: 54 ha recibido lista de barberias correctamente
+[2023-12-24T11:58:49.868Z] INFO: Usuario con id: 54 ha solicitado lista de barberos
+[2023-12-24T11:58:49.869Z] INFO: Usuario con id: 54 ha solicitado lista de barberias
+[2023-12-24T11:58:49.870Z] INFO: Usuario con id: 54 ha recibido lista de barberias correctamente
+[2023-12-24T11:58:49.871Z] INFO: Usuario con id: 54 ha recibido lista de barberos correctamente
+[2023-12-24T11:59:35.742Z] INFO: Usuario con id: 54 ha solicitado lista de barberos
+[2023-12-24T11:59:35.743Z] INFO: Usuario con id: 54 ha solicitado lista de barberias
+[2023-12-24T11:59:35.744Z] INFO: Usuario con id: 54 ha recibido lista de barberias correctamente
+[2023-12-24T11:59:35.744Z] INFO: Usuario con id: 54 ha recibido lista de barberos correctamente
+[2023-12-24T11:59:40.920Z] INFO: Usuario con id: 54 ha accedido a todos los servicios
+[2023-12-24T11:59:40.922Z] INFO: El usuario con id: 54 ha accedido a todas las citas del barbero con id: 1
+[2023-12-24T11:59:40.923Z] INFO: Usuario ha solicitado obtener los festivos del año 2023}
+[2023-12-24T11:59:40.924Z] INFO: El usuario con id: 54 ha recibido todas las citas del barbero con id: 1
+[2023-12-24T11:59:40.926Z] INFO:    Usuario ha obtenido los festivos del año 2023} correctamente
+[2023-12-24T11:59:42.055Z] INFO: Usuario con id: 54 ha accedido a su perfil
+[2023-12-24T11:59:42.615Z] INFO: Usuario con id: 54 ha solicitado lista de barberos
+[2023-12-24T11:59:42.616Z] INFO: Usuario con id: 54 ha solicitado lista de barberias
+[2023-12-24T11:59:42.617Z] INFO: Usuario con id: 54 ha recibido lista de barberias correctamente
+[2023-12-24T11:59:42.617Z] INFO: Usuario con id: 54 ha recibido lista de barberos correctamente
+[2023-12-24T11:59:46.935Z] INFO: Usuario con id: 54 ha accedido a su perfil
+[2023-12-24T11:59:47.581Z] INFO: Usuario con id: 54 ha solicitado lista de barberos
+[2023-12-24T11:59:47.582Z] INFO: Usuario con id: 54 ha recibido lista de barberos correctamente
+[2023-12-24T11:59:47.582Z] INFO: Usuario con id: 54 ha solicitado lista de barberias
+[2023-12-24T11:59:47.583Z] INFO: Usuario con id: 54 ha recibido lista de barberias correctamente
+[2023-12-24T12:00:38.216Z] INFO: Usuario con id: 54 ha solicitado lista de barberos
+[2023-12-24T12:00:38.217Z] INFO: Usuario con id: 54 ha solicitado lista de barberias
+[2023-12-24T12:00:38.217Z] INFO: Usuario con id: 54 ha recibido lista de barberias correctamente
+[2023-12-24T12:00:38.218Z] INFO: Usuario con id: 54 ha recibido lista de barberos correctamente
+[2023-12-24T12:00:40.348Z] INFO: Usuario con id: 54 ha accedido a su perfil
+[2023-12-24T12:00:40.993Z] INFO: Usuario con id: 54 ha solicitado lista de barberos
+[2023-12-24T12:00:40.994Z] INFO: Usuario con id: 54 ha solicitado lista de barberias
+[2023-12-24T12:00:40.995Z] INFO: Usuario con id: 54 ha recibido lista de barberias correctamente
+[2023-12-24T12:00:40.996Z] INFO: Usuario con id: 54 ha recibido lista de barberos correctamente
+[2023-12-24T12:00:43.139Z] INFO: Usuario con id: 54 ha accedido a su perfil
+[2023-12-24T12:00:43.731Z] INFO: Usuario con id: 54 ha solicitado lista de barberos
+[2023-12-24T12:00:43.731Z] INFO: Usuario con id: 54 ha solicitado lista de barberias
+[2023-12-24T12:00:43.732Z] INFO: Usuario con id: 54 ha recibido lista de barberias correctamente
+[2023-12-24T12:00:43.732Z] INFO: Usuario con id: 54 ha recibido lista de barberos correctamente
+[2023-12-24T12:00:47.106Z] INFO: Usuario con id: 54 ha accedido a su perfil
+[2023-12-24T12:00:47.807Z] INFO: Usuario con id: 54 ha solicitado lista de barberos
+[2023-12-24T12:00:47.808Z] INFO: Usuario con id: 54 ha solicitado lista de barberias
+[2023-12-24T12:00:47.809Z] INFO: Usuario con id: 54 ha recibido lista de barberias correctamente
+[2023-12-24T12:00:47.809Z] INFO: Usuario con id: 54 ha recibido lista de barberos correctamente
+[2023-12-24T12:08:42.141Z] INFO: Usuario con id: 54 ha solicitado lista de barberias
+[2023-12-24T12:08:42.143Z] INFO: Usuario con id: 54 ha recibido lista de barberias correctamente
+[2023-12-24T12:08:42.143Z] INFO: Usuario con id: 54 ha solicitado lista de barberos
+[2023-12-24T12:08:42.144Z] INFO: Usuario con id: 54 ha solicitado lista de barberias
+[2023-12-24T12:08:42.144Z] INFO: Usuario con id: 54 ha recibido lista de barberias correctamente
+[2023-12-24T12:08:42.145Z] INFO: Usuario con id: 54 ha recibido lista de barberos correctamente
+[2023-12-24T12:12:36.158Z] INFO: Usuario con id: 54 ha solicitado lista de barberias
+[2023-12-24T12:12:36.158Z] INFO: Usuario con id: 54 ha recibido lista de barberias correctamente
+[2023-12-24T12:13:04.063Z] INFO: Usuario con id: 54 ha solicitado lista de barberos
+[2023-12-24T12:13:04.064Z] INFO: Usuario con id: 54 ha recibido lista de barberos correctamente
+[2023-12-24T12:13:06.114Z] INFO: Usuario con id: 54 ha accedido a su perfil
+[2023-12-24T12:13:07.251Z] INFO: Usuario con id: 54 ha solicitado lista de barberias
+[2023-12-24T12:13:07.252Z] INFO: Usuario con id: 54 ha recibido lista de barberias correctamente
+[2023-12-24T12:13:08.936Z] INFO: Usuario con id: 54 ha solicitado lista de barberos
+[2023-12-24T12:13:08.937Z] INFO: Usuario con id: 54 ha recibido lista de barberos correctamente
+[2023-12-24T12:13:10.119Z] INFO: Usuario con id: 54 ha accedido a su perfil
+[2023-12-24T12:13:11.480Z] INFO: Usuario con id: 54 ha solicitado lista de barberias
+[2023-12-24T12:13:11.481Z] INFO: Usuario con id: 54 ha recibido lista de barberias correctamente
+[2023-12-24T12:13:12.293Z] INFO: Usuario con id: 54 ha solicitado lista de barberos
+[2023-12-24T12:13:12.293Z] INFO: Usuario con id: 54 ha recibido lista de barberos correctamente
+[2023-12-24T12:13:13.377Z] INFO: Usuario con id: 54 ha accedido a su perfil
+[2023-12-24T12:13:14.687Z] INFO: Usuario con id: 54 ha solicitado lista de barberias
+[2023-12-24T12:13:14.687Z] INFO: Usuario con id: 54 ha recibido lista de barberias correctamente
+[2023-12-24T12:15:35.843Z] INFO: Running
+[2023-12-24T12:16:28.830Z] INFO: Running
+[2023-12-24T12:17:31.208Z] INFO: Running
+[2023-12-24T12:26:15.098Z] INFO: Running
+[2023-12-24T12:26:32.439Z] INFO: Running
+[2023-12-24T12:34:13.126Z] INFO: Running
+[2023-12-24T12:34:28.100Z] INFO: Running
+[2023-12-24T12:39:14.996Z] INFO: Usuario con id: 54 ha solicitado lista de barberos
+[2023-12-24T12:39:15.023Z] ERROR: Error al obtener lista de barberos getAllSchedules is not defined
+[2023-12-24T12:39:18.073Z] INFO: Usuario con id: 54 ha accedido a su perfil
+[2023-12-24T12:39:18.651Z] INFO: Usuario con id: 54 ha solicitado lista de barberias
+[2023-12-24T12:39:18.652Z] INFO: Usuario con id: 54 ha recibido lista de barberias correctamente
+[2023-12-24T12:39:41.895Z] INFO: Usuario con id: 54 ha solicitado lista de barberos
+[2023-12-24T12:39:41.896Z] ERROR: Error al obtener lista de barberos getAllSchedules is not defined
+[2023-12-24T12:40:03.544Z] INFO: Running
+[2023-12-24T12:40:05.943Z] INFO: Usuario con id: 54 ha accedido a su perfil
+[2023-12-24T12:40:07.382Z] INFO: Usuario con id: 54 ha solicitado lista de barberias
+[2023-12-24T12:40:07.383Z] INFO: Usuario con id: 54 ha recibido lista de barberias correctamente
+[2023-12-24T12:40:08.359Z] INFO: Usuario con id: 54 ha solicitado lista de barberos
+[2023-12-24T12:40:08.361Z] INFO: Usuario con id: 54 ha recibido lista de barberos correctamente
+[2023-12-24T12:40:12.194Z] INFO: Usuario con id: 54 ha accedido a su perfil
+[2023-12-24T12:40:12.878Z] INFO: Usuario con id: 54 ha solicitado lista de barberias
+[2023-12-24T12:40:12.879Z] INFO: Usuario con id: 54 ha recibido lista de barberias correctamente
+[2023-12-24T12:40:13.904Z] INFO: Usuario con id: 54 ha solicitado lista de barberos
+[2023-12-24T12:40:13.905Z] ERROR: 404
+[2023-12-24T12:40:40.033Z] INFO: Running
+[2023-12-24T12:41:06.603Z] INFO: Usuario con id: 54 ha solicitado lista de barberias
+[2023-12-24T12:41:06.633Z] INFO: Usuario con id: 54 ha recibido lista de barberias correctamente
+[2023-12-24T12:41:08.562Z] INFO: Usuario con id: 54 ha solicitado lista de barberos
+[2023-12-24T12:41:08.564Z] INFO: Usuario con id: 54 ha recibido lista de barberos correctamente
+[2023-12-24T12:41:10.955Z] INFO: Usuario con id: 54 ha accedido a su perfil
+[2023-12-24T12:41:11.330Z] INFO: Usuario con id: 54 ha solicitado lista de barberias
+[2023-12-24T12:41:11.331Z] INFO: Usuario con id: 54 ha recibido lista de barberias correctamente
+[2023-12-24T12:42:13.701Z] INFO: Usuario con id: 54 ha solicitado lista de barberos
+[2023-12-24T12:42:13.702Z] ERROR: 404
+[2023-12-24T12:42:43.633Z] INFO: Running
+[2023-12-24T12:42:44.105Z] INFO: Usuario con id: 54 ha accedido a su perfil
+[2023-12-24T12:47:25.394Z] INFO: Running
+[2023-12-24T12:47:27.077Z] INFO: Usuario con id: 54 ha solicitado lista de barberias
+[2023-12-24T12:47:27.102Z] INFO: Usuario con id: 54 ha recibido lista de barberias correctamente
+[2023-12-24T12:47:29.336Z] INFO: Usuario con id: 54 ha solicitado lista de barberos
+[2023-12-24T12:47:29.338Z] ERROR: 404
+[2023-12-24T12:48:11.874Z] INFO: Running
+[2023-12-24T12:48:16.445Z] INFO: Usuario con id: 54 ha accedido a su perfil
+[2023-12-24T12:48:17.882Z] INFO: Usuario con id: 54 ha solicitado lista de barberias
+[2023-12-24T12:48:17.884Z] INFO: Usuario con id: 54 ha recibido lista de barberias correctamente
+[2023-12-24T12:48:18.916Z] INFO: Usuario con id: 54 ha solicitado lista de barberos
+[2023-12-24T12:48:18.919Z] ERROR: No se encontraron barberos
+[2023-12-24T12:48:18.919Z] ERROR: Error al obtener lista de barberos No se encontraron barberos
+[2023-12-24T12:48:21.934Z] INFO: Usuario con id: 54 ha accedido a su perfil
+[2023-12-24T12:49:52.588Z] INFO: Usuario con id: 54 ha solicitado lista de barberias
+[2023-12-24T12:49:52.589Z] INFO: Usuario con id: 54 ha recibido lista de barberias correctamente
+[2023-12-24T12:49:54.620Z] INFO: Usuario con id: 54 ha solicitado lista de barberos
+[2023-12-24T12:49:54.622Z] ERROR: No se encontraron barberos
+[2023-12-24T12:49:54.622Z] ERROR: Error al obtener lista de barberos No se encontraron barberos
+[2023-12-24T12:50:01.899Z] INFO: Usuario con id: 54 ha accedido a su perfil
+[2023-12-24T12:50:02.611Z] INFO: Usuario con id: 54 ha solicitado lista de barberias
+[2023-12-24T12:50:02.612Z] INFO: Usuario con id: 54 ha recibido lista de barberias correctamente
+[2023-12-24T12:50:18.754Z] INFO: Usuario con id: 54 ha solicitado lista de barberos
+[2023-12-24T12:50:18.759Z] INFO: Usuario con id: 54 ha recibido lista de barberos correctamente
+[2023-12-24T12:50:28.176Z] INFO: Usuario con id: 54 ha accedido a su perfil
+[2023-12-24T12:50:28.718Z] INFO: Usuario con id: 54 ha solicitado lista de barberias
+[2023-12-24T12:50:28.719Z] INFO: Usuario con id: 54 ha recibido lista de barberias correctamente
+[2023-12-24T12:57:07.353Z] INFO: Usuario con id: 54 ha solicitado lista de barberias
+[2023-12-24T12:57:07.354Z] INFO: Usuario con id: 54 ha recibido lista de barberias correctamente
+[2023-12-24T12:57:22.937Z] INFO: Usuario con id: 54 ha solicitado lista de barberos
+[2023-12-24T12:57:22.941Z] INFO: Usuario con id: 54 ha recibido lista de barberos correctamente
+[2023-12-24T12:59:19.267Z] INFO: Usuario con id: 54 ha solicitado lista de barberos
+[2023-12-24T12:59:19.271Z] INFO: Usuario con id: 54 ha recibido lista de barberos correctamente
+[2023-12-24T12:59:24.646Z] INFO: Usuario con id: 54 ha solicitado lista de barberos
+[2023-12-24T12:59:24.649Z] INFO: Usuario con id: 54 ha recibido lista de barberos correctamente
+[2023-12-24T12:59:33.288Z] INFO: Usuario con id: 54 ha solicitado lista de barberias
+[2023-12-24T12:59:33.289Z] INFO: Usuario con id: 54 ha recibido lista de barberias correctamente
+[2023-12-24T13:00:26.462Z] INFO: Usuario con id: 54 ha solicitado lista de barberos
+[2023-12-24T13:00:26.465Z] INFO: Usuario con id: 54 ha recibido lista de barberos correctamente
+[2023-12-24T13:01:00.646Z] INFO: Usuario con id: 54 ha solicitado lista de barberias
+[2023-12-24T13:01:00.647Z] INFO: Usuario con id: 54 ha recibido lista de barberias correctamente
+[2023-12-24T13:01:07.411Z] INFO: Usuario con id: 54 ha solicitado lista de barberos
+[2023-12-24T13:01:07.414Z] INFO: Usuario con id: 54 ha recibido lista de barberos correctamente
+[2023-12-24T13:01:33.571Z] INFO: Usuario con id: 54 ha solicitado lista de barberias
+[2023-12-24T13:01:33.572Z] INFO: Usuario con id: 54 ha recibido lista de barberias correctamente
+[2023-12-24T13:01:34.853Z] INFO: Usuario con id: 54 ha solicitado lista de barberos
+[2023-12-24T13:01:34.856Z] INFO: Usuario con id: 54 ha recibido lista de barberos correctamente
+[2023-12-24T13:02:17.947Z] INFO: Usuario con id: 54 ha solicitado lista de barberias
+[2023-12-24T13:02:17.948Z] INFO: Usuario con id: 54 ha recibido lista de barberias correctamente
+[2023-12-24T13:02:19.199Z] INFO: Usuario con id: 54 ha solicitado lista de barberos
+[2023-12-24T13:02:19.203Z] INFO: Usuario con id: 54 ha recibido lista de barberos correctamente
+[2023-12-24T13:02:26.338Z] INFO: Usuario con id: 54 ha solicitado lista de barberias
+[2023-12-24T13:02:26.339Z] INFO: Usuario con id: 54 ha recibido lista de barberias correctamente
+[2023-12-24T13:02:27.872Z] INFO: Usuario con id: 54 ha solicitado lista de barberos
+[2023-12-24T13:02:27.875Z] INFO: Usuario con id: 54 ha recibido lista de barberos correctamente
+[2023-12-24T13:02:54.981Z] INFO: Usuario con id: 54 ha solicitado lista de barberias
+[2023-12-24T13:02:54.982Z] INFO: Usuario con id: 54 ha recibido lista de barberias correctamente
+[2023-12-24T13:02:59.890Z] INFO: Usuario con id: 54 ha solicitado lista de barberos
+[2023-12-24T13:02:59.893Z] INFO: Usuario con id: 54 ha recibido lista de barberos correctamente
+[2023-12-24T13:03:22.990Z] INFO: Usuario con id: 54 ha solicitado lista de barberias
+[2023-12-24T13:03:22.990Z] INFO: Usuario con id: 54 ha recibido lista de barberias correctamente
+[2023-12-24T13:03:24.584Z] INFO: Usuario con id: 54 ha solicitado lista de barberos
+[2023-12-24T13:03:24.586Z] INFO: Usuario con id: 54 ha recibido lista de barberos correctamente
+[2023-12-24T13:03:29.693Z] INFO: Usuario con id: 54 ha solicitado lista de barberias
+[2023-12-24T13:03:29.693Z] INFO: Usuario con id: 54 ha recibido lista de barberias correctamente
+[2023-12-24T13:03:39.255Z] INFO: Usuario con id: 54 ha solicitado lista de barberos
+[2023-12-24T13:03:39.258Z] INFO: Usuario con id: 54 ha recibido lista de barberos correctamente
+[2023-12-24T13:05:25.233Z] INFO: Running
+[2023-12-24T13:05:28.509Z] INFO: Usuario con id: 54 ha solicitado lista de barberias
+[2023-12-24T13:05:28.532Z] INFO: Usuario con id: 54 ha recibido lista de barberias correctamente
+[2023-12-24T13:05:29.571Z] INFO: Usuario con id: 54 ha solicitado lista de barberos
+[2023-12-24T13:05:29.574Z] INFO: Usuario con id: 54 ha recibido lista de barberos correctamente
+[2023-12-24T13:06:06.519Z] INFO: Usuario con id: 54 ha solicitado lista de barberias
+[2023-12-24T13:06:06.520Z] INFO: Usuario con id: 54 ha recibido lista de barberias correctamente
+[2023-12-24T13:06:18.171Z] INFO: Usuario con id: 54 ha solicitado lista de barberos
+[2023-12-24T13:06:18.172Z] INFO: Usuario con id: 54 ha recibido lista de barberos correctamente
+[2023-12-24T13:06:21.717Z] INFO: Usuario con id: 54 ha solicitado lista de barberias
+[2023-12-24T13:06:21.718Z] INFO: Usuario con id: 54 ha recibido lista de barberias correctamente
+[2023-12-24T13:06:24.949Z] INFO: Usuario con id: 54 ha accedido a su perfil
+[2023-12-24T13:06:47.084Z] INFO: Usuario con id: 54 ha accedido a su perfil
+[2023-12-24T13:06:47.085Z] INFO: Usuario con id: 54 ha solicitado lista de citas agendadas
+[2023-12-24T13:06:47.088Z] INFO: Usuario con id: 54 ha recibido lista de citas agendadas correctamente
+[2023-12-24T13:06:48.623Z] INFO: Usuario con id: 54 ha solicitado lista de barberias
+[2023-12-24T13:06:48.623Z] INFO: Usuario con id: 54 ha recibido lista de barberias correctamente
+[2023-12-24T13:06:54.311Z] INFO: Usuario con id: 54 ha solicitado lista de barberos
+[2023-12-24T13:06:54.312Z] INFO: Usuario con id: 54 ha recibido lista de barberos correctamente
+[2023-12-24T13:06:56.509Z] INFO: Usuario con id: 54 ha accedido a su perfil
+[2023-12-24T13:06:56.924Z] INFO: Usuario con id: 54 ha solicitado lista de barberias
+[2023-12-24T13:06:56.925Z] INFO: Usuario con id: 54 ha recibido lista de barberias correctamente
+[2023-12-24T13:07:01.125Z] INFO: Usuario con id: 54 ha accedido a su perfil
+[2023-12-24T13:07:01.618Z] INFO: Usuario con id: 54 ha solicitado lista de barberias
+[2023-12-24T13:07:01.618Z] INFO: Usuario con id: 54 ha recibido lista de barberias correctamente
+[2023-12-24T13:08:11.363Z] INFO: Running
+[2023-12-24T13:08:13.059Z] INFO: Usuario con id: 54 ha solicitado lista de barberos
+[2023-12-24T13:08:13.084Z] INFO: Usuario con id: 54 ha recibido lista de barberos correctamente
+[2023-12-24T13:08:16.610Z] INFO: Usuario con id: 54 ha solicitado lista de barberias
+[2023-12-24T13:08:16.612Z] INFO: Usuario con id: 54 ha recibido lista de barberias correctamente
+[2023-12-24T13:08:19.118Z] INFO: Usuario con id: 54 ha solicitado lista de barberos
+[2023-12-24T13:08:19.120Z] INFO: Usuario con id: 54 ha recibido lista de barberos correctamente
+[2023-12-24T13:09:10.280Z] INFO: Running
+[2023-12-24T13:09:12.838Z] INFO: Usuario con id: 54 ha solicitado lista de barberias
+[2023-12-24T13:09:12.863Z] INFO: Usuario con id: 54 ha recibido lista de barberias correctamente
+[2023-12-24T13:09:13.639Z] INFO: Usuario con id: 54 ha solicitado lista de barberos
+[2023-12-24T13:09:13.642Z] INFO: Usuario con id: 54 ha recibido lista de barberos correctamente
+[2023-12-24T13:09:14.081Z] INFO: El usuario con id: 54 ha accedido a todas las citas del barbero con id: 1
+[2023-12-24T13:09:14.083Z] INFO: Usuario con id: 54 ha accedido a todos los servicios
+[2023-12-24T13:09:14.084Z] INFO: Usuario ha solicitado obtener los festivos del año 2023}
+[2023-12-24T13:09:14.086Z] INFO:    Usuario ha obtenido los festivos del año 2023} correctamente
+[2023-12-24T13:09:14.087Z] INFO: El usuario con id: 54 ha recibido todas las citas del barbero con id: 1
+[2023-12-24T13:09:20.091Z] INFO: Usuario con id: 54 ha solicitado lista de barberias
+[2023-12-24T13:09:20.092Z] INFO: Usuario con id: 54 ha solicitado lista de barberos
+[2023-12-24T13:09:20.093Z] INFO: Usuario con id: 54 ha recibido lista de barberias correctamente
+[2023-12-24T13:09:20.094Z] INFO: Usuario con id: 54 ha recibido lista de barberos correctamente
+[2023-12-24T13:09:21.693Z] INFO: Usuario con id: 54 ha accedido a todos los servicios
+[2023-12-24T13:09:21.694Z] INFO: El usuario con id: 54 ha accedido a todas las citas del barbero con id: 3
+[2023-12-24T13:09:21.695Z] INFO: Usuario ha solicitado obtener los festivos del año 2023}
+[2023-12-24T13:09:21.696Z] INFO: El usuario con id: 54 ha recibido todas las citas del barbero con id: 3
+[2023-12-24T13:09:21.697Z] INFO:    Usuario ha obtenido los festivos del año 2023} correctamente
+[2023-12-24T13:09:26.675Z] INFO: Usuario con id: 54 ha solicitado lista de barberias
+[2023-12-24T13:09:26.676Z] INFO: Usuario con id: 54 ha solicitado lista de barberos
+[2023-12-24T13:09:26.677Z] INFO: Usuario con id: 54 ha recibido lista de barberias correctamente
+[2023-12-24T13:09:26.678Z] INFO: Usuario con id: 54 ha recibido lista de barberos correctamente
+[2023-12-24T13:09:31.667Z] INFO: Usuario con id: 54 ha accedido a todos los servicios
+[2023-12-24T13:09:31.668Z] INFO: El usuario con id: 54 ha accedido a todas las citas del barbero con id: 1
+[2023-12-24T13:09:31.669Z] INFO: Usuario ha solicitado obtener los festivos del año 2023}
+[2023-12-24T13:09:31.669Z] INFO: El usuario con id: 54 ha recibido todas las citas del barbero con id: 1
+[2023-12-24T13:09:31.670Z] INFO:    Usuario ha obtenido los festivos del año 2023} correctamente
+[2023-12-24T13:09:33.881Z] INFO: Usuario con id: 54 ha solicitado lista de barberias
+[2023-12-24T13:09:33.882Z] INFO: Usuario con id: 54 ha solicitado lista de barberos
+[2023-12-24T13:09:33.883Z] INFO: Usuario con id: 54 ha recibido lista de barberias correctamente
+[2023-12-24T13:09:33.883Z] INFO: Usuario con id: 54 ha recibido lista de barberos correctamente
+[2023-12-24T13:09:35.730Z] INFO: El usuario con id: 54 ha accedido a todas las citas del barbero con id: 1
+[2023-12-24T13:09:35.731Z] INFO: Usuario ha solicitado obtener los festivos del año 2023}
+[2023-12-24T13:09:35.731Z] INFO: Usuario con id: 54 ha accedido a todos los servicios
+[2023-12-24T13:09:35.732Z] INFO: El usuario con id: 54 ha recibido todas las citas del barbero con id: 1
+[2023-12-24T13:09:35.734Z] INFO:    Usuario ha obtenido los festivos del año 2023} correctamente
+[2023-12-24T13:09:36.552Z] INFO: Usuario con id: 54 ha solicitado lista de barberias
+[2023-12-24T13:09:36.552Z] INFO: Usuario con id: 54 ha solicitado lista de barberos
+[2023-12-24T13:09:36.552Z] INFO: Usuario con id: 54 ha recibido lista de barberias correctamente
+[2023-12-24T13:09:36.553Z] INFO: Usuario con id: 54 ha recibido lista de barberos correctamente
+[2023-12-24T13:32:47.218Z] INFO: El usuario con id: 54 ha accedido a todas las citas del barbero con id: 1
+[2023-12-24T13:32:47.219Z] INFO: Usuario ha solicitado obtener los festivos del año 2023}
+[2023-12-24T13:32:47.219Z] INFO: Usuario con id: 54 ha accedido a todos los servicios
+[2023-12-24T13:32:47.220Z] INFO: El usuario con id: 54 ha recibido todas las citas del barbero con id: 1
+[2023-12-24T13:32:47.221Z] INFO:    Usuario ha obtenido los festivos del año 2023} correctamente
+[2023-12-24T13:34:21.608Z] INFO: Running
+[2023-12-24T13:34:54.179Z] INFO: Running
+[2023-12-24T13:35:35.987Z] INFO: Usuario con id: 54 ha solicitado lista de barberias
+[2023-12-24T13:35:35.999Z] INFO: Usuario con id: 54 ha solicitado lista de barberos
+[2023-12-24T13:35:36.012Z] INFO: Usuario con id: 54 ha recibido lista de barberias correctamente
+[2023-12-24T13:35:36.015Z] INFO: Usuario con id: 54 ha recibido lista de barberos correctamente
+[2023-12-24T13:35:38.503Z] INFO: Usuario con id: 54 ha accedido a su perfil
+[2023-12-24T13:35:38.952Z] INFO: Usuario con id: 54 ha solicitado lista de barberias
+[2023-12-24T13:35:38.953Z] INFO: Usuario con id: 54 ha recibido lista de barberias correctamente
+[2023-12-24T13:36:10.014Z] INFO: Usuario con id: 54 ha solicitado lista de barberos
+[2023-12-24T13:36:10.016Z] INFO: Usuario con id: 54 ha recibido lista de barberos correctamente
+[2023-12-24T13:36:11.601Z] INFO: Usuario con id: 54 ha accedido a todos los servicios
+[2023-12-24T13:36:11.602Z] INFO: El usuario con id: 54 ha accedido a todas las citas del barbero con id: 2
+[2023-12-24T13:36:11.603Z] INFO: Usuario ha solicitado obtener los festivos del año 2023}
+[2023-12-24T13:36:11.604Z] INFO: El usuario con id: 54 ha recibido todas las citas del barbero con id: 2
+[2023-12-24T13:36:11.605Z] INFO:    Usuario ha obtenido los festivos del año 2023} correctamente
+[2023-12-24T13:36:27.854Z] INFO: Usuario con id: 54 solicitando una cita con [object Object]
+[2023-12-24T13:37:27.987Z] INFO: Running
+[2023-12-24T13:37:30.875Z] INFO: Usuario con id: 54 solicitando una cita con [object Object]
+[2023-12-24T13:37:30.901Z] ERROR: Error al crear la cita Column count doesn't match value count at row 1
+[2023-12-24T13:40:12.724Z] INFO: Running
+[2023-12-24T13:40:17.476Z] INFO: Usuario con id: 54 solicitando una cita con [object Object]
+[2023-12-24T13:40:17.502Z] ERROR: Error al crear la cita Column count doesn't match value count at row 1
+[2023-12-24T13:40:41.713Z] INFO: Running
+[2023-12-24T13:40:44.226Z] INFO: Usuario con id: 54 solicitando una cita con [object Object]
+[2023-12-24T13:40:44.263Z] INFO: Usuario con id: 54 ha solicitado una cita con [object Object]
+[2023-12-24T13:40:44.489Z] ERROR: Error al enviar las notificaciones a los administradores de la app "[0].to" must be one of [string, array].
+[2023-12-24T13:40:44.489Z] INFO: Se han enviando las notificaciones a los administradores de la app
+[2023-12-24T13:40:46.512Z] INFO: Usuario con id: 54 ha solicitado lista de barberias
+[2023-12-24T13:40:46.513Z] INFO: Usuario con id: 54 ha solicitado lista de barberos
+[2023-12-24T13:40:46.514Z] INFO: Usuario con id: 54 ha recibido lista de barberias correctamente
+[2023-12-24T13:40:46.517Z] INFO: Usuario con id: 54 ha recibido lista de barberos correctamente
+[2023-12-24T13:40:52.150Z] INFO: Usuario con id: 54 ha solicitado lista de citas agendadas
+[2023-12-24T13:40:52.152Z] INFO: Usuario con id: 54 ha recibido lista de citas agendadas correctamente
+[2023-12-24T13:41:21.209Z] INFO: El usuario con id: 54 cancelando la cita con id: 1341
+[2023-12-24T13:41:21.222Z] INFO: El usuario con id: 54 ha cancelado la cita con id: 1341
+[2023-12-24T13:41:21.232Z] INFO: Usuario con id: 54 ha solicitado lista de citas agendadas
+[2023-12-24T13:41:21.233Z] INFO: Usuario con id: 54 ha recibido lista de citas agendadas correctamente
+[2023-12-24T13:41:26.886Z] INFO: Usuario con id: 54 ha solicitado lista de barberias
+[2023-12-24T13:41:26.887Z] INFO: Usuario con id: 54 ha recibido lista de barberias correctamente
+[2023-12-24T13:41:27.485Z] INFO: Usuario con id: 54 ha accedido a su perfil
+[2023-12-24T13:41:28.148Z] INFO: Usuario con id: 54 ha solicitado lista de barberias
+[2023-12-24T13:41:28.149Z] INFO: Usuario con id: 54 ha recibido lista de barberias correctamente
+[2023-12-24T13:41:28.570Z] INFO: Usuario con id: 54 ha solicitado lista de citas agendadas
+[2023-12-24T13:41:28.572Z] INFO: Usuario con id: 54 ha recibido lista de citas agendadas correctamente
+[2023-12-24T13:41:30.908Z] INFO: Usuario con id: 54 ha solicitado lista de barberias
+[2023-12-24T13:41:30.909Z] INFO: Usuario con id: 54 ha recibido lista de barberias correctamente
+[2023-12-24T13:41:37.955Z] INFO: Usuario con id: 54 ha solicitado lista de barberos
+[2023-12-24T13:41:37.956Z] INFO: Usuario con id: 54 ha recibido lista de barberos correctamente
+[2023-12-24T13:41:38.529Z] INFO: Usuario con id: 54 ha accedido a todos los servicios
+[2023-12-24T13:41:38.530Z] INFO: El usuario con id: 54 ha accedido a todas las citas del barbero con id: 2
+[2023-12-24T13:41:38.530Z] INFO: Usuario ha solicitado obtener los festivos del año 2023}
+[2023-12-24T13:41:38.531Z] INFO: El usuario con id: 54 ha recibido todas las citas del barbero con id: 2
+[2023-12-24T13:41:38.532Z] INFO:    Usuario ha obtenido los festivos del año 2023} correctamente
+[2023-12-24T13:41:41.534Z] INFO: Usuario con id: 54 ha solicitado lista de barberos
+[2023-12-24T13:41:41.535Z] INFO: Usuario con id: 54 ha solicitado lista de barberias
+[2023-12-24T13:41:41.536Z] INFO: Usuario con id: 54 ha recibido lista de barberos correctamente
+[2023-12-24T13:41:41.537Z] INFO: Usuario con id: 54 ha recibido lista de barberias correctamente
+[2023-12-24T13:41:43.835Z] INFO: Usuario con id: 54 ha accedido a su perfil
+[2023-12-24T13:41:44.280Z] INFO: Usuario con id: 54 ha solicitado lista de barberias
+[2023-12-24T13:41:44.281Z] INFO: Usuario con id: 54 ha recibido lista de barberias correctamente
+[2023-12-24T13:43:45.694Z] INFO: Usuario con id: 54 ha solicitado lista de barberos
+[2023-12-24T13:43:45.695Z] INFO: Usuario con id: 54 ha recibido lista de barberos correctamente
+[2023-12-24T18:15:01.606Z] INFO: Usuario con id: 54 ha accedido a todos los servicios
+[2023-12-24T18:15:01.607Z] INFO: El usuario con id: 54 ha accedido a todas las citas del barbero con id: 2
+[2023-12-24T18:15:01.608Z] INFO: Usuario ha solicitado obtener los festivos del año 2023}
+[2023-12-24T18:15:01.608Z] INFO: El usuario con id: 54 ha recibido todas las citas del barbero con id: 2
+[2023-12-24T18:15:01.609Z] INFO:    Usuario ha obtenido los festivos del año 2023} correctamente
+[2023-12-24T18:15:07.330Z] INFO: Usuario con id: 54 ha accedido a su perfil
+[2023-12-24T18:15:07.863Z] INFO: Usuario con id: 54 ha solicitado lista de barberias
+[2023-12-24T18:15:07.864Z] INFO: Usuario con id: 54 ha recibido lista de barberias correctamente
+[2023-12-24T18:15:43.659Z] INFO: Usuario con id: 54 ha solicitado lista de barberos
+[2023-12-24T18:15:43.660Z] INFO: Usuario con id: 54 ha recibido lista de barberos correctamente
+[2023-12-24T18:16:32.248Z] INFO: Usuario con id: 54 ha solicitado lista de barberias
+[2023-12-24T18:16:32.249Z] INFO: Usuario con id: 54 ha recibido lista de barberias correctamente
+[2023-12-24T18:16:53.972Z] INFO: Usuario con id: 54 ha solicitado lista de barberias
+[2023-12-24T18:16:53.973Z] INFO: Usuario con id: 54 ha recibido lista de barberias correctamente
+[2023-12-24T18:17:03.645Z] INFO: Usuario con id: 54 ha solicitado lista de barberias
+[2023-12-24T18:17:03.646Z] INFO: Usuario con id: 54 ha recibido lista de barberias correctamente
+[2023-12-24T18:17:03.647Z] INFO: Usuario con id: 54 ha solicitado lista de barberos
+[2023-12-24T18:17:03.648Z] INFO: Usuario con id: 54 ha recibido lista de barberos correctamente
+[2023-12-24T18:17:23.581Z] INFO: Usuario con id: 54 ha solicitado lista de barberos
+[2023-12-24T18:17:23.582Z] INFO: Usuario con id: 54 ha recibido lista de barberos correctamente
+[2023-12-24T18:18:01.373Z] INFO: Usuario con id: 54 ha accedido a su perfil
+[2023-12-24T18:18:01.934Z] INFO: Usuario con id: 54 ha solicitado lista de barberias
+[2023-12-24T18:18:01.934Z] INFO: Usuario con id: 54 ha recibido lista de barberias correctamente
+[2023-12-24T18:18:03.718Z] INFO: Usuario con id: 54 ha solicitado lista de barberos
+[2023-12-24T18:18:03.720Z] INFO: Usuario con id: 54 ha recibido lista de barberos correctamente
+[2023-12-24T18:18:53.846Z] INFO: Usuario con id: 54 ha solicitado lista de barberos
+[2023-12-24T18:18:53.847Z] INFO: Usuario con id: 54 ha recibido lista de barberos correctamente
+[2023-12-24T18:19:29.248Z] INFO: Usuario con id: 54 ha solicitado lista de barberos
+[2023-12-24T18:19:29.250Z] INFO: Usuario con id: 54 ha recibido lista de barberos correctamente
+[2023-12-24T18:19:38.694Z] INFO: Usuario con id: 54 ha solicitado lista de barberias
+[2023-12-24T18:19:38.694Z] INFO: Usuario con id: 54 ha recibido lista de barberias correctamente
+[2023-12-24T18:19:39.844Z] INFO: Usuario con id: 54 ha solicitado lista de barberos
+[2023-12-24T18:19:39.845Z] INFO: Usuario con id: 54 ha recibido lista de barberos correctamente
+[2023-12-24T18:19:41.093Z] INFO: Usuario con id: 54 ha solicitado lista de barberias
+[2023-12-24T18:19:41.094Z] INFO: Usuario con id: 54 ha recibido lista de barberias correctamente
+[2023-12-24T18:19:42.063Z] INFO: Usuario con id: 54 ha solicitado lista de barberos
+[2023-12-24T18:19:42.064Z] INFO: Usuario con id: 54 ha recibido lista de barberos correctamente
+[2023-12-24T18:19:42.828Z] INFO: Usuario con id: 54 ha solicitado lista de barberias
+[2023-12-24T18:19:42.829Z] INFO: Usuario con id: 54 ha recibido lista de barberias correctamente
+[2023-12-24T18:19:43.655Z] INFO: Usuario con id: 54 ha solicitado lista de barberos
+[2023-12-24T18:19:43.656Z] INFO: Usuario con id: 54 ha recibido lista de barberos correctamente
+[2023-12-24T18:19:47.703Z] INFO: El usuario con id: 54 ha accedido a todas las citas del barbero con id: 1
+[2023-12-24T18:19:47.704Z] INFO: Usuario con id: 54 ha accedido a todos los servicios
+[2023-12-24T18:19:47.705Z] INFO: Usuario ha solicitado obtener los festivos del año 2023}
+[2023-12-24T18:19:47.705Z] INFO: El usuario con id: 54 ha recibido todas las citas del barbero con id: 1
+[2023-12-24T18:19:47.706Z] INFO:    Usuario ha obtenido los festivos del año 2023} correctamente
+[2023-12-24T18:19:49.775Z] INFO: Usuario con id: 54 ha solicitado lista de barberos
+[2023-12-24T18:19:49.776Z] INFO: Usuario con id: 54 ha recibido lista de barberos correctamente
+[2023-12-24T18:20:09.813Z] INFO: Usuario con id: 54 ha solicitado lista de barberos
+[2023-12-24T18:20:09.814Z] INFO: Usuario con id: 54 ha recibido lista de barberos correctamente
+[2023-12-24T18:20:14.740Z] INFO: Usuario con id: 54 ha solicitado lista de barberias
+[2023-12-24T18:20:14.740Z] INFO: Usuario con id: 54 ha recibido lista de barberias correctamente
+[2023-12-24T18:20:16.252Z] INFO: Usuario con id: 54 ha solicitado lista de barberos
+[2023-12-24T18:20:16.254Z] INFO: Usuario con id: 54 ha recibido lista de barberos correctamente
+[2023-12-24T18:20:17.500Z] INFO: Usuario con id: 54 ha solicitado lista de barberias
+[2023-12-24T18:20:17.501Z] INFO: Usuario con id: 54 ha recibido lista de barberias correctamente
+[2023-12-24T18:20:18.251Z] INFO: Usuario con id: 54 ha solicitado lista de barberos
+[2023-12-24T18:20:18.252Z] INFO: Usuario con id: 54 ha recibido lista de barberos correctamente
+[2023-12-24T18:20:53.904Z] INFO: Usuario con id: 54 ha solicitado lista de barberos
+[2023-12-24T18:20:53.905Z] INFO: Usuario con id: 54 ha recibido lista de barberos correctamente
+[2023-12-24T18:20:55.869Z] INFO: Usuario con id: 54 ha solicitado lista de barberias
+[2023-12-24T18:20:55.869Z] INFO: Usuario con id: 54 ha recibido lista de barberias correctamente
+[2023-12-24T18:20:56.953Z] INFO: Usuario con id: 54 ha solicitado lista de barberos
+[2023-12-24T18:20:56.954Z] INFO: Usuario con id: 54 ha recibido lista de barberos correctamente
+[2023-12-24T18:20:58.238Z] INFO: Usuario con id: 54 ha solicitado lista de barberias
+[2023-12-24T18:20:58.238Z] INFO: Usuario con id: 54 ha recibido lista de barberias correctamente
+[2023-12-24T18:21:01.760Z] INFO: Usuario con id: 54 ha solicitado lista de barberos
+[2023-12-24T18:21:01.763Z] INFO: Usuario con id: 54 ha recibido lista de barberos correctamente
+[2023-12-24T18:21:07.968Z] INFO: El usuario con id: 54 ha accedido a todas las citas del barbero con id: 1
+[2023-12-24T18:21:07.969Z] INFO: Usuario con id: 54 ha accedido a todos los servicios
+[2023-12-24T18:21:07.970Z] INFO: Usuario ha solicitado obtener los festivos del año 2023}
+[2023-12-24T18:21:07.971Z] INFO: El usuario con id: 54 ha recibido todas las citas del barbero con id: 1
+[2023-12-24T18:21:07.971Z] INFO:    Usuario ha obtenido los festivos del año 2023} correctamente
+[2023-12-24T18:21:08.886Z] INFO: Usuario con id: 54 ha solicitado lista de barberos
+[2023-12-24T18:21:08.887Z] INFO: Usuario con id: 54 ha recibido lista de barberos correctamente
+[2023-12-24T18:21:09.725Z] INFO: Usuario con id: 54 ha solicitado lista de barberias
+[2023-12-24T18:21:09.725Z] INFO: Usuario con id: 54 ha recibido lista de barberias correctamente
+[2023-12-24T18:21:22.926Z] INFO: Usuario con id: 54 ha solicitado lista de barberias
+[2023-12-24T18:21:22.927Z] INFO: Usuario con id: 54 ha recibido lista de barberias correctamente
+[2023-12-24T18:21:24.473Z] INFO: Usuario con id: 54 ha solicitado lista de barberos
+[2023-12-24T18:21:24.474Z] INFO: Usuario con id: 54 ha recibido lista de barberos correctamente
+[2023-12-24T18:21:25.321Z] INFO: Usuario con id: 54 ha accedido a todos los servicios
+[2023-12-24T18:21:25.322Z] INFO: El usuario con id: 54 ha accedido a todas las citas del barbero con id: 1
+[2023-12-24T18:21:25.323Z] INFO: Usuario ha solicitado obtener los festivos del año 2023}
+[2023-12-24T18:21:25.324Z] INFO: El usuario con id: 54 ha recibido todas las citas del barbero con id: 1
+[2023-12-24T18:21:25.324Z] INFO:    Usuario ha obtenido los festivos del año 2023} correctamente
+[2023-12-24T18:21:26.562Z] INFO: Usuario con id: 54 ha solicitado lista de barberos
+[2023-12-24T18:21:26.563Z] INFO: Usuario con id: 54 ha recibido lista de barberos correctamente
+[2023-12-24T18:21:27.697Z] INFO: Usuario con id: 54 ha solicitado lista de barberias
+[2023-12-24T18:21:27.698Z] INFO: Usuario con id: 54 ha recibido lista de barberias correctamente
+[2023-12-24T18:21:45.351Z] INFO: Usuario con id: 54 ha solicitado lista de barberias
+[2023-12-24T18:21:45.352Z] INFO: Usuario con id: 54 ha recibido lista de barberias correctamente
+[2023-12-24T18:21:49.459Z] INFO: Usuario con id: 54 ha solicitado lista de barberias
+[2023-12-24T18:21:49.460Z] INFO: Usuario con id: 54 ha recibido lista de barberias correctamente
+[2023-12-24T18:21:50.473Z] INFO: Usuario con id: 54 ha solicitado lista de barberos
+[2023-12-24T18:21:50.474Z] INFO: Usuario con id: 54 ha recibido lista de barberos correctamente
+[2023-12-24T18:21:51.237Z] INFO: El usuario con id: 54 ha accedido a todas las citas del barbero con id: 1
+[2023-12-24T18:21:51.237Z] INFO: Usuario con id: 54 ha accedido a todos los servicios
+[2023-12-24T18:21:51.238Z] INFO: Usuario ha solicitado obtener los festivos del año 2023}
+[2023-12-24T18:21:51.239Z] INFO: El usuario con id: 54 ha recibido todas las citas del barbero con id: 1
+[2023-12-24T18:21:51.239Z] INFO:    Usuario ha obtenido los festivos del año 2023} correctamente
+[2023-12-24T18:21:52.520Z] INFO: Usuario con id: 54 ha solicitado lista de barberos
+[2023-12-24T18:21:52.521Z] INFO: Usuario con id: 54 ha recibido lista de barberos correctamente
+[2023-12-24T18:21:54.987Z] INFO: Usuario con id: 54 ha solicitado lista de barberias
+[2023-12-24T18:21:54.988Z] INFO: Usuario con id: 54 ha recibido lista de barberias correctamente
+[2023-12-24T18:21:56.528Z] INFO: Usuario con id: 54 ha solicitado lista de barberos
+[2023-12-24T18:21:56.529Z] INFO: Usuario con id: 54 ha recibido lista de barberos correctamente
+[2023-12-24T18:21:57.670Z] INFO: Usuario con id: 54 ha solicitado lista de barberias
+[2023-12-24T18:21:57.670Z] INFO: Usuario con id: 54 ha recibido lista de barberias correctamente
+[2023-12-24T18:22:00.182Z] INFO: Usuario con id: 54 ha solicitado lista de barberos
+[2023-12-24T18:22:00.183Z] INFO: Usuario con id: 54 ha recibido lista de barberos correctamente
+[2023-12-24T18:22:00.686Z] INFO: Usuario con id: 54 ha accedido a todos los servicios
+[2023-12-24T18:22:00.687Z] INFO: El usuario con id: 54 ha accedido a todas las citas del barbero con id: 1
+[2023-12-24T18:22:00.687Z] INFO: Usuario ha solicitado obtener los festivos del año 2023}
+[2023-12-24T18:22:00.688Z] INFO: El usuario con id: 54 ha recibido todas las citas del barbero con id: 1
+[2023-12-24T18:22:00.689Z] INFO:    Usuario ha obtenido los festivos del año 2023} correctamente
+[2023-12-24T18:22:03.528Z] INFO: Usuario con id: 54 ha solicitado lista de barberos
+[2023-12-24T18:22:03.530Z] INFO: Usuario con id: 54 ha recibido lista de barberos correctamente
+[2023-12-24T18:22:04.763Z] INFO: Usuario con id: 54 ha solicitado lista de barberias
+[2023-12-24T18:22:04.763Z] INFO: Usuario con id: 54 ha recibido lista de barberias correctamente
+[2023-12-24T18:22:05.611Z] INFO: Usuario con id: 54 ha solicitado lista de barberos
+[2023-12-24T18:22:05.612Z] INFO: Usuario con id: 54 ha recibido lista de barberos correctamente
+[2023-12-24T18:22:06.081Z] INFO: Usuario con id: 54 ha accedido a todos los servicios
+[2023-12-24T18:22:06.081Z] INFO: El usuario con id: 54 ha accedido a todas las citas del barbero con id: 1
+[2023-12-24T18:22:06.082Z] INFO: Usuario ha solicitado obtener los festivos del año 2023}
+[2023-12-24T18:22:06.082Z] INFO: El usuario con id: 54 ha recibido todas las citas del barbero con id: 1
+[2023-12-24T18:22:06.083Z] INFO:    Usuario ha obtenido los festivos del año 2023} correctamente
+[2023-12-24T18:22:07.375Z] INFO: Usuario con id: 54 ha solicitado lista de barberos
+[2023-12-24T18:22:07.376Z] INFO: Usuario con id: 54 ha recibido lista de barberos correctamente
+[2023-12-24T18:22:10.961Z] INFO: Usuario con id: 54 ha solicitado lista de barberias
+[2023-12-24T18:22:10.962Z] INFO: Usuario con id: 54 ha recibido lista de barberias correctamente
+[2023-12-24T18:22:23.523Z] INFO: Usuario con id: 54 ha solicitado lista de barberias
+[2023-12-24T18:22:23.523Z] INFO: Usuario con id: 54 ha recibido lista de barberias correctamente
+[2023-12-24T18:22:25.238Z] INFO: Usuario con id: 54 ha solicitado lista de barberos
+[2023-12-24T18:22:25.238Z] INFO: Usuario con id: 54 ha recibido lista de barberos correctamente
+[2023-12-24T18:22:26.109Z] INFO: Usuario con id: 54 ha accedido a todos los servicios
+[2023-12-24T18:22:26.110Z] INFO: El usuario con id: 54 ha accedido a todas las citas del barbero con id: 1
+[2023-12-24T18:22:26.110Z] INFO: Usuario ha solicitado obtener los festivos del año 2023}
+[2023-12-24T18:22:26.111Z] INFO: El usuario con id: 54 ha recibido todas las citas del barbero con id: 1
+[2023-12-24T18:22:26.112Z] INFO:    Usuario ha obtenido los festivos del año 2023} correctamente
+[2023-12-24T18:22:27.411Z] INFO: Usuario con id: 54 ha solicitado lista de barberos
+[2023-12-24T18:22:27.412Z] INFO: Usuario con id: 54 ha recibido lista de barberos correctamente
+[2023-12-24T18:22:28.357Z] INFO: El usuario con id: 54 ha accedido a todas las citas del barbero con id: 1
+[2023-12-24T18:22:28.357Z] INFO: Usuario ha solicitado obtener los festivos del año 2023}
+[2023-12-24T18:22:28.358Z] INFO: Usuario con id: 54 ha accedido a todos los servicios
+[2023-12-24T18:22:28.359Z] INFO: El usuario con id: 54 ha recibido todas las citas del barbero con id: 1
+[2023-12-24T18:22:28.360Z] INFO:    Usuario ha obtenido los festivos del año 2023} correctamente
+[2023-12-24T18:22:29.285Z] INFO: Usuario con id: 54 ha solicitado lista de barberos
+[2023-12-24T18:22:29.286Z] INFO: Usuario con id: 54 ha recibido lista de barberos correctamente
+[2023-12-24T18:22:30.302Z] INFO: Usuario con id: 54 ha solicitado lista de barberias
+[2023-12-24T18:22:30.303Z] INFO: Usuario con id: 54 ha recibido lista de barberias correctamente
+[2023-12-24T18:22:34.681Z] INFO: Usuario con id: 54 ha accedido a su perfil
+[2023-12-24T18:22:35.508Z] INFO: Usuario con id: 54 ha solicitado lista de barberias
+[2023-12-24T18:22:35.509Z] INFO: Usuario con id: 54 ha recibido lista de barberias correctamente
+[2023-12-24T18:22:36.505Z] INFO: Usuario con id: 54 ha solicitado lista de barberos
+[2023-12-24T18:22:36.506Z] INFO: Usuario con id: 54 ha recibido lista de barberos correctamente
+[2023-12-24T18:22:37.555Z] INFO: Usuario con id: 54 ha solicitado lista de barberias
+[2023-12-24T18:22:37.556Z] INFO: Usuario con id: 54 ha recibido lista de barberias correctamente
+[2023-12-24T18:22:38.066Z] INFO: Usuario con id: 54 ha solicitado lista de barberos
+[2023-12-24T18:22:38.067Z] INFO: Usuario con id: 54 ha recibido lista de barberos correctamente
+[2023-12-24T18:22:39.085Z] INFO: Usuario con id: 54 ha solicitado lista de barberias
+[2023-12-24T18:22:39.086Z] INFO: Usuario con id: 54 ha recibido lista de barberias correctamente
+[2023-12-24T18:22:46.224Z] INFO: Usuario con id: 54 ha solicitado lista de barberias
+[2023-12-24T18:22:46.225Z] INFO: Usuario con id: 54 ha recibido lista de barberias correctamente
+[2023-12-24T18:22:47.451Z] INFO: Usuario con id: 54 ha solicitado lista de barberos
+[2023-12-24T18:22:47.452Z] INFO: Usuario con id: 54 ha recibido lista de barberos correctamente
+[2023-12-24T18:22:48.268Z] INFO: Usuario con id: 54 ha accedido a todos los servicios
+[2023-12-24T18:22:48.269Z] INFO: El usuario con id: 54 ha accedido a todas las citas del barbero con id: 1
+[2023-12-24T18:22:48.269Z] INFO: Usuario ha solicitado obtener los festivos del año 2023}
+[2023-12-24T18:22:48.270Z] INFO: El usuario con id: 54 ha recibido todas las citas del barbero con id: 1
+[2023-12-24T18:22:48.271Z] INFO:    Usuario ha obtenido los festivos del año 2023} correctamente
+[2023-12-24T18:22:49.472Z] INFO: Usuario con id: 54 ha solicitado lista de barberos
+[2023-12-24T18:22:49.473Z] INFO: Usuario con id: 54 ha recibido lista de barberos correctamente
+[2023-12-24T18:22:52.930Z] INFO: Usuario con id: 54 ha solicitado lista de barberias
+[2023-12-24T18:22:52.931Z] INFO: Usuario con id: 54 ha recibido lista de barberias correctamente
+[2023-12-24T18:22:59.062Z] INFO: Usuario con id: 54 ha solicitado lista de barberos
+[2023-12-24T18:22:59.064Z] INFO: Usuario con id: 54 ha recibido lista de barberos correctamente
+[2023-12-24T18:22:59.924Z] INFO: El usuario con id: 54 ha accedido a todas las citas del barbero con id: 2
+[2023-12-24T18:22:59.925Z] INFO: Usuario con id: 54 ha accedido a todos los servicios
+[2023-12-24T18:22:59.926Z] INFO: Usuario ha solicitado obtener los festivos del año 2023}
+[2023-12-24T18:22:59.926Z] INFO: El usuario con id: 54 ha recibido todas las citas del barbero con id: 2
+[2023-12-24T18:22:59.927Z] INFO:    Usuario ha obtenido los festivos del año 2023} correctamente
+[2023-12-24T18:23:01.343Z] INFO: Usuario con id: 54 ha solicitado lista de barberos
+[2023-12-24T18:23:01.344Z] INFO: Usuario con id: 54 ha recibido lista de barberos correctamente
+[2023-12-24T18:23:02.117Z] INFO: Usuario con id: 54 ha solicitado lista de barberias
+[2023-12-24T18:23:02.117Z] INFO: Usuario con id: 54 ha recibido lista de barberias correctamente
+[2023-12-24T18:23:04.753Z] INFO: Usuario con id: 54 ha solicitado lista de barberos
+[2023-12-24T18:23:04.754Z] INFO: Usuario con id: 54 ha recibido lista de barberos correctamente
+[2023-12-24T18:23:05.500Z] INFO: Usuario con id: 54 ha accedido a todos los servicios
+[2023-12-24T18:23:05.501Z] INFO: El usuario con id: 54 ha accedido a todas las citas del barbero con id: 1
+[2023-12-24T18:23:05.501Z] INFO: Usuario ha solicitado obtener los festivos del año 2023}
+[2023-12-24T18:23:05.502Z] INFO: El usuario con id: 54 ha recibido todas las citas del barbero con id: 1
+[2023-12-24T18:23:05.503Z] INFO:    Usuario ha obtenido los festivos del año 2023} correctamente
+[2023-12-24T18:23:06.503Z] INFO: Usuario con id: 54 ha solicitado lista de barberos
+[2023-12-24T18:23:06.505Z] INFO: Usuario con id: 54 ha recibido lista de barberos correctamente
+[2023-12-24T18:23:07.160Z] INFO: Usuario con id: 54 ha solicitado lista de barberias
+[2023-12-24T18:23:07.161Z] INFO: Usuario con id: 54 ha recibido lista de barberias correctamente
+[2023-12-24T18:23:08.073Z] INFO: Usuario con id: 54 ha solicitado lista de barberos
+[2023-12-24T18:23:08.074Z] INFO: Usuario con id: 54 ha recibido lista de barberos correctamente
+[2023-12-24T18:23:09.080Z] INFO: Usuario ha solicitado obtener los festivos del año 2023}
+[2023-12-24T18:23:09.080Z] INFO: Usuario con id: 54 ha accedido a todos los servicios
+[2023-12-24T18:23:09.081Z] INFO:    Usuario ha obtenido los festivos del año 2023} correctamente
+[2023-12-24T18:23:09.081Z] INFO: El usuario con id: 54 ha accedido a todas las citas del barbero con id: 3
+[2023-12-24T18:23:09.082Z] INFO: El usuario con id: 54 ha recibido todas las citas del barbero con id: 3
+[2023-12-24T18:23:09.992Z] INFO: Usuario con id: 54 ha solicitado lista de barberos
+[2023-12-24T18:23:09.993Z] INFO: Usuario con id: 54 ha recibido lista de barberos correctamente
+[2023-12-24T18:23:10.638Z] INFO: El usuario con id: 54 ha accedido a todas las citas del barbero con id: 4
+[2023-12-24T18:23:10.638Z] INFO: Usuario ha solicitado obtener los festivos del año 2023}
+[2023-12-24T18:23:10.638Z] INFO: Usuario con id: 54 ha accedido a todos los servicios
+[2023-12-24T18:23:10.639Z] INFO: El usuario con id: 54 ha recibido todas las citas del barbero con id: 4
+[2023-12-24T18:23:10.640Z] INFO:    Usuario ha obtenido los festivos del año 2023} correctamente
+[2023-12-24T18:23:11.506Z] INFO: Usuario con id: 54 ha solicitado lista de barberos
+[2023-12-24T18:23:11.507Z] INFO: Usuario con id: 54 ha recibido lista de barberos correctamente
+[2023-12-24T18:23:12.701Z] INFO: Usuario con id: 54 ha solicitado lista de barberias
+[2023-12-24T18:23:12.702Z] INFO: Usuario con id: 54 ha recibido lista de barberias correctamente
+[2023-12-24T18:23:13.490Z] INFO: Usuario con id: 54 ha solicitado lista de barberos
+[2023-12-24T18:23:13.491Z] INFO: Usuario con id: 54 ha recibido lista de barberos correctamente
+[2023-12-24T18:23:17.701Z] INFO: Usuario con id: 54 ha accedido a su perfil
+[2023-12-24T18:23:18.369Z] INFO: Usuario con id: 54 ha accedido a su perfil
+[2023-12-24T18:23:18.374Z] INFO: Usuario con id: 54 ha solicitado lista de citas agendadas
+[2023-12-24T18:23:18.375Z] INFO: Usuario con id: 54 ha recibido lista de citas agendadas correctamente
+[2023-12-24T18:23:18.928Z] INFO: Usuario con id: 54 ha accedido a su perfil
+[2023-12-24T18:23:19.424Z] INFO: Usuario con id: 54 ha solicitado lista de barberias
+[2023-12-24T18:23:19.424Z] INFO: Usuario con id: 54 ha recibido lista de barberias correctamente
+[2023-12-24T18:23:20.372Z] INFO: Usuario con id: 54 ha solicitado lista de barberos
+[2023-12-24T18:23:20.373Z] INFO: Usuario con id: 54 ha recibido lista de barberos correctamente
+[2023-12-24T18:23:21.792Z] INFO: Usuario con id: 54 ha accedido a todos los servicios
+[2023-12-24T18:23:21.793Z] INFO: El usuario con id: 54 ha accedido a todas las citas del barbero con id: 4
+[2023-12-24T18:23:21.793Z] INFO: Usuario ha solicitado obtener los festivos del año 2023}
+[2023-12-24T18:23:21.794Z] INFO: El usuario con id: 54 ha recibido todas las citas del barbero con id: 4
+[2023-12-24T18:23:21.794Z] INFO:    Usuario ha obtenido los festivos del año 2023} correctamente
+[2023-12-24T18:23:22.771Z] INFO: Usuario con id: 54 ha solicitado lista de barberos
+[2023-12-24T18:23:22.772Z] INFO: Usuario con id: 54 ha recibido lista de barberos correctamente
+[2023-12-24T18:23:28.454Z] INFO: El usuario con id: 54 ha accedido a todas las citas del barbero con id: 1
+[2023-12-24T18:23:28.454Z] INFO: Usuario con id: 54 ha accedido a todos los servicios
+[2023-12-24T18:23:28.455Z] INFO: Usuario ha solicitado obtener los festivos del año 2023}
+[2023-12-24T18:23:28.455Z] INFO: El usuario con id: 54 ha recibido todas las citas del barbero con id: 1
+[2023-12-24T18:23:28.456Z] INFO:    Usuario ha obtenido los festivos del año 2023} correctamente
+[2023-12-24T18:23:33.344Z] INFO: Usuario con id: 54 ha accedido a su perfil
+[2023-12-24T18:23:39.538Z] INFO: Usuario con email atkinsonbarbershop@gmail.com e id: 52 ha iniciado sesión exitosamente
+[2023-12-24T18:23:39.562Z] INFO: Usuario con id: 52 ha solicitado lista de barberos
+[2023-12-24T18:23:39.563Z] INFO: Usuario ha solicitado obtener los festivos del año 2023}
+[2023-12-24T18:23:39.563Z] INFO: Usuario con id: 52 ha recibido lista de barberos correctamente
+[2023-12-24T18:23:39.564Z] INFO: Usuario con id: 52 ha accedido a todos los servicios
+[2023-12-24T18:23:39.565Z] INFO: Admin con id 52 solicitando  todos las citas del día 2023-12-24
+[2023-12-24T18:23:39.565Z] INFO:    Usuario ha obtenido los festivos del año 2023} correctamente
+[2023-12-24T18:23:39.568Z] INFO: Nuevo cliente conectado conectado al socket
+[2023-12-24T18:23:39.571Z] INFO: Admin con id 52 ha recibido todos las citas del día 2023-12-24 correctamente
+[2023-12-24T18:23:39.574Z] INFO: Admin con id 52 solicitando  todos las citas del día 2023-12-24
+[2023-12-24T18:23:39.575Z] INFO: Admin con id 52 ha recibido todos las citas del día 2023-12-24 correctamente
+[2023-12-24T18:23:42.216Z] INFO: Cliente desconectado del socket
+[2023-12-24T18:23:42.220Z] INFO: Admin con id 52 solicitando  todos las citas del día 2023-12-23
+[2023-12-24T18:23:42.233Z] INFO: Nuevo cliente conectado conectado al socket
+[2023-12-24T18:23:42.234Z] INFO: Admin con id 52 ha recibido todos las citas del día 2023-12-23 correctamente
+[2023-12-24T18:23:42.236Z] INFO: Admin con id 52 solicitando  todos las citas del día 2023-12-23
+[2023-12-24T18:23:42.244Z] INFO: Admin con id 52 ha recibido todos las citas del día 2023-12-23 correctamente
+[2023-12-24T18:33:40.395Z] INFO: Cliente desconectado del socket
+[2023-12-24T18:33:40.402Z] INFO: Admin con id 52 solicitando  todos las citas del día 2023-12-25
+[2023-12-24T18:33:40.403Z] INFO: Admin con id 52 ha recibido todos las citas del día 2023-12-25 correctamente
+[2023-12-24T18:33:40.412Z] INFO: Admin con id 52 solicitando  todos las citas del día 2023-12-25
+[2023-12-24T18:33:40.413Z] INFO: Admin con id 52 ha recibido todos las citas del día 2023-12-25 correctamente
+[2023-12-24T18:33:40.415Z] INFO: Nuevo cliente conectado conectado al socket
+[2023-12-24T18:33:41.222Z] INFO: Cliente desconectado del socket
+[2023-12-24T18:33:41.227Z] INFO: Admin con id 52 solicitando  todos las citas del día 2023-12-26
+[2023-12-24T18:33:41.231Z] INFO: Admin con id 52 ha recibido todos las citas del día 2023-12-26 correctamente
+[2023-12-24T18:33:41.237Z] INFO: Admin con id 52 solicitando  todos las citas del día 2023-12-26
+[2023-12-24T18:33:41.238Z] INFO: Nuevo cliente conectado conectado al socket
+[2023-12-24T18:33:41.243Z] INFO: Admin con id 52 ha recibido todos las citas del día 2023-12-26 correctamente
+[2023-12-24T18:33:43.510Z] INFO: Admin accediendo a perfil con id: 570
+[2023-12-24T18:33:43.511Z] INFO: Admin a accedido a la información de usuario con id: 570
+[2023-12-24T18:34:57.914Z] INFO: Cliente desconectado del socket
+[2023-12-24T18:34:57.924Z] INFO: Usuario con id: 52 ha solicitado lista de barberos
+[2023-12-24T18:34:57.925Z] INFO: Usuario con id: 52 ha recibido lista de barberos correctamente
+[2023-12-24T18:34:58.829Z] INFO: Usuario con id: 52 ha solicitado lista de barberos
+[2023-12-24T18:34:58.831Z] INFO: Usuario con id: 52 ha recibido lista de barberos correctamente
+[2023-12-24T18:34:58.832Z] INFO: Usuario ha solicitado obtener los festivos del año 2023}
+[2023-12-24T18:34:58.832Z] INFO:    Usuario ha obtenido los festivos del año 2023} correctamente
+[2023-12-24T18:34:58.833Z] INFO: Usuario con id: 52 ha accedido a todos los servicios
+[2023-12-24T18:34:58.834Z] INFO: Admin con id 52 solicitando  todos las citas del día 2023-12-24
+[2023-12-24T18:34:58.834Z] INFO: Nuevo cliente conectado conectado al socket
+[2023-12-24T18:34:58.836Z] INFO: Admin con id 52 ha recibido todos las citas del día 2023-12-24 correctamente
+[2023-12-24T18:34:58.838Z] INFO: Admin con id 52 solicitando  todos las citas del día 2023-12-24
+[2023-12-24T18:34:58.839Z] INFO: Admin con id 52 ha recibido todos las citas del día 2023-12-24 correctamente
+[2023-12-24T18:39:53.702Z] INFO: Cliente desconectado del socket
+[2023-12-24T18:39:53.706Z] INFO: Usuario con id: 52 ha solicitado lista de barberias
+[2023-12-24T18:39:53.707Z] INFO: Usuario con id: 52 ha recibido lista de barberias correctamente
+[2023-12-24T18:39:58.537Z] INFO: Usuario con id: 52 ha solicitado lista de barberos
+[2023-12-24T18:39:58.538Z] INFO: Usuario ha solicitado obtener los festivos del año 2023}
+[2023-12-24T18:39:58.539Z] INFO: Usuario con id: 52 ha accedido a todos los servicios
+[2023-12-24T18:39:58.539Z] INFO: Admin con id 52 solicitando  todos las citas del día 2023-12-24
+[2023-12-24T18:39:58.540Z] INFO:    Usuario ha obtenido los festivos del año 2023} correctamente
+[2023-12-24T18:39:58.540Z] INFO: Usuario con id: 52 ha recibido lista de barberos correctamente
+[2023-12-24T18:39:58.542Z] INFO: Admin con id 52 ha recibido todos las citas del día 2023-12-24 correctamente
+[2023-12-24T18:39:58.543Z] INFO: Admin con id 52 solicitando  todos las citas del día 2023-12-24
+[2023-12-24T18:39:58.544Z] INFO: Admin con id 52 ha recibido todos las citas del día 2023-12-24 correctamente
+[2023-12-24T18:39:58.546Z] INFO: Nuevo cliente conectado conectado al socket
+[2023-12-24T18:39:59.686Z] INFO: Cliente desconectado del socket
+[2023-12-24T18:39:59.690Z] INFO: Admin con id 52 solicitando  todos las citas del día 2023-12-23
+[2023-12-24T18:39:59.699Z] INFO: Admin con id 52 ha recibido todos las citas del día 2023-12-23 correctamente
+[2023-12-24T18:39:59.701Z] INFO: Nuevo cliente conectado conectado al socket
+[2023-12-24T18:39:59.702Z] INFO: Admin con id 52 solicitando  todos las citas del día 2023-12-23
+[2023-12-24T18:39:59.709Z] INFO: Admin con id 52 ha recibido todos las citas del día 2023-12-23 correctamente
+[2023-12-24T18:40:02.561Z] INFO: Cliente desconectado del socket
+[2023-12-24T18:40:02.569Z] INFO: Usuario con id: 52 ha solicitado lista de barberos
+[2023-12-24T18:40:02.571Z] INFO: Usuario con id: 52 ha recibido lista de barberos correctamente
+[2023-12-24T18:40:03.119Z] INFO: Usuario con id: 52 ha solicitado lista de barberias
+[2023-12-24T18:40:03.120Z] INFO: Usuario con id: 52 ha recibido lista de barberias correctamente
+[2023-12-24T18:40:05.699Z] INFO: Usuario con id: 52 ha solicitado lista de barberos
+[2023-12-24T18:40:05.700Z] INFO: Usuario con id: 52 ha recibido lista de barberos correctamente
+[2023-12-24T18:40:06.734Z] INFO: Usuario con id: 52 ha solicitado lista de barberias
+[2023-12-24T18:40:06.734Z] INFO: Usuario con id: 52 ha recibido lista de barberias correctamente
+[2023-12-24T18:40:13.503Z] INFO: Usuario con id: 52 ha solicitado lista de barberias
+[2023-12-24T18:40:13.503Z] INFO: Usuario con id: 52 ha recibido lista de barberias correctamente
+[2023-12-24T18:40:34.007Z] INFO: Usuario con id: 52 ha solicitado lista de barberos
+[2023-12-24T18:40:34.008Z] INFO: Usuario ha solicitado obtener los festivos del año 2023}
+[2023-12-24T18:40:34.009Z] INFO: Admin con id 52 solicitando  todos las citas del día 2023-12-24
+[2023-12-24T18:40:34.009Z] INFO: Usuario con id: 52 ha recibido lista de barberos correctamente
+[2023-12-24T18:40:34.010Z] INFO: Usuario con id: 52 ha accedido a todos los servicios
+[2023-12-24T18:40:34.010Z] INFO:    Usuario ha obtenido los festivos del año 2023} correctamente
+[2023-12-24T18:40:34.011Z] INFO: Nuevo cliente conectado conectado al socket
+[2023-12-24T18:40:34.013Z] INFO: Admin con id 52 ha recibido todos las citas del día 2023-12-24 correctamente
+[2023-12-24T18:40:34.014Z] INFO: Admin con id 52 solicitando  todos las citas del día 2023-12-24
+[2023-12-24T18:40:34.016Z] INFO: Admin con id 52 ha recibido todos las citas del día 2023-12-24 correctamente
+[2023-12-24T18:46:19.765Z] INFO: Cliente desconectado del socket
+[2023-12-24T18:46:19.772Z] INFO: Usuario con id: 52 ha solicitado lista de barberos
+[2023-12-24T18:46:19.774Z] INFO: Usuario con id: 52 ha recibido lista de barberos correctamente
+[2023-12-24T18:46:19.775Z] INFO: Usuario con id: 52 ha accedido a todos los servicios
+[2023-12-24T18:46:19.776Z] INFO: Admin con id 52 solicitando  todos las citas del día 2023-12-24
+[2023-12-24T18:46:19.776Z] INFO: Usuario ha solicitado obtener los festivos del año 2023}
+[2023-12-24T18:46:19.778Z] INFO: Nuevo cliente conectado conectado al socket
+[2023-12-24T18:46:19.779Z] INFO:    Usuario ha obtenido los festivos del año 2023} correctamente
+[2023-12-24T18:46:19.780Z] INFO: Admin con id 52 ha recibido todos las citas del día 2023-12-24 correctamente
+[2023-12-24T18:46:19.781Z] INFO: Admin con id 52 solicitando  todos las citas del día 2023-12-24
+[2023-12-24T18:46:19.783Z] INFO: Admin con id 52 ha recibido todos las citas del día 2023-12-24 correctamente
+[2023-12-24T18:46:22.268Z] INFO: Cliente desconectado del socket
+[2023-12-24T18:46:22.288Z] INFO: Usuario con id: 52 ha solicitado lista de barberos
+[2023-12-24T18:46:22.289Z] INFO: Usuario con id: 52 ha recibido lista de barberos correctamente
+[2023-12-24T18:46:22.767Z] INFO: Usuario con id: 52 ha solicitado lista de barberias
+[2023-12-24T18:46:22.767Z] INFO: Usuario con id: 52 ha recibido lista de barberias correctamente
+[2023-12-24T18:46:24.692Z] INFO: Usuario con id: 52 ha accedido a todos los servicios
+[2023-12-24T18:46:24.693Z] INFO: Usuario ha solicitado obtener los festivos del año 2023}
+[2023-12-24T18:46:24.693Z] INFO: Admin con id 52 solicitando  todos las citas del día 2023-12-24
+[2023-12-24T18:46:24.694Z] INFO:    Usuario ha obtenido los festivos del año 2023} correctamente
+[2023-12-24T18:46:24.694Z] INFO: Usuario con id: 52 ha solicitado lista de barberos
+[2023-12-24T18:46:24.696Z] INFO: Usuario con id: 52 ha recibido lista de barberos correctamente
+[2023-12-24T18:46:24.696Z] INFO: Admin con id 52 ha recibido todos las citas del día 2023-12-24 correctamente
+[2023-12-24T18:46:24.698Z] INFO: Admin con id 52 solicitando  todos las citas del día 2023-12-24
+[2023-12-24T18:46:24.699Z] INFO: Nuevo cliente conectado conectado al socket
+[2023-12-24T18:46:24.700Z] INFO: Admin con id 52 ha recibido todos las citas del día 2023-12-24 correctamente
+[2023-12-24T18:46:26.234Z] INFO: Cliente desconectado del socket
+[2023-12-24T18:46:26.238Z] INFO: Admin con id 52 solicitando  todos las citas del día 2023-12-18
+[2023-12-24T18:46:26.245Z] INFO: Nuevo cliente conectado conectado al socket
+[2023-12-24T18:46:26.245Z] INFO: Admin con id 52 ha recibido todos las citas del día 2023-12-18 correctamente
+[2023-12-24T18:46:26.248Z] INFO: Admin con id 52 solicitando  todos las citas del día 2023-12-18
+[2023-12-24T18:46:26.253Z] INFO: Admin con id 52 ha recibido todos las citas del día 2023-12-18 correctamente
+[2023-12-24T18:46:30.648Z] INFO: Cliente desconectado del socket
+[2023-12-24T18:46:30.654Z] INFO: Admin con id 52 solicitando  todos las citas del día 2023-12-19
+[2023-12-24T18:46:30.659Z] INFO: Nuevo cliente conectado conectado al socket
+[2023-12-24T18:46:30.660Z] INFO: Admin con id 52 ha recibido todos las citas del día 2023-12-19 correctamente
+[2023-12-24T18:46:30.661Z] INFO: Admin con id 52 solicitando  todos las citas del día 2023-12-19
+[2023-12-24T18:46:30.665Z] INFO: Admin con id 52 ha recibido todos las citas del día 2023-12-19 correctamente
+[2023-12-24T18:46:33.264Z] INFO: Cliente desconectado del socket
+[2023-12-24T18:46:33.268Z] INFO: Admin con id 52 solicitando  todos las citas del día 2023-12-18
+[2023-12-24T18:46:33.274Z] INFO: Nuevo cliente conectado conectado al socket
+[2023-12-24T18:46:33.276Z] INFO: Admin con id 52 ha recibido todos las citas del día 2023-12-18 correctamente
+[2023-12-24T18:46:33.277Z] INFO: Admin con id 52 solicitando  todos las citas del día 2023-12-18
+[2023-12-24T18:46:33.282Z] INFO: Admin con id 52 ha recibido todos las citas del día 2023-12-18 correctamente
+[2023-12-24T18:46:43.246Z] INFO: Admin accediendo a perfil con id: 699
+[2023-12-24T18:46:43.246Z] INFO: Admin a accedido a la información de usuario con id: 699
+[2023-12-24T19:04:20.741Z] INFO: Running
+[2023-12-24T19:04:20.785Z] INFO: Usuario con id: 52 ha solicitado lista de barberos
+[2023-12-24T19:04:20.901Z] INFO: Usuario con id: 52 ha recibido lista de barberos correctamente
+[2023-12-24T19:04:20.944Z] INFO: Usuario con id: 52 ha solicitado lista de barberias
+[2023-12-24T19:04:20.945Z] INFO: Usuario con id: 52 ha recibido lista de barberias correctamente
+[2023-12-24T19:04:22.285Z] INFO: Nuevo cliente conectado conectado al socket
+[2023-12-24T19:04:22.289Z] INFO: Usuario con id: 52 ha solicitado lista de barberos
+[2023-12-24T19:04:22.293Z] INFO: Usuario ha solicitado obtener los festivos del año 2023}
+[2023-12-24T19:04:22.293Z] INFO: Admin con id 52 solicitando  todos las citas del día 2023-12-24
+[2023-12-24T19:04:22.296Z] INFO: Usuario con id: 52 ha recibido lista de barberos correctamente
+[2023-12-24T19:04:22.299Z] INFO: Usuario con id: 52 ha accedido a todos los servicios
+[2023-12-24T19:04:22.300Z] INFO:    Usuario ha obtenido los festivos del año 2023} correctamente
+[2023-12-24T19:04:22.301Z] INFO: Admin con id 52 ha recibido todos las citas del día 2023-12-24 correctamente
+[2023-12-24T19:04:22.302Z] INFO: Admin con id 52 solicitando  todos las citas del día 2023-12-24
+[2023-12-24T19:04:22.304Z] INFO: Admin con id 52 ha recibido todos las citas del día 2023-12-24 correctamente
+[2023-12-24T19:04:24.486Z] INFO: Cliente desconectado del socket
+[2023-12-24T19:04:24.491Z] INFO: Admin con id 52 solicitando  todos las citas del día 2023-12-25
+[2023-12-24T19:04:24.492Z] INFO: Nuevo cliente conectado conectado al socket
+[2023-12-24T19:04:24.495Z] INFO: Admin con id 52 ha recibido todos las citas del día 2023-12-25 correctamente
+[2023-12-24T19:04:24.497Z] INFO: Admin con id 52 solicitando  todos las citas del día 2023-12-25
+[2023-12-24T19:04:24.498Z] INFO: Admin con id 52 ha recibido todos las citas del día 2023-12-25 correctamente
+[2023-12-24T19:04:25.345Z] INFO: Cliente desconectado del socket
+[2023-12-24T19:04:25.349Z] INFO: Admin con id 52 solicitando  todos las citas del día 2023-12-26
+[2023-12-24T19:04:25.351Z] INFO: Admin con id 52 ha recibido todos las citas del día 2023-12-26 correctamente
+[2023-12-24T19:04:25.354Z] INFO: Admin con id 52 solicitando  todos las citas del día 2023-12-26
+[2023-12-24T19:04:25.355Z] INFO: Nuevo cliente conectado conectado al socket
+[2023-12-24T19:04:25.356Z] INFO: Admin con id 52 ha recibido todos las citas del día 2023-12-26 correctamente
+[2023-12-24T19:04:27.208Z] INFO: Cliente desconectado del socket
+[2023-12-24T19:04:27.213Z] INFO: Admin con id 52 solicitando  todos las citas del día 2023-12-27
+[2023-12-24T19:04:27.216Z] INFO: Nuevo cliente conectado conectado al socket
+[2023-12-24T19:04:27.216Z] INFO: Admin con id 52 ha recibido todos las citas del día 2023-12-27 correctamente
+[2023-12-24T19:04:27.218Z] INFO: Admin con id 52 solicitando  todos las citas del día 2023-12-27
+[2023-12-24T19:04:27.219Z] INFO: Admin con id 52 ha recibido todos las citas del día 2023-12-27 correctamente
+[2023-12-24T19:04:29.259Z] INFO: Cliente desconectado del socket
+[2023-12-24T19:04:29.265Z] INFO: Admin con id 52 solicitando  todos las citas del día 2023-12-30
+[2023-12-24T19:04:29.267Z] INFO: Nuevo cliente conectado conectado al socket
+[2023-12-24T19:04:29.268Z] INFO: Admin con id 52 ha recibido todos las citas del día 2023-12-30 correctamente
+[2023-12-24T19:04:29.270Z] INFO: Admin con id 52 solicitando  todos las citas del día 2023-12-30
+[2023-12-24T19:04:29.271Z] INFO: Admin con id 52 ha recibido todos las citas del día 2023-12-30 correctamente
+[2023-12-24T19:04:31.027Z] INFO: Cliente desconectado del socket
+[2023-12-24T19:04:31.032Z] INFO: Admin con id 52 solicitando  todos las citas del día 2023-12-31
+[2023-12-24T19:04:31.034Z] INFO: Admin con id 52 ha recibido todos las citas del día 2023-12-31 correctamente
+[2023-12-24T19:04:31.037Z] INFO: Nuevo cliente conectado conectado al socket
+[2023-12-24T19:04:31.038Z] INFO: Admin con id 52 solicitando  todos las citas del día 2023-12-31
+[2023-12-24T19:04:31.040Z] INFO: Admin con id 52 ha recibido todos las citas del día 2023-12-31 correctamente
+[2023-12-24T19:04:32.138Z] INFO: Cliente desconectado del socket
+[2023-12-24T19:04:32.143Z] INFO: Admin con id 52 solicitando  todos las citas del día 2023-12-29
+[2023-12-24T19:04:32.144Z] INFO: Admin con id 52 ha recibido todos las citas del día 2023-12-29 correctamente
+[2023-12-24T19:04:32.146Z] INFO: Admin con id 52 solicitando  todos las citas del día 2023-12-29
+[2023-12-24T19:04:32.148Z] INFO: Nuevo cliente conectado conectado al socket
+[2023-12-24T19:04:32.149Z] INFO: Admin con id 52 ha recibido todos las citas del día 2023-12-29 correctamente
+[2023-12-24T19:04:35.506Z] INFO: Cliente desconectado del socket
+[2023-12-24T19:04:35.511Z] INFO: Admin con id 52 solicitando  todos las citas del día 2023-12-28
+[2023-12-24T19:04:35.512Z] INFO: Admin con id 52 ha recibido todos las citas del día 2023-12-28 correctamente
+[2023-12-24T19:04:35.515Z] INFO: Admin con id 52 solicitando  todos las citas del día 2023-12-28
+[2023-12-24T19:04:35.516Z] INFO: Nuevo cliente conectado conectado al socket
+[2023-12-24T19:04:35.517Z] INFO: Admin con id 52 ha recibido todos las citas del día 2023-12-28 correctamente
+[2023-12-24T19:04:38.460Z] INFO: Cliente desconectado del socket
+[2023-12-24T19:04:38.464Z] INFO: Admin con id 52 solicitando  todos las citas del día 2023-12-27
+[2023-12-24T19:04:38.466Z] INFO: Admin con id 52 ha recibido todos las citas del día 2023-12-27 correctamente
+[2023-12-24T19:04:38.468Z] INFO: Admin con id 52 solicitando  todos las citas del día 2023-12-27
+[2023-12-24T19:04:38.469Z] INFO: Nuevo cliente conectado conectado al socket
+[2023-12-24T19:04:38.470Z] INFO: Admin con id 52 ha recibido todos las citas del día 2023-12-27 correctamente
+[2023-12-24T19:04:41.033Z] INFO: Cliente desconectado del socket
+[2023-12-24T19:04:41.037Z] INFO: Admin con id 52 solicitando  todos las citas del día 2023-12-26
+[2023-12-24T19:04:41.039Z] INFO: Admin con id 52 ha recibido todos las citas del día 2023-12-26 correctamente
+[2023-12-24T19:04:41.041Z] INFO: Admin con id 52 solicitando  todos las citas del día 2023-12-26
+[2023-12-24T19:04:41.042Z] INFO: Nuevo cliente conectado conectado al socket
+[2023-12-24T19:04:41.044Z] INFO: Admin con id 52 ha recibido todos las citas del día 2023-12-26 correctamente
+[2023-12-24T19:04:41.685Z] INFO: Cliente desconectado del socket
+[2023-12-24T19:04:41.689Z] INFO: Admin con id 52 solicitando  todos las citas del día 2023-12-25
+[2023-12-24T19:04:41.690Z] INFO: Nuevo cliente conectado conectado al socket
+[2023-12-24T19:04:41.692Z] INFO: Admin con id 52 ha recibido todos las citas del día 2023-12-25 correctamente
+[2023-12-24T19:04:41.694Z] INFO: Admin con id 52 solicitando  todos las citas del día 2023-12-25
+[2023-12-24T19:04:41.696Z] INFO: Admin con id 52 ha recibido todos las citas del día 2023-12-25 correctamente
+[2023-12-24T19:04:42.321Z] INFO: Cliente desconectado del socket
+[2023-12-24T19:04:42.323Z] INFO: Admin con id 52 solicitando  todos las citas del día 2023-12-26
+[2023-12-24T19:04:42.324Z] INFO: Admin con id 52 ha recibido todos las citas del día 2023-12-26 correctamente
+[2023-12-24T19:04:42.330Z] INFO: Admin con id 52 solicitando  todos las citas del día 2023-12-26
+[2023-12-24T19:04:42.332Z] INFO: Nuevo cliente conectado conectado al socket
+[2023-12-24T19:04:42.334Z] INFO: Admin con id 52 ha recibido todos las citas del día 2023-12-26 correctamente
+[2023-12-24T19:04:50.363Z] INFO: Cliente desconectado del socket
+[2023-12-24T19:04:54.323Z] INFO: Usuario con email rubo2093@gmail.com e id: 54 ha iniciado sesión exitosamente
+[2023-12-24T19:04:54.351Z] INFO: Usuario con id: 54 ha accedido a su perfil
+[2023-12-24T19:04:54.352Z] INFO: Usuario con id: 54 ha solicitado lista de citas agendadas
+[2023-12-24T19:04:54.353Z] INFO: Usuario con id: 54 ha recibido lista de citas agendadas correctamente
+[2023-12-24T19:05:05.054Z] INFO: Usuario con id: 54 ha solicitado lista de barberias
+[2023-12-24T19:05:05.055Z] INFO: Usuario con id: 54 ha recibido lista de barberias correctamente
+[2023-12-24T19:05:06.365Z] INFO: Usuario con id: 54 ha accedido a su perfil
+[2023-12-24T19:05:11.003Z] INFO: Usuario con email atkinsonbarbershop@gmail.com e id: 52 ha iniciado sesión exitosamente
+[2023-12-24T19:05:11.021Z] INFO: Usuario con id: 52 ha solicitado lista de barberias
+[2023-12-24T19:05:11.022Z] INFO: Usuario con id: 52 ha recibido lista de barberias correctamente
+[2023-12-24T19:05:12.779Z] INFO: Usuario con id: 52 ha solicitado lista de barberos
+[2023-12-24T19:05:12.781Z] INFO: Usuario con id: 52 ha recibido lista de barberos correctamente
+[2023-12-24T19:05:12.783Z] INFO: Usuario ha solicitado obtener los festivos del año 2023}
+[2023-12-24T19:05:12.785Z] INFO: Usuario con id: 52 ha accedido a todos los servicios
+[2023-12-24T19:05:12.786Z] INFO: Nuevo cliente conectado conectado al socket
+[2023-12-24T19:05:12.787Z] INFO: Admin con id 52 solicitando  todos las citas del día 2023-12-24
+[2023-12-24T19:05:12.789Z] INFO:    Usuario ha obtenido los festivos del año 2023} correctamente
+[2023-12-24T19:05:12.791Z] INFO: Admin con id 52 ha recibido todos las citas del día 2023-12-24 correctamente
+[2023-12-24T19:05:12.792Z] INFO: Admin con id 52 solicitando  todos las citas del día 2023-12-24
+[2023-12-24T19:05:12.794Z] INFO: Admin con id 52 ha recibido todos las citas del día 2023-12-24 correctamente
+[2023-12-24T19:05:17.053Z] INFO: Cliente desconectado del socket
+[2023-12-24T19:05:17.058Z] INFO: Admin con id 52 solicitando  todos las citas del día 2023-12-25
+[2023-12-24T19:05:17.059Z] INFO: Admin con id 52 ha recibido todos las citas del día 2023-12-25 correctamente
+[2023-12-24T19:05:17.060Z] INFO: Nuevo cliente conectado conectado al socket
+[2023-12-24T19:05:17.061Z] INFO: Admin con id 52 solicitando  todos las citas del día 2023-12-25
+[2023-12-24T19:05:17.063Z] INFO: Admin con id 52 ha recibido todos las citas del día 2023-12-25 correctamente
+[2023-12-24T19:05:17.938Z] INFO: Cliente desconectado del socket
+[2023-12-24T19:05:17.942Z] INFO: Admin con id 52 solicitando  todos las citas del día 2023-12-26
+[2023-12-24T19:05:17.944Z] INFO: Admin con id 52 ha recibido todos las citas del día 2023-12-26 correctamente
+[2023-12-24T19:05:17.947Z] INFO: Admin con id 52 solicitando  todos las citas del día 2023-12-26
+[2023-12-24T19:05:17.948Z] INFO: Admin con id 52 ha recibido todos las citas del día 2023-12-26 correctamente
+[2023-12-24T19:05:17.950Z] INFO: Nuevo cliente conectado conectado al socket
+[2023-12-24T19:05:35.180Z] INFO: Cliente desconectado del socket
+[2023-12-24T19:05:35.199Z] INFO: Usuario con id: 52 ha solicitado lista de barberos
+[2023-12-24T19:05:35.201Z] INFO: Usuario con id: 52 ha recibido lista de barberos correctamente
+[2023-12-24T19:05:35.825Z] INFO: Usuario con id: 52 ha solicitado lista de barberias
+[2023-12-24T19:05:35.825Z] INFO: Usuario con id: 52 ha recibido lista de barberias correctamente
+[2023-12-24T19:05:38.443Z] INFO: Usuario con id: 52 ha solicitado lista de barberos
+[2023-12-24T19:05:38.444Z] INFO: Usuario con id: 52 ha accedido a todos los servicios
+[2023-12-24T19:05:38.445Z] INFO: Usuario con id: 52 ha recibido lista de barberos correctamente
+[2023-12-24T19:05:38.446Z] INFO: Usuario ha solicitado obtener los festivos del año 2023}
+[2023-12-24T19:05:38.447Z] INFO: Admin con id 52 solicitando  todos las citas del día 2023-12-24
+[2023-12-24T19:05:38.449Z] INFO: Nuevo cliente conectado conectado al socket
+[2023-12-24T19:05:38.449Z] INFO:    Usuario ha obtenido los festivos del año 2023} correctamente
+[2023-12-24T19:05:38.451Z] INFO: Admin con id 52 ha recibido todos las citas del día 2023-12-24 correctamente
+[2023-12-24T19:05:38.452Z] INFO: Admin con id 52 solicitando  todos las citas del día 2023-12-24
+[2023-12-24T19:05:38.454Z] INFO: Admin con id 52 ha recibido todos las citas del día 2023-12-24 correctamente
+[2023-12-24T19:05:54.776Z] INFO: Cliente desconectado del socket
+[2023-12-24T19:05:54.783Z] INFO: Admin con id 52 solicitando  todos las citas del día 2023-12-25
+[2023-12-24T19:05:54.785Z] INFO: Admin con id 52 ha recibido todos las citas del día 2023-12-25 correctamente
+[2023-12-24T19:05:54.786Z] INFO: Nuevo cliente conectado conectado al socket
+[2023-12-24T19:05:54.788Z] INFO: Admin con id 52 solicitando  todos las citas del día 2023-12-25
+[2023-12-24T19:05:54.789Z] INFO: Admin con id 52 ha recibido todos las citas del día 2023-12-25 correctamente
+[2023-12-24T19:06:00.178Z] INFO: Cliente desconectado del socket
+[2023-12-24T19:06:00.183Z] INFO: Admin con id 52 solicitando  todos las citas del día 2023-12-26
+[2023-12-24T19:06:00.185Z] INFO: Admin con id 52 ha recibido todos las citas del día 2023-12-26 correctamente
+[2023-12-24T19:06:00.187Z] INFO: Admin con id 52 solicitando  todos las citas del día 2023-12-26
+[2023-12-24T19:06:00.189Z] INFO: Admin con id 52 ha recibido todos las citas del día 2023-12-26 correctamente
+[2023-12-24T19:06:00.190Z] INFO: Nuevo cliente conectado conectado al socket
+[2023-12-24T19:06:52.170Z] INFO: Running
+[2023-12-24T19:06:53.026Z] INFO: Nuevo cliente conectado conectado al socket
+[2023-12-24T19:06:55.541Z] INFO: Cliente desconectado del socket
+[2023-12-24T19:06:55.550Z] INFO: Admin con id 52 solicitando  todos las citas del día 2023-12-27
+[2023-12-24T19:06:55.563Z] INFO: Nuevo cliente conectado conectado al socket
+[2023-12-24T19:06:55.580Z] INFO: Admin con id 52 ha recibido todos las citas del día 2023-12-27 correctamente
+[2023-12-24T19:06:55.582Z] INFO: Admin con id 52 solicitando  todos las citas del día 2023-12-27
+[2023-12-24T19:06:55.584Z] INFO: Admin con id 52 ha recibido todos las citas del día 2023-12-27 correctamente
+[2023-12-24T19:06:58.181Z] INFO: Cliente desconectado del socket
+[2023-12-24T19:06:58.186Z] INFO: Admin con id 52 solicitando  todos las citas del día 2023-12-26
+[2023-12-24T19:06:58.188Z] INFO: Admin con id 52 ha recibido todos las citas del día 2023-12-26 correctamente
+[2023-12-24T19:06:58.190Z] INFO: Nuevo cliente conectado conectado al socket
+[2023-12-24T19:06:58.192Z] INFO: Admin con id 52 solicitando  todos las citas del día 2023-12-26
+[2023-12-24T19:06:58.194Z] INFO: Admin con id 52 ha recibido todos las citas del día 2023-12-26 correctamente
+[2023-12-24T19:07:13.083Z] INFO: Running
+[2023-12-24T19:07:13.551Z] INFO: Nuevo cliente conectado conectado al socket
+[2023-12-24T19:07:35.322Z] INFO: Running
+[2023-12-24T19:07:36.388Z] INFO: Nuevo cliente conectado conectado al socket
+[2023-12-24T19:07:38.188Z] INFO: Cliente desconectado del socket
+[2023-12-24T19:07:38.198Z] INFO: Admin con id 52 solicitando  todos las citas del día 2023-12-27
+[2023-12-24T19:07:38.210Z] INFO: Nuevo cliente conectado conectado al socket
+[2023-12-24T19:07:38.225Z] INFO: Admin con id 52 ha recibido todos las citas del día 2023-12-27 correctamente
+[2023-12-24T19:07:38.227Z] INFO: Admin con id 52 solicitando  todos las citas del día 2023-12-27
+[2023-12-24T19:07:38.229Z] INFO: Admin con id 52 ha recibido todos las citas del día 2023-12-27 correctamente
+[2023-12-24T19:07:39.082Z] INFO: Cliente desconectado del socket
+[2023-12-24T19:07:39.088Z] INFO: Admin con id 52 solicitando  todos las citas del día 2023-12-26
+[2023-12-24T19:07:39.090Z] INFO: Admin con id 52 ha recibido todos las citas del día 2023-12-26 correctamente
+[2023-12-24T19:07:39.091Z] INFO: Admin con id 52 solicitando  todos las citas del día 2023-12-26
+[2023-12-24T19:07:39.092Z] INFO: Nuevo cliente conectado conectado al socket
+[2023-12-24T19:07:39.095Z] INFO: Admin con id 52 ha recibido todos las citas del día 2023-12-26 correctamente
+[2023-12-24T19:07:44.640Z] INFO: Running
+[2023-12-24T19:07:45.295Z] INFO: Nuevo cliente conectado conectado al socket
+[2023-12-24T19:07:47.026Z] INFO: Cliente desconectado del socket
+[2023-12-24T19:07:47.036Z] INFO: Admin con id 52 solicitando  todos las citas del día 2023-12-27
+[2023-12-24T19:07:47.049Z] INFO: Nuevo cliente conectado conectado al socket
+[2023-12-24T19:07:47.064Z] INFO: Admin con id 52 ha recibido todos las citas del día 2023-12-27 correctamente
+[2023-12-24T19:07:47.068Z] INFO: Admin con id 52 solicitando  todos las citas del día 2023-12-27
+[2023-12-24T19:07:47.071Z] INFO: Admin con id 52 ha recibido todos las citas del día 2023-12-27 correctamente
+[2023-12-24T19:07:47.890Z] INFO: Cliente desconectado del socket
+[2023-12-24T19:07:47.896Z] INFO: Admin con id 52 solicitando  todos las citas del día 2023-12-26
+[2023-12-24T19:07:47.899Z] INFO: Nuevo cliente conectado conectado al socket
+[2023-12-24T19:07:47.900Z] INFO: Admin con id 52 ha recibido todos las citas del día 2023-12-26 correctamente
+[2023-12-24T19:07:47.902Z] INFO: Admin con id 52 solicitando  todos las citas del día 2023-12-26
+[2023-12-24T19:07:47.904Z] INFO: Admin con id 52 ha recibido todos las citas del día 2023-12-26 correctamente
+[2023-12-24T19:08:03.060Z] INFO: Running
+[2023-12-24T19:08:03.463Z] INFO: Nuevo cliente conectado conectado al socket
+[2023-12-24T19:08:05.412Z] INFO: Cliente desconectado del socket
+[2023-12-24T19:08:05.421Z] INFO: Admin con id 52 solicitando  todos las citas del día 2023-12-27
+[2023-12-24T19:08:05.432Z] INFO: Nuevo cliente conectado conectado al socket
+[2023-12-24T19:08:05.449Z] INFO: Admin con id 52 ha recibido todos las citas del día 2023-12-27 correctamente
+[2023-12-24T19:08:05.452Z] INFO: Admin con id 52 solicitando  todos las citas del día 2023-12-27
+[2023-12-24T19:08:05.454Z] INFO: Admin con id 52 ha recibido todos las citas del día 2023-12-27 correctamente
+[2023-12-24T19:08:06.150Z] INFO: Cliente desconectado del socket
+[2023-12-24T19:08:06.155Z] INFO: Admin con id 52 solicitando  todos las citas del día 2023-12-26
+[2023-12-24T19:08:06.158Z] INFO: Nuevo cliente conectado conectado al socket
+[2023-12-24T19:08:06.158Z] INFO: Admin con id 52 ha recibido todos las citas del día 2023-12-26 correctamente
+[2023-12-24T19:08:06.161Z] INFO: Admin con id 52 solicitando  todos las citas del día 2023-12-26
+[2023-12-24T19:08:06.164Z] INFO: Admin con id 52 ha recibido todos las citas del día 2023-12-26 correctamente
+[2023-12-24T19:08:24.391Z] INFO: Running
+[2023-12-24T19:08:25.488Z] INFO: Nuevo cliente conectado conectado al socket
+[2023-12-24T19:08:30.954Z] INFO: Running
+[2023-12-24T19:08:31.512Z] INFO: Nuevo cliente conectado conectado al socket
+[2023-12-24T19:08:33.757Z] INFO: Running
+[2023-12-24T19:08:34.468Z] INFO: Nuevo cliente conectado conectado al socket
+[2023-12-24T19:08:37.830Z] INFO: Cliente desconectado del socket
+[2023-12-24T19:08:37.838Z] INFO: Nuevo cliente conectado conectado al socket
+[2023-12-24T19:08:37.841Z] INFO: Admin con id 52 solicitando  todos las citas del día 2023-12-27
+[2023-12-24T19:08:37.868Z] INFO: Admin con id 52 ha recibido todos las citas del día 2023-12-27 correctamente
+[2023-12-24T19:08:37.871Z] INFO: Admin con id 52 solicitando  todos las citas del día 2023-12-27
+[2023-12-24T19:08:37.872Z] INFO: Admin con id 52 ha recibido todos las citas del día 2023-12-27 correctamente
+[2023-12-24T19:08:39.466Z] INFO: Cliente desconectado del socket
+[2023-12-24T19:08:39.472Z] INFO: Admin con id 52 solicitando  todos las citas del día 2023-12-26
+[2023-12-24T19:08:39.475Z] INFO: Nuevo cliente conectado conectado al socket
+[2023-12-24T19:08:39.476Z] INFO: Admin con id 52 ha recibido todos las citas del día 2023-12-26 correctamente
+[2023-12-24T19:08:39.478Z] INFO: Admin con id 52 solicitando  todos las citas del día 2023-12-26
+[2023-12-24T19:08:39.480Z] INFO: Admin con id 52 ha recibido todos las citas del día 2023-12-26 correctamente
+[2023-12-24T19:08:48.226Z] INFO: Cliente desconectado del socket
+[2023-12-24T19:08:48.235Z] INFO: Usuario con id: 52 ha solicitado lista de barberos
+[2023-12-24T19:08:48.237Z] INFO: Usuario ha solicitado obtener los festivos del año 2023}
+[2023-12-24T19:08:48.239Z] INFO: Admin con id 52 solicitando  todos las citas del día 2023-12-26
+[2023-12-24T19:08:48.242Z] INFO: Usuario con id: 52 ha recibido lista de barberos correctamente
+[2023-12-24T19:08:48.244Z] INFO: Nuevo cliente conectado conectado al socket
+[2023-12-24T19:08:48.247Z] INFO: Usuario con id: 52 ha accedido a todos los servicios
+[2023-12-24T19:08:48.249Z] INFO:    Usuario ha obtenido los festivos del año 2023} correctamente
+[2023-12-24T19:08:48.252Z] INFO: Admin con id 52 ha recibido todos las citas del día 2023-12-26 correctamente
+[2023-12-24T19:08:48.253Z] INFO: Admin con id 52 solicitando  todos las citas del día 2023-12-26
+[2023-12-24T19:08:48.255Z] INFO: Admin con id 52 ha recibido todos las citas del día 2023-12-26 correctamente
+[2023-12-24T19:08:51.005Z] INFO: Cliente desconectado del socket
+[2023-12-24T19:08:51.010Z] INFO: Admin con id 52 solicitando  todos las citas del día 2023-12-27
+[2023-12-24T19:08:51.011Z] INFO: Admin con id 52 ha recibido todos las citas del día 2023-12-27 correctamente
+[2023-12-24T19:08:51.014Z] INFO: Admin con id 52 solicitando  todos las citas del día 2023-12-27
+[2023-12-24T19:08:51.015Z] INFO: Nuevo cliente conectado conectado al socket
+[2023-12-24T19:08:51.016Z] INFO: Admin con id 52 ha recibido todos las citas del día 2023-12-27 correctamente
+[2023-12-24T19:08:52.206Z] INFO: Cliente desconectado del socket
+[2023-12-24T19:08:52.209Z] INFO: Admin con id 52 solicitando  todos las citas del día 2023-12-26
+[2023-12-24T19:08:52.210Z] INFO: Admin con id 52 ha recibido todos las citas del día 2023-12-26 correctamente
+[2023-12-24T19:08:52.214Z] INFO: Admin con id 52 solicitando  todos las citas del día 2023-12-26
+[2023-12-24T19:08:52.215Z] INFO: Nuevo cliente conectado conectado al socket
+[2023-12-24T19:08:52.217Z] INFO: Admin con id 52 ha recibido todos las citas del día 2023-12-26 correctamente
+[2023-12-24T19:09:04.547Z] INFO: Cliente desconectado del socket
+[2023-12-24T19:09:04.556Z] INFO: Admin con id 52 solicitando  todos las citas del día 2023-12-27
+[2023-12-24T19:09:04.559Z] INFO: Admin con id 52 ha recibido todos las citas del día 2023-12-27 correctamente
+[2023-12-24T19:09:04.560Z] INFO: Nuevo cliente conectado conectado al socket
+[2023-12-24T19:09:04.562Z] INFO: Admin con id 52 solicitando  todos las citas del día 2023-12-27
+[2023-12-24T19:09:04.563Z] INFO: Admin con id 52 ha recibido todos las citas del día 2023-12-27 correctamente
+[2023-12-24T19:09:05.259Z] INFO: Cliente desconectado del socket
+[2023-12-24T19:09:05.263Z] INFO: Admin con id 52 solicitando  todos las citas del día 2023-12-26
+[2023-12-24T19:09:05.265Z] INFO: Admin con id 52 ha recibido todos las citas del día 2023-12-26 correctamente
+[2023-12-24T19:09:05.266Z] INFO: Nuevo cliente conectado conectado al socket
+[2023-12-24T19:09:05.268Z] INFO: Admin con id 52 solicitando  todos las citas del día 2023-12-26
+[2023-12-24T19:09:05.270Z] INFO: Admin con id 52 ha recibido todos las citas del día 2023-12-26 correctamente
+[2023-12-24T19:09:16.492Z] INFO: Running
+[2023-12-24T19:09:16.682Z] INFO: Nuevo cliente conectado conectado al socket
+[2023-12-24T19:09:19.907Z] INFO: Cliente desconectado del socket
+[2023-12-24T19:09:19.918Z] INFO: Admin con id 52 solicitando  todos las citas del día 2023-12-27
+[2023-12-24T19:09:19.935Z] INFO: Nuevo cliente conectado conectado al socket
+[2023-12-24T19:09:19.952Z] INFO: Admin con id 52 ha recibido todos las citas del día 2023-12-27 correctamente
+[2023-12-24T19:09:19.956Z] INFO: Admin con id 52 solicitando  todos las citas del día 2023-12-27
+[2023-12-24T19:09:19.957Z] INFO: Admin con id 52 ha recibido todos las citas del día 2023-12-27 correctamente
+[2023-12-24T19:09:30.140Z] INFO: Cliente desconectado del socket
+[2023-12-24T19:09:30.148Z] INFO: Admin con id 52 solicitando  todos las citas del día 2023-12-26
+[2023-12-24T19:09:30.151Z] INFO: Nuevo cliente conectado conectado al socket
+[2023-12-24T19:09:30.154Z] INFO: Admin con id 52 ha recibido todos las citas del día 2023-12-26 correctamente
+[2023-12-24T19:09:30.156Z] INFO: Admin con id 52 solicitando  todos las citas del día 2023-12-26
+[2023-12-24T19:09:30.157Z] INFO: Admin con id 52 ha recibido todos las citas del día 2023-12-26 correctamente
+[2023-12-24T19:10:07.195Z] INFO: Cliente desconectado del socket
+[2023-12-24T19:10:07.209Z] INFO: Usuario con id: 52 ha solicitado lista de barberos
+[2023-12-24T19:10:07.211Z] INFO: Usuario con id: 52 ha recibido lista de barberos correctamente
+[2023-12-24T19:10:08.027Z] INFO: Usuario con id: 52 ha solicitado lista de barberias
+[2023-12-24T19:10:08.028Z] INFO: Usuario con id: 52 ha recibido lista de barberias correctamente
+[2023-12-24T19:10:15.138Z] INFO: Usuario con id: 52 ha solicitado lista de barberos
+[2023-12-24T19:10:15.141Z] INFO: Admin con id 52 solicitando  todos las citas del día 2023-12-24
+[2023-12-24T19:10:15.143Z] INFO: Usuario ha solicitado obtener los festivos del año 2023}
+[2023-12-24T19:10:15.143Z] INFO: Usuario con id: 52 ha recibido lista de barberos correctamente
+[2023-12-24T19:10:15.145Z] INFO: Nuevo cliente conectado conectado al socket
+[2023-12-24T19:10:15.148Z] INFO: Usuario con id: 52 ha accedido a todos los servicios
+[2023-12-24T19:10:15.150Z] INFO:    Usuario ha obtenido los festivos del año 2023} correctamente
+[2023-12-24T19:10:15.151Z] INFO: Admin con id 52 ha recibido todos las citas del día 2023-12-24 correctamente
+[2023-12-24T19:10:15.153Z] INFO: Admin con id 52 solicitando  todos las citas del día 2023-12-24
+[2023-12-24T19:10:15.155Z] INFO: Admin con id 52 ha recibido todos las citas del día 2023-12-24 correctamente
+[2023-12-24T19:10:17.762Z] INFO: Cliente desconectado del socket
+[2023-12-24T19:10:17.767Z] INFO: Admin con id 52 solicitando  todos las citas del día 2023-12-25
+[2023-12-24T19:10:17.768Z] INFO: Nuevo cliente conectado conectado al socket
+[2023-12-24T19:10:17.771Z] INFO: Admin con id 52 ha recibido todos las citas del día 2023-12-25 correctamente
+[2023-12-24T19:10:17.772Z] INFO: Admin con id 52 solicitando  todos las citas del día 2023-12-25
+[2023-12-24T19:10:17.775Z] INFO: Admin con id 52 ha recibido todos las citas del día 2023-12-25 correctamente
+[2023-12-24T19:10:18.977Z] INFO: Cliente desconectado del socket
+[2023-12-24T19:10:18.981Z] INFO: Admin con id 52 solicitando  todos las citas del día 2023-12-26
+[2023-12-24T19:10:18.991Z] INFO: Nuevo cliente conectado conectado al socket
+[2023-12-24T19:10:18.994Z] INFO: Admin con id 52 ha recibido todos las citas del día 2023-12-26 correctamente
+[2023-12-24T19:10:18.995Z] INFO: Admin con id 52 solicitando  todos las citas del día 2023-12-26
+[2023-12-24T19:10:19.001Z] INFO: Admin con id 52 ha recibido todos las citas del día 2023-12-26 correctamente
+[2023-12-24T19:10:26.003Z] INFO: Cliente desconectado del socket
+[2023-12-24T19:10:26.008Z] INFO: Admin con id 52 solicitando  todos las citas del día 2023-12-27
+[2023-12-24T19:10:26.012Z] INFO: Admin con id 52 ha recibido todos las citas del día 2023-12-27 correctamente
+[2023-12-24T19:10:26.017Z] INFO: Nuevo cliente conectado conectado al socket
+[2023-12-24T19:10:26.023Z] INFO: Admin con id 52 solicitando  todos las citas del día 2023-12-27
+[2023-12-24T19:10:26.027Z] INFO: Admin con id 52 ha recibido todos las citas del día 2023-12-27 correctamente
+[2023-12-24T19:11:30.841Z] INFO: Cliente desconectado del socket
+[2023-12-24T19:11:30.848Z] INFO: Usuario con id: 52 ha solicitado lista de barberos
+[2023-12-24T19:11:30.850Z] INFO: Usuario ha solicitado obtener los festivos del año 2023}
+[2023-12-24T19:11:30.851Z] INFO: Admin con id 52 solicitando  todos las citas del día 2023-12-27
+[2023-12-24T19:11:30.851Z] INFO: Usuario con id: 52 ha accedido a todos los servicios
+[2023-12-24T19:11:30.852Z] INFO: Usuario con id: 52 ha recibido lista de barberos correctamente
+[2023-12-24T19:11:30.853Z] INFO:    Usuario ha obtenido los festivos del año 2023} correctamente
+[2023-12-24T19:11:30.855Z] INFO: Admin con id 52 ha recibido todos las citas del día 2023-12-27 correctamente
+[2023-12-24T19:11:30.859Z] INFO: Admin con id 52 solicitando  todos las citas del día 2023-12-27
+[2023-12-24T19:11:30.861Z] INFO: Nuevo cliente conectado conectado al socket
+[2023-12-24T19:11:30.864Z] INFO: Admin con id 52 ha recibido todos las citas del día 2023-12-27 correctamente
+[2023-12-24T19:11:34.632Z] INFO: Cliente desconectado del socket
+[2023-12-24T19:11:34.652Z] INFO: Usuario con id: 52 ha solicitado lista de barberos
+[2023-12-24T19:11:34.653Z] INFO: Usuario con id: 52 ha recibido lista de barberos correctamente
+[2023-12-24T19:11:35.086Z] INFO: Usuario con id: 52 ha solicitado lista de barberias
+[2023-12-24T19:11:35.087Z] INFO: Usuario con id: 52 ha recibido lista de barberias correctamente
+[2023-12-24T19:11:38.613Z] INFO: Usuario con id: 52 ha solicitado lista de barberos
+[2023-12-24T19:11:38.615Z] INFO: Nuevo cliente conectado conectado al socket
+[2023-12-24T19:11:38.616Z] INFO: Usuario con id: 52 ha accedido a todos los servicios
+[2023-12-24T19:11:38.617Z] INFO: Usuario con id: 52 ha recibido lista de barberos correctamente
+[2023-12-24T19:11:38.618Z] INFO: Usuario ha solicitado obtener los festivos del año 2023}
+[2023-12-24T19:11:38.619Z] INFO: Admin con id 52 solicitando  todos las citas del día 2023-12-24
+[2023-12-24T19:11:38.619Z] INFO:    Usuario ha obtenido los festivos del año 2023} correctamente
+[2023-12-24T19:11:38.621Z] INFO: Admin con id 52 ha recibido todos las citas del día 2023-12-24 correctamente
+[2023-12-24T19:11:38.623Z] INFO: Admin con id 52 solicitando  todos las citas del día 2023-12-24
+[2023-12-24T19:11:38.624Z] INFO: Admin con id 52 ha recibido todos las citas del día 2023-12-24 correctamente
+[2023-12-24T19:11:39.782Z] INFO: Cliente desconectado del socket
+[2023-12-24T19:11:39.789Z] INFO: Admin con id 52 solicitando  todos las citas del día 2023-12-25
+[2023-12-24T19:11:39.790Z] INFO: Nuevo cliente conectado conectado al socket
+[2023-12-24T19:11:39.792Z] INFO: Admin con id 52 ha recibido todos las citas del día 2023-12-25 correctamente
+[2023-12-24T19:11:39.793Z] INFO: Admin con id 52 solicitando  todos las citas del día 2023-12-25
+[2023-12-24T19:11:39.794Z] INFO: Admin con id 52 ha recibido todos las citas del día 2023-12-25 correctamente
+[2023-12-24T19:11:41.186Z] INFO: Cliente desconectado del socket
+[2023-12-24T19:11:41.192Z] INFO: Admin con id 52 solicitando  todos las citas del día 2023-12-26
+[2023-12-24T19:11:41.194Z] INFO: Admin con id 52 ha recibido todos las citas del día 2023-12-26 correctamente
+[2023-12-24T19:11:41.196Z] INFO: Admin con id 52 solicitando  todos las citas del día 2023-12-26
+[2023-12-24T19:11:41.198Z] INFO: Nuevo cliente conectado conectado al socket
+[2023-12-24T19:11:41.199Z] INFO: Admin con id 52 ha recibido todos las citas del día 2023-12-26 correctamente
+[2023-12-24T19:11:57.783Z] INFO: Admin con id: 52 solicitando una cita con [object Object]
+[2023-12-24T19:11:57.786Z] ERROR: Error al crear la cita "barbershopId" is required
+[2023-12-24T19:12:29.485Z] INFO: Cliente desconectado del socket
+[2023-12-24T19:12:29.494Z] INFO: Usuario con id: 52 ha solicitado lista de barberos
+[2023-12-24T19:12:29.496Z] INFO: Usuario con id: 52 ha accedido a todos los servicios
+[2023-12-24T19:12:29.496Z] INFO: Usuario ha solicitado obtener los festivos del año 2023}
+[2023-12-24T19:12:29.497Z] INFO: Admin con id 52 solicitando  todos las citas del día 2023-12-26
+[2023-12-24T19:12:29.497Z] INFO: Usuario con id: 52 ha recibido lista de barberos correctamente
+[2023-12-24T19:12:29.498Z] INFO:    Usuario ha obtenido los festivos del año 2023} correctamente
+[2023-12-24T19:12:29.500Z] INFO: Nuevo cliente conectado conectado al socket
+[2023-12-24T19:12:29.501Z] INFO: Admin con id 52 ha recibido todos las citas del día 2023-12-26 correctamente
+[2023-12-24T19:12:29.502Z] INFO: Admin con id 52 solicitando  todos las citas del día 2023-12-26
+[2023-12-24T19:12:29.504Z] INFO: Admin con id 52 ha recibido todos las citas del día 2023-12-26 correctamente
+[2023-12-24T19:12:44.118Z] INFO: Admin con id: 52 solicitando una cita con [object Object]
+[2023-12-24T19:12:44.138Z] INFO: Admin con id: 52 ha creado la cita con id: 1343
+[2023-12-24T19:13:14.012Z] INFO: Cliente desconectado del socket
+[2023-12-24T19:13:14.019Z] INFO: Usuario con id: 52 ha solicitado lista de barberos
+[2023-12-24T19:13:14.021Z] INFO: Usuario ha solicitado obtener los festivos del año 2023}
+[2023-12-24T19:13:14.021Z] INFO: Admin con id 52 solicitando  todos las citas del día 2023-12-26
+[2023-12-24T19:13:14.022Z] INFO: Usuario con id: 52 ha accedido a todos los servicios
+[2023-12-24T19:13:14.022Z] INFO:    Usuario ha obtenido los festivos del año 2023} correctamente
+[2023-12-24T19:13:14.022Z] INFO: Usuario con id: 52 ha recibido lista de barberos correctamente
+[2023-12-24T19:13:14.024Z] INFO: Admin con id 52 ha recibido todos las citas del día 2023-12-26 correctamente
+[2023-12-24T19:13:14.025Z] INFO: Admin con id 52 solicitando  todos las citas del día 2023-12-26
+[2023-12-24T19:13:14.026Z] INFO: Nuevo cliente conectado conectado al socket
+[2023-12-24T19:13:14.028Z] INFO: Admin con id 52 ha recibido todos las citas del día 2023-12-26 correctamente
+[2023-12-24T19:13:17.813Z] INFO: Cliente desconectado del socket
+[2023-12-24T19:13:17.827Z] INFO: Usuario con id: 52 ha solicitado lista de barberos
+[2023-12-24T19:13:17.829Z] INFO: Usuario con id: 52 ha recibido lista de barberos correctamente
+[2023-12-24T19:13:18.233Z] INFO: Usuario con id: 52 ha solicitado lista de barberias
+[2023-12-24T19:13:18.234Z] INFO: Usuario con id: 52 ha recibido lista de barberias correctamente
+[2023-12-24T19:13:19.646Z] INFO: Usuario con id: 52 ha solicitado lista de barberos
+[2023-12-24T19:13:19.647Z] INFO: Usuario con id: 52 ha recibido lista de barberos correctamente
+[2023-12-24T19:13:19.649Z] INFO: Nuevo cliente conectado conectado al socket
+[2023-12-24T19:13:19.649Z] INFO: Admin con id 52 solicitando  todos las citas del día 2023-12-24
+[2023-12-24T19:13:19.651Z] INFO: Usuario con id: 52 ha accedido a todos los servicios
+[2023-12-24T19:13:19.652Z] INFO: Usuario ha solicitado obtener los festivos del año 2023}
+[2023-12-24T19:13:19.653Z] INFO:    Usuario ha obtenido los festivos del año 2023} correctamente
+[2023-12-24T19:13:19.653Z] INFO: Admin con id 52 ha recibido todos las citas del día 2023-12-24 correctamente
+[2023-12-24T19:13:19.655Z] INFO: Admin con id 52 solicitando  todos las citas del día 2023-12-24
+[2023-12-24T19:13:19.656Z] INFO: Admin con id 52 ha recibido todos las citas del día 2023-12-24 correctamente
+[2023-12-24T19:13:24.807Z] INFO: Cliente desconectado del socket
+[2023-12-24T19:13:24.812Z] INFO: Admin con id 52 solicitando  todos las citas del día 2023-12-23
+[2023-12-24T19:13:24.814Z] INFO: Admin con id 52 ha recibido todos las citas del día 2023-12-23 correctamente
+[2023-12-24T19:13:24.816Z] INFO: Admin con id 52 solicitando  todos las citas del día 2023-12-23
+[2023-12-24T19:13:24.818Z] INFO: Nuevo cliente conectado conectado al socket
+[2023-12-24T19:13:24.819Z] INFO: Admin con id 52 ha recibido todos las citas del día 2023-12-23 correctamente
+[2023-12-24T19:13:25.343Z] INFO: Cliente desconectado del socket
+[2023-12-24T19:13:25.347Z] INFO: Admin con id 52 solicitando  todos las citas del día 2023-12-25
+[2023-12-24T19:13:25.349Z] INFO: Nuevo cliente conectado conectado al socket
+[2023-12-24T19:13:25.350Z] INFO: Admin con id 52 ha recibido todos las citas del día 2023-12-25 correctamente
+[2023-12-24T19:13:25.351Z] INFO: Admin con id 52 solicitando  todos las citas del día 2023-12-25
+[2023-12-24T19:13:25.352Z] INFO: Admin con id 52 ha recibido todos las citas del día 2023-12-25 correctamente
+[2023-12-24T19:13:26.343Z] INFO: Cliente desconectado del socket
+[2023-12-24T19:13:26.348Z] INFO: Admin con id 52 solicitando  todos las citas del día 2023-12-18
+[2023-12-24T19:13:26.350Z] INFO: Admin con id 52 ha recibido todos las citas del día 2023-12-18 correctamente
+[2023-12-24T19:13:26.355Z] INFO: Admin con id 52 solicitando  todos las citas del día 2023-12-18
+[2023-12-24T19:13:26.356Z] INFO: Nuevo cliente conectado conectado al socket
+[2023-12-24T19:13:26.358Z] INFO: Admin con id 52 ha recibido todos las citas del día 2023-12-18 correctamente
+[2023-12-24T19:13:27.672Z] INFO: Cliente desconectado del socket
+[2023-12-24T19:13:27.678Z] INFO: Admin con id 52 solicitando  todos las citas del día 2023-12-19
+[2023-12-24T19:13:27.680Z] INFO: Admin con id 52 ha recibido todos las citas del día 2023-12-19 correctamente
+[2023-12-24T19:13:27.682Z] INFO: Nuevo cliente conectado conectado al socket
+[2023-12-24T19:13:27.683Z] INFO: Admin con id 52 solicitando  todos las citas del día 2023-12-19
+[2023-12-24T19:13:27.685Z] INFO: Admin con id 52 ha recibido todos las citas del día 2023-12-19 correctamente
+[2023-12-24T19:13:36.366Z] INFO: Cliente desconectado del socket
+[2023-12-24T19:13:36.372Z] INFO: Admin con id 52 solicitando  todos las citas del día 2023-12-23
+[2023-12-24T19:13:36.373Z] INFO: Admin con id 52 ha recibido todos las citas del día 2023-12-23 correctamente
+[2023-12-24T19:13:36.375Z] INFO: Admin con id 52 solicitando  todos las citas del día 2023-12-23
+[2023-12-24T19:13:36.376Z] INFO: Nuevo cliente conectado conectado al socket
+[2023-12-24T19:13:36.377Z] INFO: Admin con id 52 ha recibido todos las citas del día 2023-12-23 correctamente
+[2023-12-24T19:13:37.419Z] INFO: Cliente desconectado del socket
+[2023-12-24T19:13:37.424Z] INFO: Admin con id 52 solicitando  todos las citas del día 2023-12-25
+[2023-12-24T19:13:37.426Z] INFO: Nuevo cliente conectado conectado al socket
+[2023-12-24T19:13:37.427Z] INFO: Admin con id 52 ha recibido todos las citas del día 2023-12-25 correctamente
+[2023-12-24T19:13:37.428Z] INFO: Admin con id 52 solicitando  todos las citas del día 2023-12-25
+[2023-12-24T19:13:37.430Z] INFO: Admin con id 52 ha recibido todos las citas del día 2023-12-25 correctamente
+[2023-12-24T19:13:37.603Z] INFO: Cliente desconectado del socket
+[2023-12-24T19:13:37.608Z] INFO: Usuario ha solicitado obtener los festivos del año 2024}
+[2023-12-24T19:13:37.608Z] INFO: Admin con id 52 solicitando  todos las citas del día 2024-01-01
+[2023-12-24T19:13:37.609Z] INFO:    Usuario ha obtenido los festivos del año 2024} correctamente
+[2023-12-24T19:13:37.610Z] INFO: Admin con id 52 ha recibido todos las citas del día 2024-01-01 correctamente
+[2023-12-24T19:13:37.612Z] INFO: Admin con id 52 solicitando  todos las citas del día 2024-01-01
+[2023-12-24T19:13:37.613Z] INFO: Nuevo cliente conectado conectado al socket
+[2023-12-24T19:13:37.614Z] INFO: Admin con id 52 ha recibido todos las citas del día 2024-01-01 correctamente
+[2023-12-24T19:13:38.738Z] INFO: Cliente desconectado del socket
+[2023-12-24T19:13:38.743Z] INFO: Admin con id 52 solicitando  todos las citas del día 2023-12-25
+[2023-12-24T19:13:38.744Z] INFO: Usuario ha solicitado obtener los festivos del año 2023}
+[2023-12-24T19:13:38.744Z] INFO: Admin con id 52 ha recibido todos las citas del día 2023-12-25 correctamente
+[2023-12-24T19:13:38.745Z] INFO:    Usuario ha obtenido los festivos del año 2023} correctamente
+[2023-12-24T19:13:38.748Z] INFO: Admin con id 52 solicitando  todos las citas del día 2023-12-25
+[2023-12-24T19:13:38.750Z] INFO: Nuevo cliente conectado conectado al socket
+[2023-12-24T19:13:38.750Z] INFO: Admin con id 52 ha recibido todos las citas del día 2023-12-25 correctamente
+[2023-12-24T19:13:40.040Z] INFO: Cliente desconectado del socket
+[2023-12-24T19:13:40.044Z] INFO: Admin con id 52 solicitando  todos las citas del día 2023-12-26
+[2023-12-24T19:13:40.045Z] INFO: Admin con id 52 ha recibido todos las citas del día 2023-12-26 correctamente
+[2023-12-24T19:13:40.048Z] INFO: Admin con id 52 solicitando  todos las citas del día 2023-12-26
+[2023-12-24T19:13:40.049Z] INFO: Nuevo cliente conectado conectado al socket
+[2023-12-24T19:13:40.051Z] INFO: Admin con id 52 ha recibido todos las citas del día 2023-12-26 correctamente
+[2023-12-24T19:13:43.399Z] INFO: Cliente desconectado del socket
+[2023-12-24T19:13:43.413Z] INFO: Usuario con id: 52 ha solicitado lista de barberos
+[2023-12-24T19:13:43.413Z] INFO: Usuario con id: 52 ha recibido lista de barberos correctamente
+[2023-12-24T19:13:44.603Z] INFO: Usuario con id: 52 ha solicitado lista de barberias
+[2023-12-24T19:13:44.604Z] INFO: Usuario con id: 52 ha recibido lista de barberias correctamente
+[2023-12-24T19:13:48.607Z] INFO: Usuario con id: 52 ha accedido a todos los servicios
+[2023-12-24T19:13:48.608Z] INFO: Usuario con id: 52 ha solicitado lista de barberos
+[2023-12-24T19:13:48.610Z] INFO: Admin con id 52 solicitando  todos las citas del día 2023-12-24
+[2023-12-24T19:13:48.611Z] INFO: Nuevo cliente conectado conectado al socket
+[2023-12-24T19:13:48.611Z] INFO: Usuario ha solicitado obtener los festivos del año 2023}
+[2023-12-24T19:13:48.613Z] INFO: Usuario con id: 52 ha recibido lista de barberos correctamente
+[2023-12-24T19:13:48.613Z] INFO:    Usuario ha obtenido los festivos del año 2023} correctamente
+[2023-12-24T19:13:48.614Z] INFO: Admin con id 52 ha recibido todos las citas del día 2023-12-24 correctamente
+[2023-12-24T19:13:48.616Z] INFO: Admin con id 52 solicitando  todos las citas del día 2023-12-24
+[2023-12-24T19:13:48.617Z] INFO: Admin con id 52 ha recibido todos las citas del día 2023-12-24 correctamente
+[2023-12-24T19:13:50.285Z] INFO: Cliente desconectado del socket
+[2023-12-24T19:13:50.300Z] INFO: Usuario con id: 52 ha solicitado lista de barberos
+[2023-12-24T19:13:50.301Z] INFO: Usuario con id: 52 ha recibido lista de barberos correctamente
+[2023-12-24T19:13:50.716Z] INFO: Usuario con id: 52 ha solicitado lista de barberias
+[2023-12-24T19:13:50.717Z] INFO: Usuario con id: 52 ha recibido lista de barberias correctamente
+[2023-12-24T19:13:51.587Z] INFO: Usuario ha solicitado obtener los festivos del año 2023}
+[2023-12-24T19:13:51.588Z] INFO: Usuario con id: 52 ha accedido a todos los servicios
+[2023-12-24T19:13:51.588Z] INFO:    Usuario ha obtenido los festivos del año 2023} correctamente
+[2023-12-24T19:13:51.589Z] INFO: Usuario con id: 52 ha solicitado lista de barberos
+[2023-12-24T19:13:51.590Z] INFO: Nuevo cliente conectado conectado al socket
+[2023-12-24T19:13:51.591Z] INFO: Admin con id 52 solicitando  todos las citas del día 2023-12-24
+[2023-12-24T19:13:51.592Z] INFO: Usuario con id: 52 ha recibido lista de barberos correctamente
+[2023-12-24T19:13:51.593Z] INFO: Admin con id 52 ha recibido todos las citas del día 2023-12-24 correctamente
+[2023-12-24T19:13:51.595Z] INFO: Admin con id 52 solicitando  todos las citas del día 2023-12-24
+[2023-12-24T19:13:51.596Z] INFO: Admin con id 52 ha recibido todos las citas del día 2023-12-24 correctamente
+[2023-12-24T19:13:57.520Z] INFO: Cliente desconectado del socket
+[2023-12-24T19:13:57.528Z] INFO: Admin con id 52 solicitando  todos las citas del día 2023-12-25
+[2023-12-24T19:13:57.529Z] INFO: Nuevo cliente conectado conectado al socket
+[2023-12-24T19:13:57.530Z] INFO: Admin con id 52 ha recibido todos las citas del día 2023-12-25 correctamente
+[2023-12-24T19:13:57.532Z] INFO: Admin con id 52 solicitando  todos las citas del día 2023-12-25
+[2023-12-24T19:13:57.533Z] INFO: Admin con id 52 ha recibido todos las citas del día 2023-12-25 correctamente
+[2023-12-24T19:13:58.922Z] INFO: Cliente desconectado del socket
+[2023-12-24T19:13:58.927Z] INFO: Admin con id 52 solicitando  todos las citas del día 2023-12-26
+[2023-12-24T19:13:58.931Z] INFO: Admin con id 52 ha recibido todos las citas del día 2023-12-26 correctamente
+[2023-12-24T19:13:58.936Z] INFO: Admin con id 52 solicitando  todos las citas del día 2023-12-26
+[2023-12-24T19:13:58.936Z] INFO: Nuevo cliente conectado conectado al socket
+[2023-12-24T19:13:58.941Z] INFO: Admin con id 52 ha recibido todos las citas del día 2023-12-26 correctamente
+[2023-12-24T19:21:50.193Z] INFO: Cliente desconectado del socket
+[2023-12-24T19:21:50.202Z] INFO: Usuario con id: 52 ha solicitado lista de barberos
+[2023-12-24T19:21:50.204Z] INFO: Usuario con id: 52 ha recibido lista de barberos correctamente
+[2023-12-24T19:21:51.096Z] INFO: Usuario con id: 52 ha solicitado lista de barberias
+[2023-12-24T19:21:51.096Z] INFO: Usuario con id: 52 ha recibido lista de barberias correctamente

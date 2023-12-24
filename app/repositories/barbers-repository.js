@@ -16,7 +16,15 @@ async function getBarberById(idBarber) {
     return barber[0]
 }
 
+async function getAllBarbersByIdBarbershops(idBarbershop) {
+    const pool = await getPool()
+    const sql = `SELECT * FROM barbers WHERE idBarbershop = ? AND isDelete = 0`
+    const [barbers] = await pool.query(sql, idBarbershop)
+    return barbers
+}
+
 module.exports = {
     getAllBarbers,
     getBarberById,
+    getAllBarbersByIdBarbershops,
 }

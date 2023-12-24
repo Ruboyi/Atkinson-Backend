@@ -4,13 +4,14 @@ const getPool = require('../infrastructure/database-infrastructure')
 async function createAppointment(appointmentData) {
     const pool = await getPool()
 
-    const { idUser, barberId, appointmentDate, serviceId } = appointmentData
+    const { idUser, barberId, appointmentDate, serviceId, barbershopId } =
+        appointmentData
 
     const sql = `
-    INSERT INTO appointments (idUser, idBarber, appointmentDate, idService)
-    VALUES (?, ?, ?, ?)
+    INSERT INTO appointments (idUser, idBarber, appointmentDate, idService, idBarbershop)
+    VALUES (?, ?, ?, ?, ?)
   `
-    const values = [idUser, barberId, appointmentDate, serviceId]
+    const values = [idUser, barberId, appointmentDate, serviceId, barbershopId]
 
     const [result] = await pool.query(sql, values)
 
@@ -26,12 +27,13 @@ async function getAppoiments(date) {
 }
 
 //Dame todas las citas de un dia especifico
-async function getAppoimentsByDate(date) {
+async function getAppoimentsByDate(date, idBarbershop) {
     const pool = await getPool()
     const init = date + ' 00:00:00'
     const end = date + ' 23:59:59'
-    const sql = `SELECT * FROM appointments WHERE appointmentDate BETWEEN ? AND ? AND canceled = 0`
-    const [appointments] = await pool.query(sql, [init, end])
+    // const sql = `SELECT * FROM appointments WHERE appointmentDate  BETWEEN ? AND ? AND canceled = 0`
+    const sql = `SELECT * FROM appointments WHERE appointmentDate BETWEEN ? AND ? AND canceled = 0 AND idBarbershop = ?`
+    const [appointments] = await pool.query(sql, [init, end, idBarbershop])
     return appointments
 }
 

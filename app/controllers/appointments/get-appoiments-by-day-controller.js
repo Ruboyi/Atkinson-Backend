@@ -13,7 +13,9 @@ const { findUserById } = require('../../repositories/users-repository')
 async function getAppoimnetsbyDay(req, res) {
     try {
         const { role } = req.auth
-        const { date } = req.query
+        const { date, idBarbershop } = req.query
+
+        console.log('idBarbershop', idBarbershop)
 
         if (role !== 'admin') throwJsonError(401, 'Acceso denegado')
 
@@ -23,7 +25,7 @@ async function getAppoimnetsbyDay(req, res) {
 
         if (!date) throwJsonError(400, 'La fecha es requerida')
 
-        const appointments = await getAppoimentsByDate(date)
+        const appointments = await getAppoimentsByDate(date, idBarbershop)
 
         const barbers = await getAllBarbers()
         const services = await getAllServices()
