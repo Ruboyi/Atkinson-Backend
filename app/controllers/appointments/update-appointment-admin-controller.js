@@ -24,6 +24,7 @@ const schema = Joi.object().keys({
     idService: Joi.number().integer().positive().required(),
     idBarber: Joi.number().integer().positive().required(),
     appointmentDate: Joi.date().required(),
+    barbershopId: Joi.number().required(),
 })
 
 async function updateAppointementAdmin(req, res) {
@@ -38,7 +39,13 @@ async function updateAppointementAdmin(req, res) {
 
         const { body } = req
         await schema.validateAsync(body)
-        const { idAppointment, idService, appointmentDate, idBarber } = body
+        const {
+            idAppointment,
+            idService,
+            appointmentDate,
+            idBarber,
+            barbershopId,
+        } = body
 
         const appointment = await findAppoimentsById(idAppointment)
 
@@ -67,6 +74,7 @@ async function updateAppointementAdmin(req, res) {
             idService,
             appointmentDate,
             idBarber,
+            barbershopId,
         })
         const io = req.app.get('socketio')
 
