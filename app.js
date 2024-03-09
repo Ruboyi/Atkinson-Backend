@@ -22,7 +22,7 @@ const appointmentsRouter = require('./app/routes/appointments-routes')
 const notificationsRouter = require('./app/routes/notifications-routes')
 const holidaysRouter = require('./app/routes/holidays-routes')
 const schedulesRouter = require('./app/routes/schedules-routes')
-
+const barberShopsRouter = require('./app/routes/barbershops-routes')
 const logger = require('./app/logs/logger')
 
 app.use('/api/v1/users/', usersRouter)
@@ -32,6 +32,7 @@ app.use('/api/v1/appointments/', appointmentsRouter)
 app.use('/api/v1/notifications/', notificationsRouter)
 app.use('/api/v1/holidays/', holidaysRouter)
 app.use('/api/v1/schedules/', schedulesRouter)
+app.use('/api/v1/barbershops/', barberShopsRouter)
 
 const server = http.createServer(app)
 

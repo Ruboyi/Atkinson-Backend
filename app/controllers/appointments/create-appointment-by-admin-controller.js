@@ -17,6 +17,7 @@ const schema = Joi.object().keys({
     nameUser: Joi.string().min(3).max(120),
     phone: Joi.string().min(9).max(12),
     idUser: Joi.number(),
+    barbershopId: Joi.number().required(),
 })
 
 async function createAppointmentByAdminController(req, res) {

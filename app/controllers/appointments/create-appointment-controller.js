@@ -30,6 +30,7 @@ const schema = Joi.object().keys({
     barberId: Joi.number().required(),
     appointmentDate: Joi.date().required(),
     serviceId: Joi.number().required(),
+    barbershopId: Joi.number().required(),
 })
 
 async function createAppointmentController(req, res) {
