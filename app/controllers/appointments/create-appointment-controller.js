@@ -23,7 +23,6 @@ const { getServiceById } = require('../../repositories/services-repository')
 
 const MAX_APPOINTMENTS_PER_USER = 2
 const LIMIT_ABSENCES = 2
-const DOUBLE_APPOINTMENT_SERVICES = [13, 14]
 const TLF_ADMIN = '608 19 44 32'
 
 const schema = Joi.object().keys({
@@ -52,9 +51,10 @@ async function createAppointmentController(req, res) {
         const userAppointments = await getAppoimentsByUserId(idUser)
 
         if (
-            userAppointments.length >= MAX_APPOINTMENTS_PER_USER ||
-            idUser === 561
+            userAppointments.length >= MAX_APPOINTMENTS_PER_USER &&
+            idUser !== 561
         ) {
+            //Usuario con varios niños identificado por el id 561 pertmite más citas
             throwJsonError(
                 400,
                 `No se puede realizar la reserva. Ya tienes el máximo de ${MAX_APPOINTMENTS_PER_USER} citas.`
