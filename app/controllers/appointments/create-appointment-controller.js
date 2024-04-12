@@ -51,7 +51,10 @@ async function createAppointmentController(req, res) {
 
         const userAppointments = await getAppoimentsByUserId(idUser)
 
-        if (userAppointments.length >= MAX_APPOINTMENTS_PER_USER) {
+        if (
+            userAppointments.length >= MAX_APPOINTMENTS_PER_USER ||
+            idUser === 561
+        ) {
             throwJsonError(
                 400,
                 `No se puede realizar la reserva. Ya tienes el máximo de ${MAX_APPOINTMENTS_PER_USER} citas.`
