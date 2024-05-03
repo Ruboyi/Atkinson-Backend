@@ -52,9 +52,11 @@ async function createAppointmentController(req, res) {
 
         if (
             userAppointments.length >= MAX_APPOINTMENTS_PER_USER &&
-            idUser !== 561
+            idUser !== 561 &&
+            idUser !== 615 &&
+            idUser !== 1716
         ) {
-            //Usuario con varios niños identificado por el id 561 pertmite más citas
+            //Usuarios con varios niños identificado por el id pertmite más citas
             throwJsonError(
                 400,
                 `No se puede realizar la reserva. Ya tienes el máximo de ${MAX_APPOINTMENTS_PER_USER} citas.`
