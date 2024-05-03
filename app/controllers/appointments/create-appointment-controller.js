@@ -21,7 +21,7 @@ const {
 const { getBarberById } = require('../../repositories/barbers-repository')
 const { getServiceById } = require('../../repositories/services-repository')
 
-const MAX_APPOINTMENTS_PER_USER = 2
+const MAX_APPOINTMENTS_PER_USER = 3
 const LIMIT_ABSENCES = 2
 const TLF_ADMIN = '608 19 44 32'
 
