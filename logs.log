@@ -3110,3 +3110,53 @@
 [2023-12-25T18:43:21.918Z] INFO: Nuevo cliente conectado conectado al socket
 [2024-03-09T12:52:14.653Z] INFO: Running
 [2024-03-09T12:52:55.822Z] INFO: Running
+[2024-09-27T08:26:55.465Z] INFO: Running
+[2024-09-27T08:31:56.375Z] INFO: Running
+[2024-09-27T08:35:42.055Z] INFO: Running
+[2024-09-27T08:35:57.532Z] INFO: Running
+[2024-09-27T08:37:23.743Z] INFO: Running
+[2024-09-27T08:39:08.118Z] INFO: Running
+[2024-09-27T08:40:14.453Z] INFO: Running
+[2024-09-27T08:40:44.583Z] INFO: Running
+[2024-09-27T08:40:49.773Z] INFO: Running
+[2024-09-27T08:42:46.532Z] INFO: Running
+[2024-09-27T08:43:58.489Z] ERROR: No existe un usuario con ese email y/o password
+[2024-09-27T08:43:58.489Z] ERROR: Error al iniciar sesión con emal: admin1@yopmail.com: No existe un usuario con ese email y/o password
+[2024-09-27T08:44:38.012Z] INFO: Usuario con email atkinsonbarbershop@gmail.com e id: 52 ha iniciado sesión exitosamente
+[2024-09-27T08:46:35.901Z] ERROR: han intentado acceder sin autorización
+[2024-09-27T08:46:35.902Z] ERROR: Autorización requerida
+[2024-09-27T08:46:35.902Z] ERROR: Token expirado
+[2024-09-27T08:46:49.724Z] INFO: Usuario con email atkinsonbarbershop@gmail.com e id: 52 ha iniciado sesión exitosamente
+[2024-09-27T08:46:54.662Z] ERROR: han intentado acceder sin autorización
+[2024-09-27T08:46:54.662Z] ERROR: Autorización requerida
+[2024-09-27T08:46:54.662Z] ERROR: Token expirado
+[2024-09-27T08:47:37.612Z] INFO: Usuario con id: 2 accediendo a su perfil: undefined
+[2024-09-27T08:47:37.613Z] ERROR: El usuario no existe
+[2024-09-27T08:47:37.613Z] ERROR: Error al acceder al perfil del usuario con id:2 El usuario no existe
+[2024-09-27T08:48:43.840Z] ERROR: Token expirado
+[2024-09-27T08:49:17.202Z] ERROR: Token expirado
+[2024-09-27T08:49:18.038Z] ERROR: Token expirado
+[2024-09-27T08:49:26.476Z] ERROR: Token expirado
+[2024-09-27T08:49:31.346Z] ERROR: Token expirado
+[2024-09-27T08:49:43.107Z] ERROR: Token expirado
+[2024-09-27T08:49:48.348Z] INFO: Usuario con id: 2 accediendo a su perfil: undefined
+[2024-09-27T08:49:48.348Z] ERROR: El usuario no existe
+[2024-09-27T08:49:48.348Z] ERROR: Error al acceder al perfil del usuario con id:2 El usuario no existe
+[2024-09-27T08:49:49.316Z] INFO: Usuario con id: 2 accediendo a su perfil: undefined
+[2024-09-27T08:49:49.317Z] ERROR: El usuario no existe
+[2024-09-27T08:49:49.317Z] ERROR: Error al acceder al perfil del usuario con id:2 El usuario no existe
+[2024-09-27T08:49:57.925Z] INFO: Usuario con id: 54 accediendo a su perfil: [object Object]
+[2024-09-27T08:49:57.925Z] INFO: Usuario con id: 54 ha accedido a su perfil
+[2024-09-27T08:55:19.763Z] ERROR: 404
+[2024-09-27T08:59:43.921Z] INFO: Running
+[2024-09-27T08:59:51.683Z] ERROR: 404
+[2024-09-27T09:01:18.142Z] INFO: Running
+[2024-09-27T09:01:26.144Z] INFO: Running
+[2024-09-27T09:01:32.698Z] ERROR: 404
+[2024-09-27T09:03:33.047Z] INFO: Running
+[2024-09-27T09:03:37.738Z] ERROR: 404
+[2024-09-27T09:05:43.917Z] INFO: Running
+[2024-09-27T09:05:48.413Z] INFO: Se obtuvieron los servicios del barbero con id: 1
+[2024-09-27T09:10:24.033Z] INFO: Se obtuvieron los servicios del barbero con id: 1
+[2024-09-27T09:10:39.372Z] INFO: Se obtuvieron los servicios del barbero con id: 6
+[2024-09-27T09:10:48.111Z] INFO: Se obtuvieron los servicios del barbero con id: 5

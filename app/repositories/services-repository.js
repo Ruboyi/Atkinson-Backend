@@ -36,10 +36,23 @@ async function deleteService(idService) {
     await pool.query(sql, idService)
 }
 
+async function getServicesByBarber(idBarber) {
+    const pool = await getPool()
+    const sql = `
+        SELECT *
+        FROM services
+        INNER JOIN barber_services ON services.idService = barber_services.idService
+        WHERE barber_services.idBarber = ?;
+    `
+    const [rows] = await pool.query(sql, [idBarber])
+    return rows // Devuelve los servicios asociados al barbero
+}
+
 module.exports = {
     getAllServices,
     getServiceById,
     createService,
     deleteService,
     updateService,
+    getServicesByBarber,
 }
