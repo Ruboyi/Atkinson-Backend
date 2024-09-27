@@ -5,6 +5,7 @@ const getAllServicesController = require('../controllers/services/get-all-servic
 const createServiceController = require('../controllers/services/create-services-controller')
 const deleteServiceController = require('../controllers/services/delete-services-controller')
 const updateServiceController = require('../controllers/services/update-services-controller')
+const getServicesByBarberController = require('../controllers/services/get-services-by-barber-controller')
 
 router
     .route('/services')
@@ -17,5 +18,10 @@ router
     .all(validateAuth)
     .delete(deleteServiceController)
     .put(updateServiceController)
+
+router
+    .route('/barbers/:idBarber/services')
+    .all(validateAuth)
+    .get(getServicesByBarberController)
 
 module.exports = router
