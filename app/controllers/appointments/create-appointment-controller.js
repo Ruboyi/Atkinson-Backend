@@ -75,7 +75,8 @@ async function createAppointmentController(req, res) {
 
         if (
             newAppointment.serviceId === '13' ||
-            newAppointment.serviceId === '14'
+            newAppointment.serviceId === '14' ||
+            newAppointment.serviceId === '16'
         ) {
             //Lo mismo con la media hora siguiente
             const appointmentDate = new Date(newAppointment.appointmentDate)
