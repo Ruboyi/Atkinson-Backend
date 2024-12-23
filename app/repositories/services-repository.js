@@ -4,6 +4,13 @@ const getPool = require('../infrastructure/database-infrastructure')
 
 async function getAllServices() {
     const pool = await getPool()
+    const sql = 'SELECT * FROM services'
+    const [services] = await pool.query(sql)
+    return services
+}
+
+async function getServices() {
+    const pool = await getPool()
     const sql = 'SELECT * FROM services WHERE DeletionStatus = 0'
     const [services] = await pool.query(sql)
     return services
@@ -55,4 +62,5 @@ module.exports = {
     deleteService,
     updateService,
     getServicesByBarber,
+    getServices,
 }
