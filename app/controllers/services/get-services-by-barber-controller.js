@@ -7,13 +7,17 @@ const {
 
 async function getServicesByBarberController(req, res) {
     try {
-        const { idBarber } = req.params
+        const { idBarber, idBarbershop } = req.params
 
         if (!idBarber) {
-            throwJsonError('El id del barbero es requerido.', 400)
+            throwJsonError(400, 'El id del barbero es requerido.')
         }
 
-        const services = await getServicesByBarber(idBarber)
+        if (!idBarbershop) {
+            throwJsonError(400, 'El id de la barbería es requerido.')
+        }
+
+        const services = await getServicesByBarber(idBarber, idBarbershop)
 
         if (services.length === 0) {
             throwJsonError(
@@ -28,7 +32,6 @@ async function getServicesByBarberController(req, res) {
         res.status(200).json(services)
     } catch (error) {
         const { idBarber } = req.params
-
         logger.error(
             `Error al obtener los servicios del barbero con id: ${idBarber}`,
             error

@@ -8,7 +8,7 @@ const updateServiceController = require('../controllers/services/update-services
 const getServicesByBarberController = require('../controllers/services/get-services-by-barber-controller')
 
 router
-    .route('/services')
+    .route('/services/:idBarbershop')
     .all(validateAuth)
     .get(getAllServicesController)
     .post(createServiceController)
@@ -20,7 +20,7 @@ router
     .put(updateServiceController)
 
 router
-    .route('/barbers/:idBarber/services')
+    .route('/barbers/:idBarber/barbershops/:idBarbershop/services')
     .all(validateAuth)
     .get(getServicesByBarberController)
 

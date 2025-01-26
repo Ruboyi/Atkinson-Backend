@@ -9,10 +9,18 @@ async function getAllServices() {
     return services
 }
 
-async function getServices() {
+async function getServices(idBarbershop) {
     const pool = await getPool()
-    const sql = 'SELECT * FROM services WHERE DeletionStatus = 0'
-    const [services] = await pool.query(sql)
+    const sql = `
+        SELECT 
+            services.idService,
+            services.name,
+            barbershop_services.price
+        FROM services
+        INNER JOIN barbershop_services ON services.idService = barbershop_services.service_id
+        WHERE barbershop_services.barbershop_id = ? AND services.DeletionStatus = 0;
+    `
+    const [services] = await pool.query(sql, [idBarbershop])
     return services
 }
 
@@ -43,16 +51,20 @@ async function deleteService(idService) {
     await pool.query(sql, idService)
 }
 
-async function getServicesByBarber(idBarber) {
+async function getServicesByBarber(idBarber, idBarbershop) {
     const pool = await getPool()
     const sql = `
-        SELECT *
+        SELECT 
+            services.idService,
+            services.name,
+            barbershop_services.price
         FROM services
         INNER JOIN barber_services ON services.idService = barber_services.idService
-        WHERE barber_services.idBarber = ?;
+        INNER JOIN barbershop_services ON services.idService = barbershop_services.service_id
+        WHERE barber_services.idBarber = ? AND barbershop_services.barbershop_id = ?;
     `
-    const [rows] = await pool.query(sql, [idBarber])
-    return rows // Devuelve los servicios asociados al barbero
+    const [rows] = await pool.query(sql, [idBarber, idBarbershop])
+    return rows
 }
 
 module.exports = {

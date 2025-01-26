@@ -6,8 +6,16 @@ const { getServices } = require('../../repositories/services-repository')
 async function getAllServicesController(req, res) {
     try {
         const { idUser } = req.auth
+        const { idBarbershop } = req.params
 
-        const services = await getServices()
+        if (!idUser) {
+            throwJsonError(400, 'El id del usuario es requerido.')
+        }
+        if (!idBarbershop) {
+            throwJsonError(400, 'El id de la barbería es requerido.')
+        }
+
+        const services = await getServices(idBarbershop)
 
         if (services.length === 0) {
             throwJsonError('No se encontraron servicios.', 404)
