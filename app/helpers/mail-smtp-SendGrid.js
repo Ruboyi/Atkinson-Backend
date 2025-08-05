@@ -1,36 +1,39 @@
 'use strict'
 
-const sgMail = require('@sendgrid/mail')
-const createJsonError = require('../errors/create-json-error')
+const brevo = require('@getbrevo/brevo')
 const logger = require('../logs/logger')
 
-sgMail.setApiKey(process.env.SENDGRID_API_KEY)
-const { HTTP_SERVER, FRONTEND_URL } = process.env
+const apiInstance = new brevo.TransactionalEmailsApi()
+apiInstance.setApiKey(
+    brevo.TransactionalEmailsApiApiKeys.apiKey,
+    process.env.BREVO_API_KEY
+)
+
+const { HTTP_SERVER, FRONTEND_URL, BREVO_FROM } = process.env
+
+// ========== FUNCIONES ==========
 
 async function sendMailRegister(name, email, code) {
     try {
         const linkActivation = `${HTTP_SERVER}/api/v1/users/activation?code=${code}`
-
-        const msg = {
-            to: email,
-            from: process.env.SENDGRID_FROM,
+        const sendSmtpEmail = {
+            sender: { name: 'Atkinson Barber Shop', email: BREVO_FROM },
+            to: [{ email }],
             subject: 'Bienvenido a Atkinson Barber Shop',
-            html: `
+            htmlContent: `
         <div style="text-align: center;">
-          <img src="https://atkinsonbarbershop.com/wp-content/uploads/2017/06/logoatkinsonheader.png" alt="Logo Atkinson Barber Shop" style="width: 200px; height: auto; margin: 20px auto;">
+          <img src="https://www.dafont.com/forum/attach/orig/2/1/217371.gif" alt="Logo Atkinson Barber Shop" style="width: 200px;">
           <h1>Bienvenido a Atkinson Barber Shop</h1>
           <p>Hola ${name},</p>
-          <p>Gracias por confiar en nosotros. Para activar la cuenta haz click en el boton que te muestro a continuación: </p>
-          <a href="${linkActivation}" style="display: inline-block; padding: 12px 24px; background-color: #d96c2c; color: #fff; text-decoration: none; border-radius: 4px; margin-top: 20px;">Activar Cuenta</a>
+          <p>Gracias por confiar en nosotros. Para activar la cuenta haz click en el botón:</p>
+          <a href="${linkActivation}" style="display:inline-block;padding:12px 24px;background-color:#d96c2c;color:#fff;text-decoration:none;border-radius:4px;">Activar Cuenta</a>
         </div>
       `,
         }
-
-        const data = await sgMail.send(msg)
+        await apiInstance.sendTransacEmail(sendSmtpEmail)
         logger.info(
             `Usuario con email: ${email} ha recibido un mail de activación`
         )
-        return data
     } catch (error) {
         logger.error(`Error al enviar el mail de activación a ${email}`, error)
         throw new Error('Error al enviar el mail')
@@ -39,242 +42,129 @@ async function sendMailRegister(name, email, code) {
 
 async function sendMailCorrectValidation(name, email) {
     try {
-        const msg = {
-            to: email,
-            from: process.env.SENDGRID_FROM,
+        const sendSmtpEmail = {
+            sender: { name: 'Atkinson Barber Shop', email: BREVO_FROM },
+            to: [{ email }],
             subject: 'Atkinson Barber Shop - Cuenta activada',
-            html: `<div style="text-align: center;">
-      <img src="https://atkinsonbarbershop.com/wp-content/uploads/2017/06/logoatkinsonheader.png" alt="Logo Atkinson Barber Shop" style="width: 200px; height: auto; margin: 20px auto;">
-      <h1>Atkinson Barber Shop</h1>
-      <p>Hola ${name},</p>
-      <p>Gracias por confiar en nosotros. Su cuenta ha sido activada correctamente</p>
-    
-    </div>`,
+            htmlContent: `
+        <div style="text-align: center;">
+          <img src="https://www.dafont.com/forum/attach/orig/2/1/217371.gif" alt="Logo" style="width: 200px;">
+          <h1>Atkinson Barber Shop</h1>
+          <p>Hola ${name},</p>
+          <p>Su cuenta ha sido activada correctamente</p>
+        </div>
+      `,
         }
-
-        const data = await sgMail.send(msg)
+        await apiInstance.sendTransacEmail(sendSmtpEmail)
         logger.info(
-            `Usuario con email: ${email} ha recibido un mail de agradecimiento de activación`
+            `Usuario con email: ${email} ha recibido email de cuenta activada`
         )
-        return data
     } catch (error) {
         logger.error(
-            `Error al enviar el mail de agradecimiento de activación a ${email}`,
+            `Error al enviar email de cuenta activada a ${email}`,
             error
         )
         throw new Error('Error al enviar el mail')
     }
 }
 
-async function sendMailPurchaseOrderNotif(name, email) {
-    const msg = {
-        to: email,
-        from: process.env.SENDGRID_FROM,
-        subject: 'Arcade Marketplace - New Message!',
-        text: `Hi ${name},
-    There's someone interested in one of your products.
-    Check the app to see more details.`,
-        html: `<h1>Hi ${name},</h1>
-    <p>There's someone interested in one of your products.
-    Check the app to see more details.</p>`,
-    }
-
-    const data = await sgMail.send(msg)
-    return data
-}
-
 async function sendMailRecoveryPassword(name, email, temporaryPassword) {
     try {
-        sgMail.setApiKey(process.env.SENDGRID_API_KEY)
-
-        const msg = {
-            to: email,
-            from: {
-                name: 'Atkinson Barber Shop',
-                email: process.env.SENDGRID_FROM,
-            },
+        const sendSmtpEmail = {
+            sender: { name: 'Atkinson Barber Shop', email: BREVO_FROM },
+            to: [{ email }],
             subject: 'Atkinson Barber Shop - Restablecimiento de contraseña',
-            html: `
+            htmlContent: `
         <div style="text-align: center;">
-          <img src="https://atkinsonbarbershop.com/wp-content/uploads/2017/06/logoatkinsonheader.png" alt="Logo Atkinson Barber Shop" style="width: 200px; height: auto; margin: 20px auto;">
+          <img src="https://www.dafont.com/forum/attach/orig/2/1/217371.gif" alt="Logo" style="width: 200px;">
           <h1>Atkinson Barber Shop</h1>
           <p>Hola ${name},</p>
           <p>Hemos recibido una solicitud para restablecer tu contraseña.</p>
-          <p>A continuación, encontrarás tu contraseña temporal:</p>
           <p><strong>${temporaryPassword}</strong></p>
-          <p>Por favor, inicia sesión con esta contraseña temporal y cambia tu contraseña lo antes posible.</p>
-          <p>Si no solicitaste restablecer tu contraseña, ignora este correo electrónico.</p>
-          <p>Atentamente,</p>
-          <p>Equipo de Atkinson Barber Shop</p>
         </div>
       `,
         }
-
-        await sgMail.send(msg)
-        logger.info(
-            `Usuario con email: ${email} ha recibido un mail de recuperación de contraseña`
-        )
+        await apiInstance.sendTransacEmail(sendSmtpEmail)
     } catch (error) {
-        logger.error(
-            `Error al enviar el mail de recuperación de contraseña a ${email}}`,
-            error
-        )
-        throw new Error('Error al enviar el correo electrónico')
+        logger.error(`Error al enviar mail de recuperación a ${email}`, error)
+        throw new Error('Error al enviar el mail')
     }
 }
 
-async function sendMailRecoveryPassword(name, email, verificationCode) {
+async function sendMailRecoveryPasswordWeb(name, email, verificationCode) {
     try {
-        sgMail.setApiKey(process.env.SENDGRID_API_KEY)
-
-        const msg = {
-            to: email,
-            from: {
-                name: 'Atkinson Barber Shop',
-                email: process.env.SENDGRID_FROM,
-            },
-            subject: 'Atkinson Barber Shop - Restablecimiento de contraseña',
-            html: `
+        const recoveryUrl = `${FRONTEND_URL}/reset-password?code=${verificationCode}`
+        const sendSmtpEmail = {
+            sender: { name: 'Atkinson Barber Shop', email: BREVO_FROM },
+            to: [{ email }],
+            subject: 'Atkinson Barber Shop - Restablecimiento de Contraseña',
+            htmlContent: `
         <div style="text-align: center;">
-          <img src="https://atkinsonbarbershop.com/wp-content/uploads/2017/06/logoatkinsonheader.png" alt="Logo Atkinson Barber Shop" style="width: 200px; height: auto; margin: 20px auto;">
+          <img src="https://www.dafont.com/forum/attach/orig/2/1/217371.gif" style="width: 200px;">
           <h1>Atkinson Barber Shop</h1>
           <p>Hola ${name},</p>
-          <p>Hemos recibido una solicitud para restablecer tu contraseña.</p>
-          <p>A continuación, encontrarás tu código de verificación:</p>
-          <p><strong>${verificationCode}</strong></p>
-          <p>Ingresa este código en la aplicación para completar el proceso de restablecimiento de contraseña.</p>
-          <p>Si no solicitaste restablecer tu contraseña, ignora este correo electrónico.</p>
-          <p>Atentamente,</p>
-          <p>Equipo de Atkinson Barber Shop</p>
+          <p>Para recuperar tu contraseña, haz clic en el siguiente enlace:</p>
+          <a href="${recoveryUrl}">${recoveryUrl}</a>
         </div>
       `,
         }
-
-        await sgMail.send(msg)
-        logger.info(
-            `Usuario con email: ${email} ha recibido un mail de recuperación de contraseña`
-        )
+        await apiInstance.sendTransacEmail(sendSmtpEmail)
     } catch (error) {
         logger.error(
-            `Error al enviar el mail de recuperación de contraseña a ${email}`,
+            `Error al enviar mail de recuperación web a ${email}`,
             error
         )
-        throw new Error('Error al enviar el correo electrónico')
+        throw new Error('Error al enviar el mail')
     }
 }
 
 async function sendMailCitaActualizada(name, email, newDate) {
     try {
-        const msg = {
-            to: email,
-            from: process.env.SENDGRID_FROM,
+        const sendSmtpEmail = {
+            sender: { name: 'Atkinson Barber Shop', email: BREVO_FROM },
+            to: [{ email }],
             subject: 'Actualización de cita en Atkinson Barber Shop',
-            html: `
-          <div style="text-align: center;">
-            <img src="https://atkinsonbarbershop.com/wp-content/uploads/2017/06/logoatkinsonheader.png" alt="Logo Atkinson Barber Shop" style="width: 200px; height: auto; margin: 20px auto;">
-            <h1>Atkinson Barber Shop</h1>
-            <p>Hola ${name},</p>
-            <p>Tu cita ha sido actualizada por el administrador debido a motivos de concurrencia.</p>
-            <p>La nueva fecha de tu cita es: ${newDate}</p>
-            <p>Por favor, contáctanos si tienes alguna pregunta o necesitas más información.</p>
-            <p>Gracias por tu comprensión.</p>
-          </div>
-        `,
+            htmlContent: `
+        <div style="text-align: center;">
+          <img src="https://www.dafont.com/forum/attach/orig/2/1/217371.gif" style="width: 200px;">
+          <h1>Atkinson Barber Shop</h1>
+          <p>Hola ${name},</p>
+          <p>Tu cita ha sido actualizada a: ${newDate}</p>
+        </div>
+      `,
         }
-
-        const data = await sgMail.send(msg)
-        logger.info(
-            `Usuario con email: ${email} ha recibido un correo electrónico de actualización de cita`
-        )
-        return data
+        await apiInstance.sendTransacEmail(sendSmtpEmail)
     } catch (error) {
         logger.error(
-            `Error al enviar el correo electrónico de actualización de cita a ${email}`,
+            `Error al enviar email de cita actualizada a ${email}`,
             error
         )
-        throw new Error('Error al enviar el correo electrónico')
+        throw new Error('Error al enviar el mail')
     }
 }
 
 async function sendMailCitaCancelada(name, email) {
     try {
-        const msg = {
-            to: email,
-            from: process.env.SENDGRID_FROM,
+        const sendSmtpEmail = {
+            sender: { name: 'Atkinson Barber Shop', email: BREVO_FROM },
+            to: [{ email }],
             subject: 'Cancelación de cita en Atkinson Barber Shop',
-            html: `
-          <div style="text-align: center;">
-            <img src="https://atkinsonbarbershop.com/wp-content/uploads/2017/06/logoatkinsonheader.png" alt="Logo Atkinson Barber Shop" style="width: 200px; height: auto; margin: 20px auto;">
-            <h1>Atkinson Barber Shop</h1>
-            <p>Hola ${name},</p>
-            <p>Lamentamos informarte que tu cita ha sido cancelada.</p>
-            <p>Contactar con el admistrador para mas información</p>
-            <p>Te pedimos disculpas por cualquier inconveniente que esto pueda causarte.</p>
-            <p>Si deseas programar una nueva cita, por favor contáctanos.</p>
-            <p>Gracias por tu comprensión.</p>
-          </div>
-        `,
+            htmlContent: `
+        <div style="text-align: center;">
+          <img src="https://www.dafont.com/forum/attach/orig/2/1/217371.gif" style="width: 200px;">
+          <h1>Atkinson Barber Shop</h1>
+          <p>Hola ${name},</p>
+          <p>Lamentamos informarte que tu cita ha sido cancelada.</p>
+        </div>
+      `,
         }
-
-        const data = await sgMail.send(msg)
-        logger.info(
-            `Usuario con email: ${email} ha recibido un correo electrónico de cancelación de cita`
-        )
-        return data
+        await apiInstance.sendTransacEmail(sendSmtpEmail)
     } catch (error) {
         logger.error(
-            `Error al enviar el correo electrónico de cancelación de cita a ${email}`,
+            `Error al enviar email de cita cancelada a ${email}`,
             error
         )
-        throw new Error('Error al enviar el correo electrónico')
-    }
-}
-
-// Función para generar la URL de recuperación con el verificationCode
-function generateRecoveryURL(verificationCode) {
-    const baseUrl = `${FRONTEND_URL}/reset-password`
-    const recoveryUrl = `${baseUrl}?code=${verificationCode}`
-    return recoveryUrl
-}
-
-async function sendMailRecoveryPasswordWeb(name, email, verificationCode) {
-    try {
-        sgMail.setApiKey(process.env.SENDGRID_API_KEY)
-
-        const recoveryUrl = generateRecoveryURL(verificationCode)
-
-        const msg = {
-            to: email,
-            from: {
-                name: 'Atkinson Barber Shop',
-                email: process.env.SENDGRID_FROM,
-            },
-            subject: 'Atkinson Barber Shop - Restablecimiento de Contraseña',
-            html: `
-                <div style="text-align: center;">
-                    <img src="https://atkinsonbarbershop.com/wp-content/uploads/2017/06/logoatkinsonheader.png" alt="Logo Atkinson Barber Shop" style="width: 200px; height: auto; margin: 20px auto;">
-                    <h1>Atkinson Barber Shop</h1>
-                    <p>Estimado/a ${name},</p>
-                    <p>Recibimos una solicitud para restablecer su contraseña en Atkinson Barber Shop.</p>
-                    <p>Si no solicitó restablecer su contraseña, por favor ignore este correo electrónico.</p>
-                    <p>Para recuperar su contraseña, haga clic en el siguiente enlace:</p>
-                    <p><a href="${recoveryUrl}">${recoveryUrl}</a></p>
-                    <p>Atentamente,</p>
-                    <p>El Equipo de Atkinson Barber Shop</p>
-                </div>
-            `,
-        }
-
-        await sgMail.send(msg)
-        logger.info(
-            `Usuario con email: ${email} ha recibido un correo de recuperación de contraseña`
-        )
-    } catch (error) {
-        logger.error(
-            `Error al enviar el correo de recuperación de contraseña a ${email}`,
-            error
-        )
-        throw new Error('Error al enviar el correo electrónico')
+        throw new Error('Error al enviar el mail')
     }
 }
 
@@ -282,7 +172,6 @@ module.exports = {
     sendMailRegister,
     sendMailCorrectValidation,
     sendMailRecoveryPasswordWeb,
-    sendMailPurchaseOrderNotif,
     sendMailRecoveryPassword,
     sendMailCitaActualizada,
     sendMailCitaCancelada,
