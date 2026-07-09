@@ -17,7 +17,7 @@ const logger = require('../../logs/logger')
 const schema = Joi.object().keys({
     nameUser: Joi.string().min(3).max(20).required(),
     email: Joi.string().email().required(),
-    phone: Joi.any().required(),
+    phone: Joi.string().min(7).max(20).required(),
 })
 
 async function updateUser(req, res) {

@@ -15,7 +15,7 @@ const schema = Joi.object().keys({
     appointmentDate: Joi.date().required(),
     serviceId: Joi.number().required(),
     nameUser: Joi.string().min(3).max(120),
-    phone: Joi.string().min(9).max(12),
+    phone: Joi.string().min(7).max(20),
     idUser: Joi.number(),
     barbershopId: Joi.number().required(),
 })
